@@ -1,0 +1,1 @@
+SpectateBlock = class()

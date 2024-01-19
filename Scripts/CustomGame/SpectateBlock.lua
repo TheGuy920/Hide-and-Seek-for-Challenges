@@ -63,7 +63,7 @@ function SpectateBlock.client_onAction(self, input, active)
 			end
 			self.mode = "Player Cam"
 		elseif self.mode == "Player Cam" and active then
-			self.mode = "Free Cam"
+			self.mode = "Player Cam"
 		end
 		if self.titlesOn == true then
 			sm.gui.displayAlertText( self.mode )
@@ -628,7 +628,8 @@ function SpectateBlock.cl_exitCam(self)
 	if self.optSaves == true then
 		self.camPos = sm.camera.getPosition()
 	end
-    if sm.localPlayer.getPlayer():getCharacter():getLockingInteractable() then
+    if sm.localPlayer.getPlayer():getCharacter()
+    and sm.localPlayer.getPlayer():getCharacter():getLockingInteractable() then
         --SpectateBlock.cl_save(self)
         sm.localPlayer.getPlayer():getCharacter():setLockingInteractable(nil)
         sm.camera.setCameraState(1)
