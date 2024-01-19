@@ -82,6 +82,31 @@
 			},
 			"color" : "ffffff",
 			"flammable" : false,
+			"name" : "invis_barrierY",
+			"physicsMaterial" : "Glass",
+			"ratings" : {
+			   "buoyancy" : 1,
+			   "density" : 1,
+			   "durability" : 1,
+			   "friction" : 1
+			},
+			"restrictions": {
+				"erasable": false
+			},
+			"showInInventory": false,
+			"renderable" : "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_logicgate.rend",
+			"rotationSet" : "PropYZNegX",
+			"stackSize" : 10,
+			"uuid" : "1be96842-cb7d-4748-b159-3dbc61ca1f40"
+		 },
+		 {
+			"box" : {
+			   "x" : 1,
+			   "y" : 1,
+			   "z" : 60
+			},
+			"color" : "ffffff",
+			"flammable" : false,
 			"name" : "spectate",
 			"physicsMaterial" : "Glass",
 			"ratings" : {

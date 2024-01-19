@@ -6,6 +6,7 @@ local Controls = {
     A = 1,
     D = 2,
     One = 5,
+    Spacebar = 16,
     Mouse1 = 19,
     Mouse2 = 18,
     ScrollUp = 20,
@@ -27,6 +28,7 @@ function SpectateBlock.client_onCreate( self )
     self.sdown = false
     self.adown = false
     self.ddown = false
+    self.spacedown = false
     self.spectateIndex = 0
     self.mode = Modes.Follow
     self.zoom = 0
@@ -135,6 +137,9 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
         if self.ddown then
             self.camera_pos = self.camera_pos + sm.camera.getRight() * deltaTime * 10
         end
+        if self.spacedown then
+            self.camera_pos = self.camera_pos + sm.vec3.new(0,0,1) * deltaTime * 10
+        end
 
         local old = sm.camera.getPosition()
         local oldd = sm.camera.getDirection()
@@ -152,6 +157,7 @@ function SpectateBlock.client_onAction( self, input, active )
         if input == Controls.S then self.sdown = true end
         if input == Controls.A then self.adown = true end
         if input == Controls.D then self.ddown = true end
+        if input == Controls.Spacebar then self.spacedown = true end
 
         if input == Controls.One then
             if self.mode == Modes.Follow then
@@ -195,6 +201,7 @@ function SpectateBlock.client_onAction( self, input, active )
         if input == Controls.S then self.sdown = false end
         if input == Controls.A then self.adown = false end
         if input == Controls.D then self.ddown = false end
+        if input == Controls.Spacebar then self.spacedown = false end
     end
 
     if input == Controls.ScrollUp and active then
@@ -206,8 +213,6 @@ function SpectateBlock.client_onAction( self, input, active )
     if input == 15 then
         self:client_unBindPlayer(self.player)
     end
-
-    print(input)
 
     return true
 end

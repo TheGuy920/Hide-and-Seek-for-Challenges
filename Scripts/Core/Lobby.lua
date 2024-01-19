@@ -10,13 +10,11 @@ World.worldBorder = true
 World.isStatic = true
 World.enableCreations = false
 local MenuLockUuid = sm.uuid.new("b9e418dd-5875-4ca6-85f1-48154fa81643")
-local BarrierUuidX = sm.uuid.new("d8669091-5ed8-41af-90dd-60e6f5d1f282")
-local BarrierUuidY = sm.uuid.new("1be96842-cb7d-4748-b159-3dbc61ca1f40")
 local OrderList = {
-	BarrierUuidX,
-	BarrierUuidX,
-	BarrierUuidY,
-	BarrierUuidY
+	sm.uuid.new("d8669091-5ed8-41af-90dd-60e6f5d1f282"),
+	sm.uuid.new("d8669091-5ed8-41af-90dd-60e6f5d1f282"),
+	sm.uuid.new("1be96842-cb7d-4748-b159-3dbc61ca1f40"),
+	sm.uuid.new("1be96842-cb7d-4748-b159-3dbc61ca1f40")
 }
 local posOffset = {
 	sm.vec3.new(-0.55,0,0),

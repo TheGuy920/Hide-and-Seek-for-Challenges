@@ -1,10 +1,8 @@
 {
 	"assetSetList": [
 		{
-			"assetSet": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Database/AssetSets/challengemode.json",
-			"categories": [
-				"Environment/Challengemode/Challengemode"
-			]
+		    "assetSet": "$CHALLENGE_DATA/Terrain/Database/AssetSets/challengemode.json",
+		    "categories": ["Environment/Challengemode/Challengemode"]
 		},
 		{
 			"hidden": true,
