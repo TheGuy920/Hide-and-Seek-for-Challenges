@@ -1,1 +1,0 @@
-SpectateBlock = class()

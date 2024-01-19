@@ -203,14 +203,6 @@ function Player.client_onUpdate(self, dt)
 	end
 end
 
-function Player.client_onFixedUpdate(self, deltaTime)
-	if self.spectate and not self.player:getCharacter():getLockingInteractable()
-	and sm.exists(self.spectate_part) then
-		self.player:getCharacter():setLockingInteractable(self.spectate_part)
-	end
-	
-end
-
 function Player.client_onClientDataUpdate(self, data)
 	ChallengePlayer.client_onClientDataUpdate(self, data)
 end
@@ -366,12 +358,11 @@ function Player.server_setSpectate(self, data)
 	if self.state == States.Play or self.state == States.PlayBuild or self.state == States.Build then
 		self.spectate = data.state
 		self.spectate_part = data.part
-		if self.spectate then
-			self.player:getCharacter():setLockingInteractable( self.spectate_part )
-		elseif self.spectate_part then
-			sm.event.sendToInteractable(self.spectate_part, "server_closeAll")
-		end
 		self.network:sendToClient(self.player, "client_setSpectate", data)
+	end
+
+	if not data.state and sm.exists(self.spectate_part) then
+		sm.event.sendToInteractable(self.spectate_part, "client_unBindAll")
 	end
 end
 
@@ -379,7 +370,9 @@ function Player.client_setSpectate(self, data)
 	self.spectate = data.state
 	self.spectate_part = data.part
 	if self.spectate then
-		sm.event.sendToInteractable(self.spectate_part, "client_triggerInteract", true)
+		sm.event.sendToInteractable(self.spectate_part, "client_bindPlayer", self.player)
+	else
+		sm.event.sendToInteractable(self.spectate_part, "client_unBindPlayer", self.player)
 	end
 end
 
