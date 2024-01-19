@@ -31,7 +31,7 @@ end
 function SpectateBlock.client_bindPlayer( self, player )
     self.player = player
     if player:getCharacter() then
-        sm.camera.setCameraState(2)
+        sm.camera.setCameraState(sm.camera.state.forcedTP)
         player.character:setLockingInteractable(self.interactable)
     end
 end
@@ -39,7 +39,7 @@ end
 function SpectateBlock.client_unBindPlayer( self, player )
     self.player = nil
     if player:getCharacter() then
-        sm.camera.setCameraState(sm.camera.default)
+        sm.camera.setCameraState(sm.camera.state.default)
         player.character:setLockingInteractable(nil)
     end
 end
