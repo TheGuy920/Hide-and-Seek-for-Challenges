@@ -373,7 +373,9 @@ function Player.client_setSpectate(self, data)
 		if self.spectate then
 			sm.event.sendToInteractable(self.spectate_part, "client_bindPlayer", self.player)
 		else
+			sm.camera.setCameraState(sm.camera.state.default)
 			sm.event.sendToInteractable(self.spectate_part, "client_unBindPlayer", self.player)
+			self.player:getCharacter():setLockingInteractable(nil)	
 		end
 	end
 end

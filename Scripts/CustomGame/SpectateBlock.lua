@@ -62,16 +62,16 @@ end
 function SpectateBlock.client_unBindPlayer( self, player )
     self.player = nil
     if player:getCharacter() then
-        sm.camera.setCameraState(sm.camera.state.cutsceneFP)
-        player.character:setLockingInteractable(nil)
+        sm.camera.setCameraState(sm.camera.state.default)
+        player:getCharacter():setLockingInteractable(nil)
     end
 end
 
 function SpectateBlock.client_unbindAll( self, players )
     for _,player in pairs(players) do
         if player and player:getCharacter()
-            and player.character:getLockingInteractable() then
-                player.character:setLockingInteractable(nil)
+            and player:getCharacter():getLockingInteractable() then
+                player:getCharacter():setLockingInteractable(nil)
         end
     end
 end
