@@ -7,6 +7,8 @@ local Controls = {
     D = 2,
     Mouse1 = 19,
     Mouse2 = 18,
+    ScrollUp = 20,
+    ScrollDown = 21
 }
 
 local Modes = {
@@ -26,12 +28,13 @@ function SpectateBlock.client_onCreate( self )
     self.ddown = false
     self.spectateIndex = 0
     self.mode = Modes.Follow
+    self.zoom = 0
 end
 
 function SpectateBlock.client_bindPlayer( self, player )
     self.player = player
     if player:getCharacter() then
-        sm.camera.setCameraState(sm.camera.state.forcedTP)
+        sm.camera.setCameraState(sm.camera.state.cutsceneTP)
         player.character:setLockingInteractable(self.interactable)
     end
 end
@@ -55,8 +58,47 @@ end
 
 function SpectateBlock.client_onUpdate( self, deltaTime )
     if self.mode == Modes.Follow then
-        if self.target then       
-            sm.camera.setPosition(self.target.character.worldPosition)
+        if self.target then
+            local pos = self.target.character:getWorldPosition()
+            if not self.camera_pos then
+                self.camera_pos = pos + sm.vec3.new(0,0,1)
+            end
+            local deltaX, deltaY = sm.localPlayer.getMouseDelta()
+            local dir = (self.camera_pos - pos):normalize()
+            
+            -- Define orbit distance if not already defined
+            local orbitDistance = dir:length() + self.zoom
+
+            -- Convert direction to spherical coordinates (theta, phi)
+            local r = dir:length()
+            local theta = math.atan2(dir.y, dir.x)
+            local phi = math.acos(dir.z / r)
+
+            -- Adjust theta and phi based on mouse movement
+            -- sensitivity factors should be adjusted as needed
+            theta = theta - deltaX * -3
+            phi = math.max(0.1, math.min(math.pi - 0.1, phi - deltaY * -3))
+
+            -- Convert back to Cartesian coordinates
+            dir.x = r * math.sin(phi) * math.cos(theta)
+            dir.y = r * math.sin(phi) * math.sin(theta)
+            dir.z = r * math.cos(phi)
+
+            -- Ensure the camera maintains the orbit distance
+            dir = dir:normalize() * orbitDistance
+
+            -- Update camera position
+            self.camera_pos = pos + dir
+
+            -- Update camera position
+            self.camera_pos = pos + dir
+
+            -- Set camera position and direction
+            local old = sm.camera.getPosition()
+            local fpos = self.camera_pos + sm.vec3.new(0,0,0.5) + self.target:getCharacter():getVelocity() * 0.1
+            fpos = sm.vec3.lerp(old, fpos, 0.75)
+            sm.camera.setPosition(fpos)
+            sm.camera.setDirection(-dir)
         end
     else
         self.target = nil
@@ -108,8 +150,15 @@ function SpectateBlock.client_onAction( self, input, active )
         if input == Controls.D then self.ddown = false end
     end
 
-    print(self.wdown, self.sdown, self.adown, self.ddown)
-    print(self.spectateIndex)
+    if input == Controls.ScrollUp and active then
+        self.zoom = math.max(self.zoom - 0.5, 0.15)
+    elseif input == Controls.ScrollDown and active then
+        self.zoom = math.min(self.zoom + 0.5, 20)
+    end
+
+    if input == 15 then
+        self:client_unBindPlayer(self.player)
+    end
 
     return true
 end

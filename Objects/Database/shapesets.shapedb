@@ -1,7 +1,6 @@
 {
 	"shapeSetList":
 	[
-		/*
 		"$GAME_DATA/Objects/Database/ShapeSets/blocks.json",
 		"$SURVIVAL_DATA/Objects/Database/ShapeSets/blocks.json",
 		"$GAME_DATA/Objects/Database/ShapeSets/interactive.json",
@@ -34,10 +33,7 @@
 		"$SURVIVAL_DATA/Objects/Database/ShapeSets/manmade.json",
 		"$SURVIVAL_DATA/Objects/Database/ShapeSets/character_shape.json",
 		"$SURVIVAL_DATA/Objects/Database/ShapeSets/robotparts.json",
-		*/
-		"$CONTENT_DATA/Objects/Database/ShapeSets/blocks.json",
-		"$CONTENT_DATA/Objects/Database/ShapeSets/challenge.json",
-		"$CONTENT_DATA/Objects/Database/ShapeSets/interactive.json",
+		
 		"$CONTENT_DATA/Objects/Database/ShapeSets/override.json",
 		"$CONTENT_DATA/Objects/Database/ShapeSets/master.json"
 	]
