@@ -5,6 +5,7 @@ local Controls = {
     S = 4,
     A = 1,
     D = 2,
+    One = 5,
     Mouse1 = 19,
     Mouse2 = 18,
     ScrollUp = 20,
@@ -36,13 +37,32 @@ function SpectateBlock.client_bindPlayer( self, player )
     if player:getCharacter() then
         sm.camera.setCameraState(sm.camera.state.cutsceneTP)
         player.character:setLockingInteractable(self.interactable)
+        local players = sm.player.getAllPlayers()
+
+        self:client_findAvailablePlayer()
     end
+end
+
+function SpectateBlock.client_findAvailablePlayer( self )
+    local players = sm.player.getAllPlayers()
+
+    ::SCheck::
+    if self.spectateIndex > #players - 1 then
+        self.spectateIndex = 0
+    end
+
+    self.target = players[self.spectateIndex+1]
+    if self.target == sm.localPlayer.getPlayer() then
+        self.spectateIndex = self.spectateIndex + 1
+        goto SCheck
+    end
+
 end
 
 function SpectateBlock.client_unBindPlayer( self, player )
     self.player = nil
     if player:getCharacter() then
-        sm.camera.setCameraState(sm.camera.state.default)
+        sm.camera.setCameraState(sm.camera.state.cutsceneFP)
         player.character:setLockingInteractable(nil)
     end
 end
@@ -58,7 +78,7 @@ end
 
 function SpectateBlock.client_onUpdate( self, deltaTime )
     if self.mode == Modes.Follow then
-        if self.target then
+        if self.target and self.target.character then
             local pos = self.target.character:getWorldPosition()
             if not self.camera_pos then
                 self.camera_pos = pos + sm.vec3.new(0,0,1)
@@ -92,16 +112,34 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
 
             -- Update camera position
             self.camera_pos = pos + dir
-
+            
             -- Set camera position and direction
             local old = sm.camera.getPosition()
-            local fpos = self.camera_pos + sm.vec3.new(0,0,0.5) + self.target:getCharacter():getVelocity() * 0.1
-            fpos = sm.vec3.lerp(old, fpos, 0.75)
-            sm.camera.setPosition(fpos)
-            sm.camera.setDirection(-dir)
+            local oldd = sm.camera.getDirection()
+            local fpos = self.camera_pos + sm.vec3.new(0,0,0.5) + self.target:getCharacter():getVelocity() * 0.025
+            sm.camera.setPosition(magicPositionInterpolation(old, fpos, deltaTime, 1))
+            sm.camera.setDirection(magicPositionInterpolation(oldd, -dir, deltaTime, 1))
         end
-    else
+    elseif self.mode == Modes.Free and self.player then
         self.target = nil
+
+        if self.wdown then
+            self.camera_pos = self.camera_pos + sm.camera.getDirection() * deltaTime * 10
+        end
+        if self.sdown then
+            self.camera_pos = self.camera_pos - sm.camera.getDirection() * deltaTime * 10
+        end
+        if self.adown then
+            self.camera_pos = self.camera_pos - sm.camera.getRight() * deltaTime * 10
+        end
+        if self.ddown then
+            self.camera_pos = self.camera_pos + sm.camera.getRight() * deltaTime * 10
+        end
+
+        local old = sm.camera.getPosition()
+        local oldd = sm.camera.getDirection()
+        sm.camera.setPosition(magicPositionInterpolation(old, self.camera_pos, deltaTime, 1))
+        sm.camera.setDirection(magicPositionInterpolation(oldd, self.player.character:getDirection(), deltaTime, 1))
     end
 end
 
@@ -114,6 +152,15 @@ function SpectateBlock.client_onAction( self, input, active )
         if input == Controls.S then self.sdown = true end
         if input == Controls.A then self.adown = true end
         if input == Controls.D then self.ddown = true end
+
+        if input == Controls.One then
+            if self.mode == Modes.Follow then
+                self.mode = Modes.Free
+            else
+                self.mode = Modes.Follow
+                self:client_findAvailablePlayer()
+            end
+        end
 
         if #players > 1 then
             if input == Controls.Mouse1 then
@@ -159,6 +206,8 @@ function SpectateBlock.client_onAction( self, input, active )
     if input == 15 then
         self:client_unBindPlayer(self.player)
     end
+
+    print(input)
 
     return true
 end
