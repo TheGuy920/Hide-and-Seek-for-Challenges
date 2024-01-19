@@ -451,11 +451,26 @@ function ChallengeWorld.server_spawnCharacter( self, params )
 	for _,player in ipairs( params.players ) do
 		if self.challengeStarted then
 			for _,rplayer in pairs(self.hideandseekoptions.players) do
-				print(rplayer)
 				if rplayer.name == player:getName() then
-					print(self.hideandseekoptions.options)
 					if self.hideandseekoptions.options.spectate then
 						rplayer.state = PlayerStates.Spectator
+						if not self.spectateblock then
+							self.spectateblock = sm.shape.createPart(
+								sm.uuid.new("d8669091-5ed8-41af-90dd-60e6f5d1f283"),
+								sm.vec3.new(0,0,0),
+								sm.quat.identity(),
+								false,
+								true
+							)
+						end
+						sm.event.sendToPlayer(
+							player,
+							"server_setSpectate",
+							{
+								state = true,
+								part = self.spectateblock:getInteractable()
+							}
+						)
 						sm.event.sendToGame("server_setHideAndSeekOptions", self.hideandseekoptions)
 					end
 					break
