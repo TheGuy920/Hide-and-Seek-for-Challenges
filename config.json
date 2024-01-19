@@ -1,0 +1,11 @@
+{
+   "baseGameContent": "None",
+   "gameScript" : {
+      "class" : "Game",
+      "file" : "$CONTENT_DATA/Scripts/Core/Game.lua"
+   },
+   "playerScript" : {
+      "class" : "Player",
+      "file" : "$CONTENT_DATA/Scripts/Core/Player.lua"
+   }
+}

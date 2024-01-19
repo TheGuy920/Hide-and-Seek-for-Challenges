@@ -1,0 +1,31 @@
+{
+    "buttons":[
+        {
+            "name": "ExitChallengePack",
+            "method": "client_pack_CloseMenu"
+        },
+        {
+            "name": "Back",
+            "method": "client_pack_CloseMenu"
+        },
+        {
+            "name": "SelectChallengePack",
+            "method": "client_pack_SelectPack"
+        },
+        {
+            "name": "ChallengeBuilder",
+            "method": "client_pack_OpenGui"
+        },
+        {
+            "name": "UpArrow",
+            "method": "client_ScrollUp"
+        },
+        {
+            "name": "DownArrow",
+            "method": "client_ScrollDown"
+        }
+    ],
+    "text": [
+        
+    ]
+}

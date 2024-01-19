@@ -1,0 +1,46 @@
+{
+    "buttons": [
+        {
+            "name": "AddToChallengePack",
+            "method": "client_level_AddChallenge"
+        },
+        {
+            "name": "Play",
+            "method": "client_level_PlayChallenge"
+        },
+        {
+            "name": "Build",
+            "method": "client_level_BuildChallenge"
+        },
+        {
+            "name": "ChallengeModeMenuPack",
+            "method": "client_level_OpenGui"
+        },
+        {
+            "name": "Back",
+            "method": "client_level_OpenGui"
+        },
+        {
+            "name": "UpArrow",
+            "method": "client_ScrollUp"
+        },
+        {
+            "name": "DownArrow",
+            "method": "client_ScrollDown"
+        },
+        {
+            "name": "Toggle",
+            "method": "client_toggleShowing"
+        }
+    ],
+    "text": [
+        {
+            "name": "EditText_Title",
+            "method": "client_level_ChangeTitle"
+        },
+        {
+            "name": "EditText_Description",
+            "method": "client_level_ChangeDescription"
+        }
+    ]
+}

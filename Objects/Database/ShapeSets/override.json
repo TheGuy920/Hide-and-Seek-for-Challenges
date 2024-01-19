@@ -1,0 +1,131 @@
+{
+	"blockList": [
+		{
+			"uuid": "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+			"name": "blk_crackedconcrete",
+			"dif": "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_crackedconcrete01_dif.tga",
+			"asg": "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_crackedconcrete01_asg.tga",
+			"nor": "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_crackedconcrete01_nor.tga",
+			"tiling": 8,
+			"color": "8d8f89",
+			"physicsMaterial": "Rock",
+			"ratings": {
+				"density": 6,
+				"durability": 3,
+				"friction": 6,
+				"buoyancy": 4
+			},
+			"flammable": false
+		}
+	],
+	"partList": [
+		{
+			"box" : {
+			   "x" : 1,
+			   "y" : 1,
+			   "z" : 1
+			},
+			"color" : "ffffff",
+			"flammable" : false,
+			"name" : "menu_lock",
+			"physicsMaterial" : "Metal",
+			"ratings" : {
+			   "buoyancy" : 1,
+			   "density" : 1,
+			   "durability" : 1,
+			   "friction" : 1
+			},
+			"renderable" : "$CHALLENGE_DATA/Objects/Renderable/interactive/obj_challenge_interactive_smallgoal.rend",
+			"rotationSet" : "PropYZNegX",
+			"scripted" : {
+			   "classname" : "MenuLock",
+			   "data" : {},
+			   "filename" : "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/MenuLock.lua"
+			},
+			"restrictions": {
+				"erasable": false
+			},
+			"showInInventory": false,
+			"stackSize" : 10,
+			"uuid" : "b9e418dd-5875-4ca6-85f1-48154fa81643"
+		 },
+		 {
+			"box" : {
+			   "x" : 1,
+			   "y" : 1,
+			   "z" : 60
+			},
+			"color" : "ffffff",
+			"flammable" : false,
+			"name" : "invis_barrierX",
+			"physicsMaterial" : "Glass",
+			"ratings" : {
+			   "buoyancy" : 1,
+			   "density" : 1,
+			   "durability" : 1,
+			   "friction" : 1
+			},
+			"restrictions": {
+				"erasable": false
+			},
+			"showInInventory": false,
+			"renderable" : "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_logicgate.rend",
+			"rotationSet" : "PropYZNegX",
+			"stackSize" : 10,
+			"uuid" : "d8669091-5ed8-41af-90dd-60e6f5d1f282"
+		 },
+		 {
+			"box" : {
+			   "x" : 1,
+			   "y" : 1,
+			   "z" : 60
+			},
+			"color" : "ffffff",
+			"flammable" : false,
+			"name" : "spectate",
+			"physicsMaterial" : "Glass",
+			"ratings" : {
+			   "buoyancy" : 1,
+			   "density" : 1,
+			   "durability" : 1,
+			   "friction" : 1
+			},
+			"restrictions": {
+				"erasable": false
+			},
+			"scripted" : {
+				"classname" : "SpectateBlock",
+				"data" : {},
+				"filename" : "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/SpectateBlock.lua"
+			 },
+			"showInInventory": false,
+			"renderable" : "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_logicgate.rend",
+			"rotationSet" : "PropYZNegX",
+			"stackSize" : 1,
+			"uuid" : "d8669091-5ed8-41af-90dd-60e6f5d1f283"
+		 },
+		 {
+            "uuid": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+            "name": "obj_interactive_logicgate",
+            "legacyId": 119,
+            "renderable": "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_logicgate.rend",
+            "color": "df7f01",
+            "box": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "logic": {},
+            "rotationSet": "PropYZ",
+            "physicsMaterial": "Mechanical",
+            "ratings": {
+                "density": 2,
+                "durability": 3,
+                "friction": 5,
+                "buoyancy": 2
+            },
+            "flammable": false,
+            "stackSize": 10
+        }
+	]
+}

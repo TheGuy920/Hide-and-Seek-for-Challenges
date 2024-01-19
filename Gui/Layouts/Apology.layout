@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="BackgroundPromptNarrow" position_real="0 0 0.34375 0.88888888888888884" name="BackPanel">
+        <Property key="InheritsAlpha" value="false"/>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.089393939393939401 0.03229166666666667 0.78939393939393943 0.88958333333333328">
+            <Property key="NeedKey" value="false"/>
+            <Property key="InheritsAlpha" value="false"/>
+            <Widget type="ImageBox" skin="ImageBox" position_real="0.46065259117082535 0.064402810304449651 0.094049904030710174 0.05737704918032787">
+                <Property key="ImageTexture" value="gui_icon_popup_alert.png"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.1343570057581574 0.16393442622950818 0.76583493282149717 0.051522248243559721" name="Title">
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="Caption" value="Hey there friend..."/>
+                <Property key="TextAlign" value="Center"/>
+            </Widget>
+            <Widget type="EditBox" skin="EditBoxEmpty" position_real="-0.076775431861804216 0.22833723653395785 1.1900191938579654 0.69086651053864168" name="Message">
+                <Property key="FontName" value="SM_Text"/>
+                <Property key="TextColour" value="0.564706 0.572549 0.572549"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="MultiLine" value="true"/>
+                <Property key="WordWrap" value="true"/>
+                <Property key="ReadOnly" value="true"/>
+                <Property key="Static" value="true"/>
+                <Property key="Caption" value="Recently there have been some problems\nwith the mod. It hasnt always worked like\n it was supposed to. I wanted to apologize\n for the troubles and let you know they&apos;ve\n been addressed. Through my own testing\nI found the local detector to not be working\nlike it was mean to. I also released the mod\n without addressing the chest problem.\n\nI&apos;ve fixed the chest problems and the\nlocal detector. All should be working as\nadvertised. Once again, I am sorry for\nthe troubbles.\n\nCommunity Feedback is highly valued\nand continues to be the vital factor in\ncombating problems that find their way\ninto the wild. You can drop by the discord\nor just leave a comment on the mod steam\npage. If you like my work, a thumbs up on\nthe steam page is the best way to show it.\n\nThanks - TGO"/>
+                <Property key="FontHeight" value="16"/>
+                <UserString key="FontName" value="SM_Text"/>
+            </Widget>
+            <Widget type="Button" skin="SecondaryButton" position_real="0.37428023032629559 0.91920374707259955 0.28214971209213052 0.05737704918032787" name="Button">
+                <Property key="Caption" value="#{MENU_YN_OK}"/>
+                <Property key="FontName" value="SM_Button"/>
+                <Property key="TextAlign" value="Center"/>
+            </Widget>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>

@@ -1,0 +1,17 @@
+{
+   "allow_add_mods" : true,
+   "custom_icons" : false,
+   "dependencies" : [
+      {
+         "fileId" : 3041422152,
+         "localId" : "e3589ff7-31ca-4f19-b1f0-bef055ba9200",
+         "name" : "Challenge Pack Database"
+      }
+   ],
+   "description" : "This is a custom game. Its just like scrap mechanic. You should have no difficulty navigating the menus or using this mod. \r\n\r\nThis mod is a 1:1 clone of challenge mode, but runs as a custom game mode. In the menu book, the host will be able to access the following settings:\r\n[*] Hide all name tags \r\n[*] Hiders see name tags (seekers dont)\r\n[*] Full health\r\n[*] Half health\r\n[*] 1 Shot Kill\r\n[*] Spectate when dead\r\n[*] No items (seeker has spud gun)\r\n[*] Inactivity VFX\r\n[*] Fall damage\r\n[*] Player list to toggle between [b]Spectate | Hider | Seeker[/b]\r\n\r\nThe host is the only person with the \"menu book\". DO NOT drop it on the ground! You'll be stuck without it until you reload the entire save file.",
+   "fileId" : 3141117447,
+   "localId" : "a65c170c-ede3-4757-9f1a-586eabf1a2bc",
+   "name" : "Hide and Seek for Challenges",
+   "type" : "Custom Game",
+   "version" : 0
+}

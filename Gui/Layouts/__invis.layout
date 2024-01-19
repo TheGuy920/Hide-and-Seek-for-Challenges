@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget name="base" type="Widget" skin="PanelEmpty" position_real="0 0 0.01 0.01">
+        <Property key="NeedKey" value="false"/>
+        <Property key="NeedMouse" value="false"/>
+        <Property key="Alpha" value="0.01"/>
+        <Widget type="ImageBox" skin="ImageBox" name="BackgroundImage" position_real="0 0 1 1">
+            <Property key="ImageTexture" value="blank.png" />
+        </Widget>
+    </Widget>
+</MyGUI>

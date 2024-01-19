@@ -1,0 +1,27 @@
+{
+    "buttons":[
+        {
+            "name": "Play",
+            "method": "client_SelectPlay"
+        },
+        {
+            "name": "ChallengeModeMenuPack",
+            "method": "client_play_OpenGui"
+        },
+        {
+            "name": "Back",
+            "method": "client_play_OpenGui"
+        },
+        {
+            "name": "UpArrow",
+            "method": "client_ScrollUp"
+        },
+        {
+            "name": "DownArrow",
+            "method": "client_ScrollDown"
+        }
+    ],
+    "text": [
+        
+    ]
+}

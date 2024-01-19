@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+        <Property key="NeedKey" value="true"/>
+        <Property key="NeedMouse" value="true"/>
+        <Widget type="Widget" skin="BackgroundPromptWide" position_real="0.3125 0.17129629629629631 0.375 0.68148148148148147" name="ChallengeBuilderPackPanel">
+            <Property key="InheritsAlpha" value="false"/>
+            <Widget type="TextBox" skin="TextBox" position_real="0.081944444444444445 0.10326086956521739 0.83194444444444449 0.04755434782608696">
+                <Property key="Caption" value="Someone didnt read the description..."/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontHeight" value="28"/>
+            </Widget>
+            <Widget type="Widget" skin="PanelEmpty" position_real="0.081944444444444445 0.16168478260869565 0.83194444444444449 0.72418478260869568">
+                <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 0.91557223264540333" name="ChallengeBuilderNoPackContainer">
+                    <Widget type="ImageBox" skin="ImageBox" position_real="0.39232053422370616 0.051229508196721313 0.23205342237061768 0.29303278688524592" name="Icon">
+                        <Property key="ImageTexture" value="gui_icon_popup_alert.png"/>
+                    </Widget>
+                    <Widget type="TextBox" skin="TextBox" position_real="0.1001669449081803 0.39959016393442626 0.80968280467445741 0.15778688524590165">
+                        <Property key="FontName" value="DejaVuSansFont_28"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="Caption" value="You are missing these required items!"/>
+                        <Property key="FontHeight" value="26"/>
+                        <Property key="TextShadow" value="true"/>
+                    </Widget>
+                    <Widget type="TextBox" skin="TextBox" position_real="0.1001669449081803 0.51024590163934425 0.80968280467445741 0.15778688524590165" name="hasDatabase">
+                        <Property key="FontName" value="DejaVuSansFont_28"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="Caption" value="#ff0000Challenge Pack Database"/>
+                        <Property key="FontHeight" value="22"/>
+                    </Widget>
+                    <Widget type="TextBox" skin="TextBox" position_real="0.1001669449081803 0.625 0.80968280467445741 0.15778688524590165" name="hasAssets">
+                        <Property key="FontName" value="DejaVuSansFont_28"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="Caption" value="#ff0000Challenge Assets"/>
+                        <Property key="FontHeight" value="22"/>
+                    </Widget>
+                    <Widget type="TextBox" skin="TextBox" position_real="0.033388981636060099 0.79918032786885251 0.94323873121869783 0.19877049180327869">
+                        <Property key="FontName" value="DejaVuSansFont_28"/>
+                        <Property key="TextAlign" value="Center"/>
+                        <Property key="Caption" value="You can not play without these items.\nPlease visit the steam workshop to download the required items!"/>
+                        <Property key="FontHeight" value="20"/>
+                    </Widget>
+                </Widget>
+            </Widget>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>

@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" position_real="0 0 1 1" skin="PanelEmpty" name="xx01441" id="f4f214f3-23fc-42c9-8a95-af3c6b040cb8">
+        <Property key="NeedKey" value="true"/>
+        <Property key="NeedMouse" value="true"/>
+        <Widget type="Widget" position_real="0.041666666666666664 0.1574074074074074 0.5828125 0.7212962962962963" skin="PanelEmpty" name="ChallengePackPanel" id="36a95ccb-6db7-477f-823c-29b439316de0">
+            <Widget type="Widget" position_real="0 0 1 0.12708600770218229" skin="NonBlurryBackgroundDarkRoundedUpperRight" id="1bead903-ae9e-4a4b-b435-bb635a85f10c">
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+                <Widget type="ImageBox" position_real="0.03485254691689008 0.30303030303030304 0.025915996425379804 0.3939393939393939" skin="ImageBox" name="Icon" id="343ecc9e-4afb-435c-a618-e8a3d5e88ba2">
+                    <Property key="ImageTexture" value="IconChallengeMode.png"/>
+                </Widget>
+                <Widget type="TextBox" position_real="0.0777479892761394 0.36363636363636365 0.2359249329758713 0.29292929292929293" skin="TextBox" id="4c1317c8-0eb8-4b47-a858-756274724b93">
+                    <Property key="Caption" value="#{CHALLENGE_MENU_TITLE}"/>
+                    <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                    <Property key="TextAlign" value="Left VCenter"/>
+                </Widget>
+            </Widget>
+            <Widget type="Widget" position_real="0 0.12708600770218229 1 0.7445442875481386" skin="NonBlurryBackgroundLightSquared" id="459524d7-e4dd-49c7-9f0e-85c650cc776c">
+                <Widget type="ItemBox" position_real="0.035746201966041107 0.06896551724137931 0.9106344950848972 0.8603448275862069" skin="InventoryItemBox2" name="ChallengePackList" id="c9ac5e03-4fdf-444e-8c87-5f2b8b94fe72">
+                    <Widget type="Widget" position_real="0 0 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_0" id="9a5d3dae-d515-447e-abd6-4a7f4afc587e">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.2375" skin="PanelEmpty" id="7e785381-1323-4daf-bf30-9928637eebd9">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8888888888888888" skin="SelectionFieldBox" id="38f84742-4496-4421-b139-8fc6fc5f6023">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 0.9090909090909091" skin="ImageBox" name="Preview_0" id="8add4a48-b22b-412b-b7d9-1665b66353df">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_0" id="3da9cd2a-aa75-49b8-9536-e2661cf3cda0">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.09090909090909091 0.5296523517382413 0.5" skin="TextBox" name="Name_0" id="903eb24e-319f-4b10-8549-70aa412e7a26">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3987730061349693 0.45454545454545453 0.7934560327198364 0.5" skin="TextBox" name="ByLine_0" id="9d55f82d-c5c5-4cec-a76c-d7eb0452e125">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5681818181818182 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_0" id="041eff8f-d41b-4d99-835d-fde4d08aa063">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.022727272727272728 0.24335378323108384 0.75" skin="PanelEmpty" id="1228a4c9-1715-4527-ad17-0edbfcfa151f">
+                                    <Widget type="TextBox" position_real="0 0.2878787878787879 0.2857142857142857 0.3181818181818182" skin="TextBox" name="LeftValue_0" id="bcd2150d-efd6-4625-a225-0bc1ebfea71e">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6818181818181818 0.2857142857142857 0.3181818181818182" skin="TextBox" name="RightValue_0" id="e5a4a8ec-24dc-4f8e-ae2f-93edd4fc691a">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.3181818181818182 0.3277310924369748 0.6666666666666666" skin="ImageBox" id="1c973104-0af5-4be3-a190-f5658e48b8fc">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.9090909090909091" skin="HighlightSelectionBox" name="SelectBorder_0" id="b547e62a-2d2e-4106-9b57-3ffbf3ecb136">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_0" id="2630ef99-4595-488f-be93-a8d0f403236e">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0.4955839057899902 0 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_1" id="2ab2a8fe-8b47-41a7-ad19-fe237cadd21a">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1" skin="PanelEmpty" id="4221642e-752c-47af-b6f9-451e1ef441ca">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 1" skin="SelectionFieldBox" id="808938b1-0dfb-420d-9097-0999cae1cec3">
+                                <Widget type="ImageBox" position_real="0 0 0.28629856850715746 1" skin="ImageBox" name="Preview_1" id="99db6943-8567-4d2f-bdeb-49c59fc2a0f7">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_1" id="9eeefafd-89fa-4b26-b7c2-6db1981dd15a">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.1 0.5296523517382413 0.55" skin="TextBox" name="Name_1" id="c1fc0dc2-c5b9-42b6-9e72-a3dca15db859">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.5 0.7934560327198364 0.55" skin="TextBox" name="ByLine_1" id="7b984b1d-9ba0-4e95-afdd-08f3d02106be">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5625 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_1" id="7ddaed63-e33c-4419-ac22-8f41f3a85ede">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.025 0.24335378323108384 0.825" skin="PanelEmpty" id="25825262-7c8f-404c-8197-a3f7c37b59fa">
+                                    <Widget type="TextBox" position_real="0 0.2878787878787879 0.2857142857142857 0.3181818181818182" skin="TextBox" name="LeftValue_1" id="0c29dd25-6f60-4a64-8994-402d42c87ece">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6818181818181818 0.2857142857142857 0.3181818181818182" skin="TextBox" name="RightValue_1" id="e0301bde-df05-47c4-8a9f-fdf85e3814b9">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.3181818181818182 0.3277310924369748 0.6666666666666666" skin="ImageBox" id="f580b58a-66b4-419a-a766-7ab5e5896b14">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 1" skin="HighlightSelectionBox" name="SelectBorder_1" id="99f6bbca-081e-4b4b-8e22-f113a000d982">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_1" id="9773141a-aee4-49b3-8fef-40b9db667d3b">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0 0.18036072144288579 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_2" id="a9a78018-886c-4700-a229-01d0f25456f1">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.2" skin="PanelEmpty" id="5142bd47-a7ea-4c8e-a210-6995e0786200">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8333333333333334" skin="SelectionFieldBox" id="a9868590-7e4a-4c9d-af2f-58163b189c3f">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 1" skin="ImageBox" name="Preview_2" id="29808eab-2638-4ae7-b45a-71aa72726377">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_2" id="49713ce7-3452-4c51-8344-d192d3b80fc0">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.0625 0.5296523517382413 0.5125" skin="TextBox" name="Name_2" id="4145d6f6-483a-4eb3-b61e-0c688f02442d">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.4625 0.7934560327198364 0.5125" skin="TextBox" name="ByLine_2" id="37fd6db5-ee26-4b7e-ad4a-7562f47cc7f7">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.6 0.049079754601226995 0.2625" skin="ImageBox" name="ModIcon_2" id="a44684f7-f8f2-4dca-9440-0630ece08c57">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0 0.24335378323108384 0.7875" skin="PanelEmpty" id="4bb3d231-c403-4106-aba1-883b4ac83014">
+                                    <Widget type="TextBox" position_real="0 0.25396825396825395 0.2857142857142857 0.2857142857142857" skin="TextBox" name="LeftValue_2" id="b5a1ed7e-5113-4996-bfd8-33678911ebce">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6666666666666666 0.2857142857142857 0.2857142857142857" skin="TextBox" name="RightValue_2" id="c3fdac4f-2246-4a3d-a76f-3bac1c16b09d">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.2857142857142857 0.3277310924369748 0.6507936507936508" skin="ImageBox" id="2896b1b5-cd37-482e-b359-ac1f5d8b97fd">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 1" skin="HighlightSelectionBox" name="SelectBorder_2" id="dac4520c-b5b7-424f-a98f-fb52088969cb">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_2" id="97bc62ab-9579-4916-a360-b4b9c74342bb">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0.4955839057899902 0.18036072144288579 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_3" id="cf1fbaad-3516-4530-a98d-a7cf0417381c">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.3" skin="PanelEmpty" id="dc793cd9-4edd-4a75-994c-2c397188e840">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8846153846153846" skin="SelectionFieldBox" id="40d67822-cd77-42a6-8d88-8ded58352999">
+                                <Widget type="ImageBox" position_real="0 0 0.28629856850715746 0.8695652173913043" skin="ImageBox" name="Preview_3" id="b9c93a1f-3067-4eef-8fd8-1f6e7cc0b91d">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_3" id="fb597d6b-f476-44e3-ba24-38fde5a7c0e1">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.07608695652173914 0.5296523517382413 0.4891304347826087" skin="TextBox" name="Name_3" id="0bd89919-3d89-42fd-8083-40c8e0fde929">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.44565217391304346 0.7934560327198364 0.4891304347826087" skin="TextBox" name="ByLine_3" id="80e32acb-4446-45c1-9b0e-b7b34dedbbf5">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5543478260869565 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_3" id="c463d601-0e35-4392-b9cf-baab6a080659">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.010869565217391304 0.24335378323108384 0.7391304347826086" skin="PanelEmpty" id="d72284ca-b7e4-417e-97a3-48e004ad19fb">
+                                    <Widget type="TextBox" position_real="0 0.2647058823529412 0.2857142857142857 0.29411764705882354" skin="TextBox" name="LeftValue_3" id="e7a2e591-6758-48e8-b52b-b604f4998fdb">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6764705882352942 0.2857142857142857 0.29411764705882354" skin="TextBox" name="RightValue_3" id="08b37af0-2f91-4d49-bf8b-1bcee0f8349c">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.29411764705882354 0.3277310924369748 0.6470588235294118" skin="ImageBox" id="f05e4e41-a42c-49d5-b06e-adfaf7e593b9">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.8695652173913043" skin="HighlightSelectionBox" name="SelectBorder_3" id="29b38ba7-c4c1-4cfb-89eb-99e5f36c18fb">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_3" id="808f4299-55a9-4b6b-99c8-fb30ec1c9446">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0 0.36072144288577157 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_4" id="65f506cd-346c-4e68-a8b8-e1d7fa2c9ece">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.275" skin="PanelEmpty" id="dcefe4f4-02c9-41af-af92-06f17584cff2">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8823529411764706" skin="SelectionFieldBox" id="b84c891e-e22f-4bf5-8ae3-d5903c8bd901">
+                                <Widget type="ImageBox" position_real="0 0 0.28629856850715746 0.8888888888888888" skin="ImageBox" name="Preview_4" id="83663003-13a3-4679-97dc-9c57a59f3575">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1 1.0125" skin="HighlightSelectionBox" name="PreviewSelectBorder_4" id="25303f43-b4ef-4755-ac49-b85edcef19b6">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.05555555555555555 0.5296523517382413 0.4777777777777778" skin="TextBox" name="Name_4" id="78e4410c-f0eb-41cc-96b5-a2e3b1d89db7">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.43333333333333335 0.7934560327198364 0.4777777777777778" skin="TextBox" name="ByLine_4" id="1a9093d2-926e-4923-9416-41d0938b16f7">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5666666666666667 0.049079754601226995 0.24444444444444444" skin="ImageBox" name="ModIcon_4" id="eb4eb6e1-1a1c-4da3-a46a-332289dbd11c">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0 0.24335378323108384 0.7333333333333333" skin="PanelEmpty" id="d0a52a44-beff-4d89-b693-5ceea5f9a8ce">
+                                    <Widget type="TextBox" position_real="0 0.24242424242424243 0.2857142857142857 0.2727272727272727" skin="TextBox" name="LeftValue_4" id="9081563a-8ca5-4ab6-bd16-da545a280499">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6666666666666666 0.2857142857142857 0.2727272727272727" skin="TextBox" name="RightValue_4" id="05bf3818-7168-4ac7-b845-f7857cc2fac4">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.2727272727272727 0.3277310924369748 0.6363636363636364" skin="ImageBox" id="9c691f0d-89bc-4dcb-946e-4649c0a8b057">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.8888888888888888" skin="HighlightSelectionBox" name="SelectBorder_4" id="3f76043b-2761-4e1e-9135-a323f6ad7ddb">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_4" id="c901aa2a-6eec-4047-b7d8-5bdc54fc1730">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0.4955839057899902 0.36072144288577157 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_5" id="f4cbcf0d-4a04-4e71-acd3-7f85af367a72">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.3" skin="PanelEmpty" id="c38cfab5-56c6-44f1-8f08-b54d14582c39">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8846153846153846" skin="SelectionFieldBox" id="ab6d91a9-d44f-4874-ba68-4b1f4d9da7e3">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 0.8695652173913043" skin="ImageBox" name="Preview_5" id="126195be-203c-4200-a874-b67cfaa2cde8">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_5" id="68c259b5-6779-40bf-b111-2df1a1862ede">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.07608695652173914 0.5296523517382413 0.4891304347826087" skin="TextBox" name="Name_5" id="598a2935-aaba-4555-9abc-6b35250a6bff">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.44565217391304346 0.7934560327198364 0.4891304347826087" skin="TextBox" name="ByLine_5" id="a9d81469-a674-4353-985b-9cd5c72b8fb1">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5543478260869565 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_5" id="10cb22b8-25fb-4308-84d7-17c2a1085e41">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.010869565217391304 0.24335378323108384 0.7391304347826086" skin="PanelEmpty" id="4799225d-97c7-4063-912a-267b3e05eddb">
+                                    <Widget type="TextBox" position_real="0 0.2647058823529412 0.2857142857142857 0.29411764705882354" skin="TextBox" name="LeftValue_5" id="aa842e08-8a50-4e21-b7cd-7da03662a039">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6764705882352942 0.2857142857142857 0.29411764705882354" skin="TextBox" name="RightValue_5" id="4cd20ab8-a247-4724-af60-741bce6b0e15">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.29411764705882354 0.3277310924369748 0.6470588235294118" skin="ImageBox" id="bf24a888-5b9f-4b82-8da6-3a04097c7ed2">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.8695652173913043" skin="HighlightSelectionBox" name="SelectBorder_5" id="34d63725-be74-4b5e-b0e6-5da7e078bc40">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_5" id="d3653cd0-85e9-46c9-bd16-cce8917cd0eb">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0 0.5410821643286573 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_6" id="44f7fac6-9a9e-4989-b0ba-94c80bed8e16">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.275" skin="PanelEmpty" id="83bdfb05-f90f-4c67-9cc9-635bf8b44b9e">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8823529411764706" skin="SelectionFieldBox" id="f8dd40c1-574c-4362-aff9-c56e84981156">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 0.8888888888888888" skin="ImageBox" name="Preview_6" id="6b731a0d-18ff-4474-a6a5-199273fd3ace">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_6" id="4e3d365a-64c0-46be-90fb-6b9dab7d155a">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.05555555555555555 0.5296523517382413 0.4777777777777778" skin="TextBox" name="Name_6" id="05ade12e-af4c-45e2-8e1d-810088eca37d">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.43333333333333335 0.7934560327198364 0.4777777777777778" skin="TextBox" name="ByLine_6" id="05d60a9f-a2ab-4d4f-9744-eda648811876">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5666666666666667 0.049079754601226995 0.24444444444444444" skin="ImageBox" name="ModIcon_6" id="2e2743b1-df54-467f-ae74-6b4af7a27ba2">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0 0.24335378323108384 0.7333333333333333" skin="PanelEmpty" id="4f0716cb-468b-4dca-8cb7-78ab0e716a3d">
+                                    <Widget type="TextBox" position_real="0 0.24242424242424243 0.2857142857142857 0.2727272727272727" skin="TextBox" name="LeftValue_6" id="374e1e5c-25dd-41fc-ae76-e710b905a4f9">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6666666666666666 0.2857142857142857 0.2727272727272727" skin="TextBox" name="RightValue_6" id="8c239fe3-3a0b-464f-9ac6-02505bfb25d2">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.2727272727272727 0.3277310924369748 0.6363636363636364" skin="ImageBox" id="f301cf4e-e97d-466c-9e50-058ef27fa2e2">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.8888888888888888" skin="HighlightSelectionBox" name="SelectBorder_6" id="0d87744a-6dc7-42fe-bde0-12d4c47480a2">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_6" id="11c37116-1658-41df-9a07-453b207614ff">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0.4955839057899902 0.5410821643286573 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_7" id="95b62d65-13ac-4d32-b1be-a9d7a0c85862">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.3" skin="PanelEmpty" id="189b950f-c21c-40b6-a345-78fc01bd95eb">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8846153846153846" skin="SelectionFieldBox" id="8697d2c9-de96-4ca7-a8d1-3bc0f811b1ed">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 0.8695652173913043" skin="ImageBox" name="Preview_7" id="14f33974-7943-4927-8572-bdeb1daa9d73">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_7" id="b9d28141-f703-4cda-bf6b-24f794858536">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.07608695652173914 0.5296523517382413 0.4891304347826087" skin="TextBox" name="Name_7" id="45a27822-4077-4a16-adf5-077f725ee8cf">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.44565217391304346 0.7934560327198364 0.4891304347826087" skin="TextBox" name="ByLine_7" id="d15f90f0-46b1-4010-9058-48a83d69fa3a">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5543478260869565 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_7" id="f4d68c18-ef6c-46a5-8f74-ef68750c521b">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.010869565217391304 0.24335378323108384 0.7391304347826086" skin="PanelEmpty" id="80042cb4-e883-4af6-b4f5-a157ae9988bd">
+                                    <Widget type="TextBox" position_real="0 0.2647058823529412 0.2857142857142857 0.29411764705882354" skin="TextBox" name="LeftValue_7" id="27cc5e3a-95a9-420d-b096-b78311c1fd82">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6764705882352942 0.2857142857142857 0.29411764705882354" skin="TextBox" name="RightValue_7" id="cd97c062-7c6e-46fc-aad4-46b5eab1e145">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.29411764705882354 0.3277310924369748 0.6470588235294118" skin="ImageBox" id="8a84a534-d7ba-45b4-b19c-25c09f57f4c3">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.8695652173913043" skin="HighlightSelectionBox" name="SelectBorder_7" id="1ca929ea-7427-498f-93c3-acd7371493ea">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_7" id="30b9105b-5814-4dff-9461-4944c09429ce">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0 0.7214428857715431 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_8" id="904467de-e6fe-4b2a-b246-06d42a9f3630">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.2375" skin="PanelEmpty" id="ac0106fd-da67-485b-9fc0-bdcca1084049">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8888888888888888" skin="SelectionFieldBox" id="7b9162b1-142c-4fe8-8baf-36a60349e6b9">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 0.9090909090909091" skin="ImageBox" name="Preview_8" id="340b5b8e-2aa9-412b-9731-5474824f5061">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_8" id="2765c87b-812d-4b89-af4b-c3eebf3ddff1">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.09090909090909091 0.5296523517382413 0.5" skin="TextBox" name="Name_8" id="87275f52-d912-4bff-95c2-34f775f98392">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.45454545454545453 0.7934560327198364 0.5" skin="TextBox" name="ByLine_8" id="25f029f2-cd24-4899-8ec1-49bc5e492abe">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5681818181818182 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_8" id="0713ff84-557b-410e-9fe9-6d32e3e9981a">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.022727272727272728 0.24335378323108384 0.75" skin="PanelEmpty" id="28d99673-60e7-41d3-828a-42b06cd04e5a">
+                                    <Widget type="TextBox" position_real="0 0.2878787878787879 0.2857142857142857 0.3181818181818182" skin="TextBox" name="LeftValue_8" id="2e96efe8-52c6-4d0d-ad0e-067715f74c40">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6818181818181818 0.2857142857142857 0.3181818181818182" skin="TextBox" name="RightValue_8" id="a5be1baa-b472-4935-8e6c-384683ab4398">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.3181818181818182 0.3277310924369748 0.6666666666666666" skin="ImageBox" id="a94b8915-33eb-4fd4-b536-b58d4ba280f9">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.9090909090909091" skin="HighlightSelectionBox" name="SelectBorder_8" id="c18237ff-a987-4e65-a11a-395810c6ef64">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_8" id="dfd3beba-1813-42e3-ad5a-15cae9f85e69">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0.4955839057899902 0.7214428857715431 0.48086359175662413 0.16032064128256512" skin="PanelEmpty" name="ChallengePack_9" id="4fd2e261-8e8d-4439-9f9b-434de2bcf2d1">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.2375" skin="PanelEmpty" id="50238894-d2d6-42a4-a885-d9138148c112">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8888888888888888" skin="SelectionFieldBox" id="84c99337-29f4-4349-a898-3aa0991e284a">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 0.9090909090909091" skin="ImageBox" name="Preview_9" id="9f8a6af5-9b83-42e1-9d77-6820efe193b9">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 1" skin="HighlightSelectionBox" name="PreviewSelectBorder_9" id="99c4719b-3c6d-4027-a4f9-09695059e531">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.09090909090909091 0.5296523517382413 0.5" skin="TextBox" name="Name_9" id="f1b4839d-4ca1-4e5f-83f9-e95562361067">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.45454545454545453 0.7934560327198364 0.5" skin="TextBox" name="ByLine_9" id="8c147b66-a880-4926-818d-abe1eb8324e2">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5681818181818182 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_9" id="37fe5dfa-3fea-47f6-8176-ea1003f8be36">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.022727272727272728 0.24335378323108384 0.75" skin="PanelEmpty" id="b23570fd-c25f-478a-8c6f-952f147578ec">
+                                    <Widget type="TextBox" position_real="0 0.2878787878787879 0.2857142857142857 0.3181818181818182" skin="TextBox" name="LeftValue_9" id="90da2847-a9f4-4886-8c55-8359f8984eba">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6818181818181818 0.2857142857142857 0.3181818181818182" skin="TextBox" name="RightValue_9" id="2dc3ac21-8fa5-4932-9ae8-af5dff4f660f">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.3181818181818182 0.3277310924369748 0.6666666666666666" skin="ImageBox" id="577c2f10-8630-4b39-9da6-3620ea431539">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.9090909090909091" skin="HighlightSelectionBox" name="SelectBorder_9" id="96d9205d-5485-4d12-abac-c7af5fffa182">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_9" id="e0000768-7a63-44ef-ad55-a491b1dee5a8">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0 0.9018036072144289 0.48086359175662413 0.17034068136272545" skin="PanelEmpty" name="ChallengePack_10" id="26407a5d-fb00-4933-a8d1-33765528550a">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.1647058823529413" skin="PanelEmpty" id="e91a7ba7-6c5e-4496-9c0b-04df3e0f5f0f">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8888888888888888" skin="SelectionFieldBox" id="a5bc28a0-161a-4d6c-8c9b-2aceadcc0af7">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 1" skin="ImageBox" name="Preview_10" id="38d5d724-0cf5-4d6d-abf4-5370d7fe07b0">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 0.9090909090909091" skin="HighlightSelectionBox" name="PreviewSelectBorder_10" id="08fe96e1-2c4a-4e12-9044-714f2fbc2e67">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.09090909090909091 0.5296523517382413 0.5" skin="TextBox" name="Name_10" id="292a6e59-80c3-4b77-80b9-879a6a6548e7">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.45454545454545453 0.7934560327198364 0.5" skin="TextBox" name="ByLine_10" id="59aae918-d63f-4d69-ac6c-2fab5477c3bc">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5681818181818182 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_10" id="2c4b6a16-0ab9-46a4-aef6-11aa0ea25b7c">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.022727272727272728 0.24335378323108384 0.75" skin="PanelEmpty" id="dc31ff2e-3c4e-4aa4-ac74-55b4e51467d2">
+                                    <Widget type="TextBox" position_real="0 0.2878787878787879 0.2857142857142857 0.3181818181818182" skin="TextBox" name="LeftValue_10" id="07368c08-8ee4-4732-a280-4d2b35fd1334">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6818181818181818 0.2857142857142857 0.3181818181818182" skin="TextBox" name="RightValue_10" id="d78255ed-3077-4cce-9baa-a7b34715b126">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.3181818181818182 0.3277310924369748 0.6666666666666666" skin="ImageBox" id="6649a84d-283f-4678-9c39-17b3477d3e63">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.8636363636363636" skin="HighlightSelectionBox" name="SelectBorder_10" id="527b7274-588e-463a-8832-dac6e1b2a75c">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_10" id="68222735-1fa4-4ca2-8a03-cee48490dbb6">
+                            
+                        </Widget>
+                    </Widget>
+                    <Widget type="Widget" position_real="0.4955839057899902 0.9018036072144289 0.48086359175662413 0.17034068136272545" skin="PanelEmpty" name="ChallengePack_11" id="c9ef6afd-df1e-49d0-999b-3c6e52e7da5c">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" position_real="0 0 0.9979591836734694 1.1647058823529413" skin="PanelEmpty" id="9baa0736-e24d-4f82-a79e-398c13e08154">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" position_real="0 0 1 0.8888888888888888" skin="SelectionFieldBox" id="99b2e891-3bd5-448c-87fa-c985d2a54706">
+                                <Widget type="ImageBox" position_real="0 0 0.2842535787321063 1" skin="ImageBox" name="Preview_11" id="eb684c4c-8e45-4d0b-b1d1-c98d68996658">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" position_real="0 0 1.0071942446043165 0.9090909090909091" skin="HighlightSelectionBox" name="PreviewSelectBorder_11" id="6e86a28f-7942-4adc-a224-fe6c1ed914bb">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.32515337423312884 0.09090909090909091 0.5296523517382413 0.5" skin="TextBox" name="Name_11" id="c1745674-12cd-41d9-9574-4c65e738ef5a">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="TextBox" position_real="0.3946830265848671 0.45454545454545453 0.7934560327198364 0.5" skin="TextBox" name="ByLine_11" id="f6d26591-a828-4230-89f3-fe1bff1d69ba">
+                                    <Property key="Caption" value="By line"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_TextTiny"/>
+                                </Widget>
+                                <Widget type="ImageBox" position_real="0.3374233128834356 0.5681818181818182 0.049079754601226995 0.25" skin="ImageBox" name="ModIcon_11" id="201b763b-3ba6-40ca-944a-305ce9f5e312">
+                                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                                    <Property key="Alpha" value="0.25"/>
+                                </Widget>
+                                <Widget type="Widget" position_real="0.83640081799591 0.022727272727272728 0.24335378323108384 0.75" skin="PanelEmpty" id="00da84c1-8287-4247-9a79-babddaf994a0">
+                                    <Widget type="TextBox" position_real="0 0.2878787878787879 0.2857142857142857 0.3181818181818182" skin="TextBox" name="LeftValue_11" id="9a3ed1e9-49c3-4120-a55a-0af35d6edd83">
+                                        <Property key="Caption" value="0"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Right VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="TextBox" position_real="0.29411764705882354 0.6818181818181818 0.2857142857142857 0.3181818181818182" skin="TextBox" name="RightValue_11" id="8ddbaa20-d31e-4a70-8a68-f5d3dee08de7">
+                                        <Property key="Caption" value="999"/>
+                                        <Property key="FontName" value="SM_TextLabel"/>
+                                        <Property key="TextAlign" value="Center VCenter"/>
+                                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                                    </Widget>
+                                    <Widget type="ImageBox" position_real="0.16806722689075632 0.3181818181818182 0.3277310924369748 0.6666666666666666" skin="ImageBox" id="bce26499-1b86-4dd2-be36-748e58424b60">
+                                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="Widget" position_real="0 0 1.0020449897750512 0.8636363636363636" skin="HighlightSelectionBox" name="SelectBorder_11" id="b2c445f0-bd6f-49d3-a0fd-85862e367ac2">
+                                    
+                                </Widget>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" position_real="0 0 1 1" skin="PanelEmpty" name="ChallengeButton_11" id="abaf5acc-995a-4d6c-89e4-c8560f89c9ce">
+                            
+                        </Widget>
+                    </Widget>
+                </Widget>
+                <Widget type="ScrollBar" position_real="0.9499553172475425 0.07758620689655173 0.02680965147453083 0.853448275862069" skin="InventoryVSlider" name="ChallengePackScroll" id="e615eeb2-4982-4a02-9557-6d43ccab8924">
+                    
+                </Widget>
+            </Widget>
+            <Widget type="Widget" position_real="0 0.8716302952503209 1 0.12708600770218229" skin="NonBlurryBackgroundDarkRoundedLowerLeft" id="9db2504d-935b-4d2f-b253-20c92e4414e3">
+                <Widget type="Button" position_real="0.03127792672028597 0.26262626262626265 0.21358355674709562 0.3939393939393939" skin="SecondaryButton" name="ExitChallengePack" id="bd2be974-bb21-4834-bedb-510ea59fb977">
+                    <Property key="Visible" value="false"/>
+                    <Property key="Caption" value="CLOSE"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="TextAlign" value="Center"/>
+                </Widget>
+                <Widget type="Button" position_real="0.7497765862377123 0.21212121212121213 0.22430741733690795 0.5151515151515151" skin="PrimaryButton" name="SelectChallengePack" id="116b2686-7882-4538-acd4-01059484e573">
+                    <Property key="Caption" value="#{CHALLENGE_MENU_SELECT_CHALLENGE}"/>
+                    <Property key="FontName" value="SM_ButtonSmallBold"/>
+                    <Property key="TextAlign" value="Center"/>
+                </Widget>
+            </Widget>
+        </Widget>
+        <Widget type="Widget" position_real="0.6255208333333333 0.1574074074074074 0.1765625 0.7212962962962963" skin="BackgroundMenuChallenge_challengebuilder" name="ChallengeBuilderPanel" id="58e95071-7c7b-4f6c-9f66-1854358ee2a7">
+            <Widget type="TextBox" position_real="0.05604719764011799 0.6225930680359435 0.8820058997050148 0.07573812580231065" skin="TextBox" name="Title_0" id="7479b137-ac4b-423f-a624-1faad26766ff">
+                <Property key="Caption" value="#{BUILD}"/>
+                <Property key="FontName" value="SM_HeaderMedium"/>
+                <Property key="TextAlign" value="VCenter HCenter"/>
+            </Widget>
+            <Widget type="TextBox" position_real="0.05604719764011799 0.6598202824133504 0.8820058997050148 0.07573812580231065" skin="TextBox" name="Title_1" id="5b6e289b-6a18-4c5c-856c-0fab29118e24">
+                <Property key="Caption" value="#{CHALLENGE_MENU_BUILDER_TITLE_LINE_2}"/>
+                <Property key="FontName" value="SM_HeaderMedium"/>
+                <Property key="TextAlign" value="VCenter HCenter"/>
+            </Widget>
+            <Widget type="TextBox" position_real="0.05604719764011799 0.6957637997432606 0.8820058997050148 0.07573812580231065" skin="TextBox" name="Title_2" id="8bc132d6-8ec9-4af6-a63c-ea28407d4f89">
+                <Property key="Caption" value="#{CHALLENGE_MENU_BUILDER_TITLE_LINE_3}"/>
+                <Property key="FontName" value="SM_HeaderMedium"/>
+                <Property key="TextAlign" value="VCenter HCenter"/>
+            </Widget>
+            <Widget type="TextBox" position_real="0.05604719764011799 0.7406931964056482 0.8820058997050148 0.07573812580231065" skin="TextBox" name="DescriptionRow1" id="1b001d3b-17d9-4620-9cd0-82d07285a755">
+                <Property key="Caption" value="#{CHALLENGE_MENU_BUILDER_DESCRIPTION_LINE_1}"/>
+                <Property key="FontName" value="SM_TextSmall"/>
+                <Property key="TextAlign" value="VCenter HCenter"/>
+                <Property key="TextColour" value="0.65 0.65 0.65"/>
+            </Widget>
+            <Widget type="TextBox" position_real="0.05604719764011799 0.7715019255455713 0.8820058997050148 0.07573812580231065" skin="TextBox" name="DescriptionRow2" id="e9d21512-aa09-4038-ba90-f3767c894055">
+                <Property key="Caption" value="#{CHALLENGE_MENU_BUILDER_DESCRIPTION_LINE_2}"/>
+                <Property key="FontName" value="SM_TextSmall"/>
+                <Property key="TextAlign" value="VCenter HCenter"/>
+                <Property key="TextColour" value="0.65 0.65 0.65"/>
+            </Widget>
+            <Widget type="TextBox" position_real="0.05604719764011799 0.8023106546854942 0.8820058997050148 0.07573812580231065" skin="TextBox" name="DescriptionRow3" id="99a76fb5-9739-4568-8de8-6ee2b9ee62dd">
+                <Property key="Caption" value="#{CHALLENGE_MENU_BUILDER_DESCRIPTION_LINE_3}"/>
+                <Property key="FontName" value="SM_TextSmall"/>
+                <Property key="TextAlign" value="VCenter HCenter"/>
+                <Property key="TextColour" value="0.65 0.65 0.65"/>
+            </Widget>
+            <Widget type="Button" position_real="0.12389380530973451 0.8998716302952503 0.7404129793510325 0.06546854942233633" skin="ActiveButton" name="ChallengeBuilder" id="eea07a6b-b524-4380-a5b7-d05bcd7f2aac">
+                <Property key="Caption" value="#{CHALLENGE_BUILDER_2}"/>
+                <Property key="FontName" value="SM_ButtonSmallBold"/>
+                <Property key="TextAlign" value="Center"/>
+            </Widget>
+        </Widget>
+        <Widget type="Widget" position_real="0.8015625 0.1574074074074074 0.15625 0.7212962962962963" skin="BackgroundMenuDownload" name="ModBrowserPanel" id="dcc8bee0-ac74-4bb6-8355-29cf41abed9c">
+            <Widget type="ImageBox" position_real="0.2 0.38125802310654683 0.6 0.12708600770218229" skin="ImageBox" name="Icon" id="0149c0ac-4c85-4b78-8be2-4f69d26941da">
+                <Property key="ImageTexture" value="IconComingSoon.png"/>
+            </Widget>
+            <Widget type="Button" position_real="0.08 0.8998716302952503 0.84 0.06546854942233633" skin="ActiveButton" name="BrowseMods" id="f5b1d901-ca91-417a-afe4-a4797b9d0338">
+                <Property key="Caption" value="#{BROWSE}"/>
+                <Property key="FontName" value="SM_ButtonSmall"/>
+                <Property key="TextAlign" value="Center"/>
+                <Widget type="ImageBox" position_real="0.06349206349206349 0.29411764705882354 0.07936507936507936 0.37254901960784315" skin="ImageBox" name="Icon" id="63435070-4bb8-4a19-a439-13fd532e8240">
+                    <Property key="ImageTexture" value="IconSteamDefault.png"/>
+                    <Property key="Colour" value="1 0.8156863 0.2745098"/>
+                    <Property key="Alpha" value="0.5"/>
+                </Widget>
+            </Widget>
+        </Widget>
+        <Widget type="ImageBox" position_real="0.5942708333333333 0.7398148148148148 0.018229166666666668 0.03148148148148148" skin="ImageBox" name="No_DownIcon" id="d95777c1-8d2b-4fb1-b1d6-fc8baf362721">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\down.png"/>
+            <Property key="Alpha" value="0.2"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" position_real="0.5942708333333333 0.26851851851851855 0.018229166666666668 0.03148148148148148" skin="ImageBox" name="No_UpIcon" id="bb3fba9e-fb0c-4b6d-ab5c-486abe45a127">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\up.png"/>
+            <Property key="Alpha" value="0.2"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" position_real="0.5942708333333333 0.26851851851851855 0.018229166666666668 0.03148148148148148" skin="ImageBox" name="UpIcon" id="ff0cf69b-b766-424a-a2f9-9bac4ccf0d49">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\up_selected.png"/>
+        </Widget>
+        <Widget type="ImageBox" position_real="0.5942708333333333 0.7398148148148148 0.018229166666666668 0.03148148148148148" skin="ImageBox" name="DownIcon" id="8d4b5689-aaae-4a2a-a428-27b5a9e29be3">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\down_selected.png"/>
+        </Widget>
+        <Widget type="Button" position_real="0.5942708333333333 0.26851851851851855 0.018229166666666668 0.03148148148148148" skin="PanelEmpty" name="UpArrow" id="db05d006-3f73-4790-b7b3-858893bd62ad">
+            
+        </Widget>
+        <Widget type="Button" position_real="0.5942708333333333 0.7398148148148148 0.018229166666666668 0.03148148148148148" skin="PanelEmpty" name="DownArrow" id="5ffa534a-7db4-4eb7-ae81-20a80599fc0b">
+            
+        </Widget>
+    </Widget>
+    <Widget type="Button" position_real="0.0375 0.06851851851851852 0.12708333333333333 0.05555555555555555" skin="MenuButton" name="Back" id="13c0194f-4166-4ac5-be91-d9852ff0b058">
+        <Widget type="ImageBox" position_real="0.05327868852459016 0.25 0.11475409836065574 0.5" skin="ImageBox" name="BackButtomImage" id="b19c6bb4-67c7-4e7c-adec-45cac3c33cce">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/gui_icon_back.png"/>
+            <Property key="NeedMouse" value="false"/>
+            <Property key="NeedKey" value="false"/>
+        </Widget>
+        <Widget type="TextBox" position_real="0.22131147540983606 0.1 0.4426229508196721 0.8" skin="TextBox" id="d8a4d1be-c1ca-4bce-b129-3b8af58bce80">
+            <Property key="Caption" value="#{BACK}"/>
+            <Property key="FontName" value="SM_ButtonLarge"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+        </Widget>
+        <Widget type="Button" position_real="0.6926229508196722 0.25 0.19672131147540983 0.5" skin="EscButton" id="74582462-086f-4153-96b2-ef8d33f5764a">
+            <Property key="NeedMouse" value="false"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="TextAlign" value="Center"/>
+        </Widget>
+    </Widget>
+</MyGUI>

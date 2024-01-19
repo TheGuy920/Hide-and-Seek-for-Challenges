@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1" name="xx01441">
+        <Property key="NeedKey" value="true"/>
+        <Property key="NeedMouse" value="true"/>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.041666666666666664 0.15740740740740741 0.75 0.72129629629629632" name="ChallengePanel">
+            <Widget type="Widget" skin="NonBlurryBackgroundDarkRoundedUpperRight" position_real="0 0 1 0.12836970474967907">
+                <Property key="NeedKey" value="false"/>
+                <Property key="NeedMouse" value="false"/>
+                <Widget type="ImageBox" skin="ImageBox" position_real="0.027777777777777776 0.29999999999999999 0.02013888888888889 0.39000000000000001" name="Icon">
+                    <Property key="ImageTexture" value="IconChallengeMode.png"/>
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" position_real="0.060416666666666667 0.35999999999999999 0.87638888888888888 0.28000000000000003">
+                    <Property key="Caption" value="#{CHALLENGE_PACK_MENU_TITLE}"/>
+                    <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                    <Property key="TextAlign" value="Left VCenter"/>
+                </Widget>
+                <Widget type="Widget" skin="PanelEmpty" position_real="0.93402777777777779 0.11 0.082638888888888887 0.56000000000000005" name="Progress">
+                    <Widget type="TextBox" skin="TextBox" position_real="0 0.25 0.2857142857142857 0.2857142857142857" name="LeftValue">
+                        <Property key="Caption" value="999"/>
+                        <Property key="FontName" value="SM_TextLabel"/>
+                        <Property key="TextAlign" value="Right VCenter"/>
+                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                    </Widget>
+                    <Widget type="TextBox" skin="TextBox" position_real="0.29411764705882354 0.6607142857142857 0.2857142857142857 0.2857142857142857" name="RightValue">
+                        <Property key="Caption" value="999"/>
+                        <Property key="FontName" value="SM_TextLabel"/>
+                        <Property key="TextAlign" value="Center VCenter"/>
+                        <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                    </Widget>
+                    <Widget type="ImageBox" skin="ImageBox" position_real="0.16806722689075632 0.2857142857142857 0.32773109243697479 0.6428571428571429">
+                        <Property key="ImageTexture" value="IconLine45Degree.png"/>
+                    </Widget>
+                </Widget>
+            </Widget>
+            <Widget type="Widget" skin="NonBlurryBackgroundLightRoundedLowerLeft" position_real="0 0.12836970474967907 1 0.87163029525032087">
+                <Widget type="ItemBox" skin="InventoryItemBox2" position_real="0.027777777777777776 0.057437407952871868 0.91666666666666663 0.88217967599410896" name="ChallengesList">
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0 0 0.3196969696969697 0.14858096828046743" name="ChallengePlay_0">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_0">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_0">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_0">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_0"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_0"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.32954545454545453 0 0.3196969696969697 0.14858096828046743" name="ChallengePlay_1">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_1">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_1">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_1">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_1"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_1"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.65909090909090906 0 0.3196969696969697 0.14858096828046743" name="ChallengePlay_2">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_2">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_2">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_2">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_2"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_2"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0 0.14858096828046743 0.3196969696969697 0.14858096828046743" name="ChallengePlay_3">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_3">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_3">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_3">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_3"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_3"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.32954545454545453 0.14858096828046743 0.3196969696969697 0.14858096828046743" name="ChallengePlay_4">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_4">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_4">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_4">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_4"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_4"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.65909090909090906 0.14858096828046743 0.3196969696969697 0.14858096828046743" name="ChallengePlay_5">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_5">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_5">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_5">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_5"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_5"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0 0.29883138564273792 0.3196969696969697 0.14858096828046743" name="ChallengePlay_6">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_6">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_6">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_6">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_6"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_6"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.32954545454545453 0.29883138564273792 0.3196969696969697 0.14858096828046743" name="ChallengePlay_7">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_7">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_7">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_7">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_7"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_7"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.65909090909090906 0.29883138564273792 0.3196969696969697 0.14858096828046743" name="ChallengePlay_8">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_8">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_8">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_8">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_8"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_8"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0 0.44908180300500833 0.3196969696969697 0.14858096828046743" name="ChallengePlay_9">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_9">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_9">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_9">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_9"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_9"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.32954545454545453 0.45075125208681133 0.3196969696969697 0.14858096828046743" name="ChallengePlay_10">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_10">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_10">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_10">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_10"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_10"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.65909090909090906 0.44908180300500833 0.3196969696969697 0.14858096828046743" name="ChallengePlay_11">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_11">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_11">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_11">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_11"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_11"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0 0.59432387312186974 0.3196969696969697 0.14858096828046743" name="ChallengePlay_12">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_12">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_12">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_12">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_12"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_12"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.32954545454545453 0.59265442404006674 0.3196969696969697 0.14858096828046743" name="ChallengePlay_13">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_13">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_13">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_13">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_13"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_13"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.65909090909090906 0.59432387312186974 0.3196969696969697 0.14858096828046743" name="ChallengePlay_14">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_14">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_14">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_14">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_14"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_14"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0 0.74457429048414026 0.3196969696969697 0.14858096828046743" name="ChallengePlay_15">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_15">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_15">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_15">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_15"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_15"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.32954545454545453 0.74290484140233726 0.3196969696969697 0.14858096828046743" name="ChallengePlay_16">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_16">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_16">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_16">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_16"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_16"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.65909090909090906 0.74457429048414026 0.3196969696969697 0.14858096828046743" name="ChallengePlay_17">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_17">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_17">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_17">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_17"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_17"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0 0.89482470784641066 0.3196969696969697 0.14858096828046743" name="ChallengePlay_18">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_18">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_18">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_18">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_18"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_18"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.32954545454545453 0.89315525876460766 0.3196969696969697 0.14858096828046743" name="ChallengePlay_19">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_19">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_19">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_19">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_19"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_19"/>
+                    </Widget>
+                    <Widget type="Widget" skin="PanelEmpty" position_real="0.65909090909090906 0.89482470784641066 0.3196969696969697 0.14858096828046743" name="ChallengePlay_20">
+                        <Property key="NeedKey" value="true"/>
+                        <Property key="NeedMouse" value="true"/>
+                        <Property key="Visible" value="false"/>
+                        <Widget type="Widget" skin="PanelEmpty" position_real="0 0 1 1">
+                            <Property key="NeedMouse" value="false"/>
+                            <Property key="NeedKey" value="false"/>
+                            <Widget type="Button" skin="SelectionFieldBox" position_real="0 0 1 0.88764044943820219">
+                                <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.28436018957345971 1" name="Preview_20">
+                                    <Property key="ImageTexture" value="challenge_missing_icon_small.png"/>
+                                    <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1.0666666666666667 1" name="PreviewSelectBorder_20">
+                                        <Property key="Visible" value="false"/>
+                                    </Widget>
+                                </Widget>
+                                <Widget type="TextBox" skin="TextBox" position_real="0.3246445497630332 0.21518987341772153 0.52606635071090047 0.49367088607594939" name="Name_20">
+                                    <Property key="Caption" value="Game Name"/>
+                                    <Property key="TextAlign" value="Left VCenter"/>
+                                    <Property key="FontName" value="SM_ListItem"/>
+                                </Widget>
+                                <Widget type="Widget" skin="HighlightSelectionBox" position_real="0 0 1 1" name="SelectBorder_20"/>
+                            </Widget>
+                        </Widget>
+                        <Widget type="Button" skin="PanelEmpty" position_real="0 0 1 1" name="ChallengeButton_20"/>
+                    </Widget>
+                </Widget>
+                <Widget type="ScrollBar" skin="InventoryVSlider" position_real="0.94791666666666663 0.063328424153166418 0.02013888888888889 0.84241531664212077" name="ChallengesScroll"/>
+            </Widget>
+        </Widget>
+        <Widget type="Widget" skin="BackgroundMenuChallenge" position_real="0.80156249999999996 0.12037037037037036 0.15625 0.7583333333333333" name="ChallengeInfoPanel">
+            <Widget type="TextBox" skin="TextBox" position_real="0.089999999999999997 0.43467643467643469 0.81000000000000005 0.070818070818070816" name="ChallengeName">
+                <Property key="Caption" value="Challenge Name"/>
+                <Property key="FontName" value="SM_GameName"/>
+                <Property key="TextAlign" value="Left Top"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.10000000000000001 0.53357753357753357 0.80666666666666664 0.0231990231990232" name="RecordContainer">
+                <Widget type="TextBox" skin="TextBox" position_real="0.41735537190082644 0 0.5826446280991735 1" name="RecordTime">
+                    <Property key="Caption" value="2d 32h 56h"/>
+                    <Property key="FontName" value="SM_LabelTiny"/>
+                    <Property key="TextAlign" value="Right VCenter"/>
+                    <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" position_real="0.095041322314049589 0 0.62809917355371903 1" name="RecordTimeLabel">
+                    <Property key="Caption" value="#{PLAYTIME}"/>
+                    <Property key="FontName" value="SM_LabelTiny"/>
+                    <Property key="TextAlign" value="Left VCenter"/>
+                    <Property key="TextColour" value="0.57 0.57 0.57"/>
+                </Widget>
+                <Widget type="ImageBox" skin="ImageBox" position_real="0 0.052631578947368418 0.061983471074380167 0.89473684210526316" name="RecordIcon">
+                    <Property key="ImageTexture" value="IconStopwatch.png"/>
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="SecondaryButton" position_real="0.10000000000000001 0.74481074481074483 0.80000000000000004 0.047619047619047616" name="Remove">
+                <Property key="Caption" value="#{REMOVE}"/>
+                <Property key="FontName" value="SM_ButtonSmall"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="SecondaryButton" position_real="0.10000000000000001 0.81562881562881562 0.80000000000000004 0.047619047619047616" name="ChallengeModeMenuPack">
+                <Property key="Caption" value="RETURN"/>
+                <Property key="FontName" value="SM_ButtonSmall"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="Visible" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="StyledButtonLarge" position_real="0.080000000000000002 0.88522588522588519 0.81666666666666665 0.081807081807081808" name="Play">
+                <Property key="Caption" value="#{PLAY}"/>
+                <Property key="FontName" value="SM_Button"/>
+                <Property key="TextAlign" value="Center"/>
+            </Widget>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.75104166666666672 0.80925925925925923 0.018229166666666668 0.031481481481481478" name="No_DownIcon">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\down.png"/>
+            <Property key="Alpha" value="0.2"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.75104166666666672 0.26851851851851855 0.018229166666666668 0.031481481481481478" name="No_UpIcon">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\up.png"/>
+            <Property key="Alpha" value="0.2"/>
+            <Property key="Visible" value="false"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.75104166666666672 0.26851851851851855 0.018229166666666668 0.031481481481481478" name="UpIcon">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\up_selected.png"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.75104166666666672 0.80925925925925923 0.018229166666666668 0.031481481481481478" name="DownIcon">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc\Gui\down_selected.png"/>
+        </Widget>
+        <Widget type="Button" skin="PanelEmpty" position_real="0.75104166666666672 0.26851851851851855 0.018229166666666668 0.031481481481481478" name="UpArrow"/>
+        <Widget type="Button" skin="PanelEmpty" position_real="0.75104166666666672 0.80925925925925923 0.018229166666666668 0.031481481481481478" name="DownArrow"/>
+    </Widget>
+    <Widget type="Button" skin="MenuButton" position_real="0.037499999999999999 0.06851851851851852 0.12708333333333333 0.055555555555555552" name="Back">
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.053278688524590161 0.25 0.11475409836065574 0.5" name="BackButtomImage">
+            <Property key="ImageTexture" value="$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/gui_icon_back.png"/>
+            <Property key="NeedMouse" value="false"/>
+            <Property key="NeedKey" value="false"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.22131147540983606 0.10000000000000001 0.44262295081967212 0.80000000000000004">
+            <Property key="Caption" value="#{BACK}"/>
+            <Property key="FontName" value="SM_ButtonLarge"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="NeedMouse" value="false"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="TextColour" value="1 0.8156863 0.2745098"/>
+        </Widget>
+        <Widget type="Button" skin="EscButton" position_real="0.69262295081967218 0.25 0.19672131147540983 0.5">
+            <Property key="NeedMouse" value="false"/>
+            <Property key="NeedKey" value="false"/>
+            <Property key="TextAlign" value="Center"/>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>

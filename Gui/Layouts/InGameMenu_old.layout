@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="BackgroundMenuInGame" name="ChallengePanel" position_real="0.1545 0 0.209375 0.68">
+        <Property key="NeedKey" value="false" />
+        <Property key="NeedMouse" value="true" />
+        <Property key="InheritsAlpha" value="false" />
+        <Property key="Visible" value="false" />
+        <Widget type="Button" skin="ActiveButton" name="Resume_CP" position_real="0.0895522 0.343612 0.813433 0.0903084">
+            <Property key="Caption" value="#{MENU_INGAME_RESUME}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Reset_CP" position_real="0.0895522 0.444934 0.813433 0.0903084">
+            <Property key="Caption" value="#{CHALLENGE_RESET}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.0895522 0.548458 0.813433 0.0903084">
+            <Property key="Alpha" value="0.5" />
+            <Widget type="TextBox" skin="SettingsButton" name="InviteFriend_CP" position_real="0 0 1 1">
+                <Property key="Caption" value="#{MENU_INGAME_INVITE_FRIEND}" />
+                <Property key="FontName" value="SM_Button" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Options_CP" position_real="0.0895522 0.651982 0.813433 0.0903084">
+            <Property key="Caption" value="#{MENU_MAIN_OPTIONS}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Restart_CP" position_real="0.0895522 0.753304 0.813433 0.0903084">
+            <Property key="Caption" value="#{CHALLENGE_RESTART}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Exit_CP" position_real="0.0895522 0.856828 0.813433 0.0903084">
+            <Property key="Caption" value="#{MENU_INGAME_EXIT}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+    </Widget>
+    <Widget type="Widget" skin="BackgroundMenuInGame" name="ChallengeBuilderPanel" position_real="0.4 0.08 0.209375 0.758333">
+        <Property key="NeedKey" value="false" />
+        <Property key="NeedMouse" value="true" />
+        <Property key="InheritsAlpha" value="false" />
+        <Property key="Visible" value="false" />
+        
+        <Widget type="Button" skin="ActiveButton" name="Resume_CBP" position_real="0.0895522 0.285714 0.813433 0.0750916">
+            <Property key="Caption" value="#{MENU_INGAME_RESUME}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.0895522 0.369963 0.813433 0.0750916">
+            <Property key="Alpha" value="0.5" />
+            <Widget type="TextBox" skin="SettingsButton" name="Reset_EMPTY" position_real="0 0 1 1">
+                <Property key="Caption" value="#{CHALLENGE_RESET}" />
+                <Property key="FontName" value="SM_Button" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Reset_CBP" position_real="0.0895522 0.369963 0.813433 0.0750916">
+            <Property key="Caption" value="#{CHALLENGE_RESET}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.0895522 0.456044 0.813433 0.0750916">
+            <Property key="Alpha" value="0.5" />
+            <Widget type="TextBox" skin="SettingsButton" name="InviteFriend_CBP" position_real="0 0 1 1">
+                <Property key="Caption" value="#{MENU_INGAME_INVITE_FRIEND}" />
+                <Property key="FontName" value="SM_Button" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.0895522 0.542125 0.813433 0.0750916">
+            <Property key="Alpha" value="0.5" />
+            <Widget type="TextBox" skin="SettingsButton" name="Options_CBP" position_real="0 0 1 1">
+                <Property key="Caption" value="#{MENU_MAIN_OPTIONS}" />
+                <Property key="FontName" value="SM_Button" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.0895522 0.626374 0.813433 0.0750916">
+            <Property key="Alpha" value="0.5" />
+            <Widget type="TextBox" skin="SettingsButton" name="Restart_EMPTY" position_real="0 0 1 1">
+                <Property key="Caption" value="#{CHALLENGE_RESTART}" />
+                <Property key="FontName" value="SM_Button" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Restart_CBP" position_real="0.0895522 0.626374 0.813433 0.0750916">
+            <Property key="Caption" value="#{CHALLENGE_RESTART}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.0895522 0.712454 0.813433 0.0750916">
+            <Property key="Alpha" value="0.5" />
+            <Widget type="TextBox" skin="SettingsButton" name="Save_EMPTY" position_real="0 0 1 1">
+                <Property key="Caption" value="#{MENU_INGAME_SAVE}" />
+                <Property key="FontName" value="SM_Button" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Save_CBP" position_real="0.0895522 0.712454 0.813433 0.0750916">
+            <Property key="Caption" value="#{MENU_INGAME_SAVE}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="SaveAndTest_CBP" position_real="0.0895522 0.798535 0.813433 0.0750916">
+            <Property key="Caption" value="#{MENU_INGAME_SAVE_AND_TEST}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="StopTest_CBP" position_real="0.0895522 0.798535 0.813433 0.0750916">
+            <Property key="Caption" value="#{MENU_INGAME_STOP_TEST}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+        <Widget type="Button" skin="SettingsButton" name="Exit_CBP" position_real="0.0895522 0.882784 0.813433 0.0750916">
+            <Property key="Caption" value="#{MENU_INGAME_EXIT}" />
+            <Property key="FontName" value="SM_Button" />
+            <Property key="TextAlign" value="Center" />
+        </Widget>
+    </Widget>
+    <Widget type="Widget" skin="PanelEmpty" align="Default" name="BackPanel" position_real="0 0 0.520312 0.677778">
+        <Property key="NeedKey" value="false" />
+        <Property key="Visible" value="false" />
+        <Widget type="Widget" skin="BackgroundInteractableUltraWide" name="UpgradeBackground" position_real="0 0 1 1">
+            <Property key="NeedKey" value="false" />
+            <Widget type="TextBox" skin="TextBox" position_real="0.1997 0.186885 0.600601 0.0532787">
+                <Property key="Caption" value="Hide and Seek Options" />
+                <Property key="FontName" value="SM_HeaderLarge_Wide" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="hideallnameOnActive" position_real="0.315315 0.418033 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="hideallnameOn" position_real="0.315315 0.418033 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="hideallnameOffActive" position_real="0.399399 0.418033 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="hideallnameOff" position_real="0.399399 0.418033 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="hideallnameText" position_real="0.045045 0.409836 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="Hide All Nametags" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="hiderscanseeOnActive" position_real="0.315315 0.504098 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="hiderscanseeOn" position_real="0.315315 0.504098 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="hiderscanseeOffActive" position_real="0.399399 0.504098 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="hiderscanseeOff" position_real="0.399399 0.504098 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="hiderscanseeText" position_real="0.045045 0.495902 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="Hiders See Nametags" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="fullhealthOnActive" position_real="0.315315 0.590164 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="fullhealthOn" position_real="0.315315 0.590164 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="fullhealthOffActive" position_real="0.399399 0.590164 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="fullhealthOff" position_real="0.399399 0.590164 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="fullhealthText" position_real="0.045045 0.581967 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="Full health" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="halfhealthOnActive" position_real="0.315315 0.67623 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="halfhealthOn" position_real="0.315315 0.67623 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="halfhealthOffActive" position_real="0.399399 0.67623 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="halfhealthOff" position_real="0.399399 0.67623 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="halfhealthText" position_real="0.045045 0.668033 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="Half health" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="oneshotOnActive" position_real="0.315315 0.762295 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="oneshotOn" position_real="0.315315 0.762295 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="oneshotOffActive" position_real="0.399399 0.762295 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="oneshotOff" position_real="0.399399 0.762295 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="oneshotText" position_real="0.045045 0.754098 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="1 Shot Kill" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="spectateOnActive" position_real="0.315315 0.848361 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="spectateOn" position_real="0.315315 0.848361 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="spectateOffActive" position_real="0.399399 0.848361 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="spectateOff" position_real="0.399399 0.848361 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="spectateText" position_real="0.045045 0.840164 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="Spectate When Dead" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="noitemsOnActive" position_real="0.795796 0.418033 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="noitemsOn" position_real="0.795796 0.418033 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="noitemsOffActive" position_real="0.87988 0.418033 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="noitemsOff" position_real="0.87988 0.418033 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="noitemsText" position_real="0.525526 0.409836 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="No Items" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="inactivityOnActive" position_real="0.795796 0.504098 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="inactivityOn" position_real="0.795796 0.504098 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="inactivityOffActive" position_real="0.87988 0.504098 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="inactivityOff" position_real="0.87988 0.504098 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="inactivityText" position_real="0.525526 0.495902 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="Inactivity VFX" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="falldamageOnActive" position_real="0.795796 0.590164 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="falldamageOn" position_real="0.795796 0.590164 0.0810811 0.0696721">
+                <Property key="Caption" value="#{ON}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="PrimaryButton" name="falldamageOffActive" position_real="0.87988 0.590164 0.0810811 0.0696721">
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="SettingsButton" name="falldamageOff" position_real="0.87988 0.590164 0.0810811 0.0696721">
+                <Property key="Visible" value="false" />
+                <Property key="Caption" value="#{OFF}" />
+                <Property key="FontName" value="SM_ButtonSmall" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="falldamage_text" position_real="0.525526 0.581967 0.27027 0.0819672">
+                <Property key="FontName" value="SM_TextLabel" />
+                <Property key="TextAlign" value="Left VCenter" />
+                <Property key="Caption" value="Fall Damage" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator1" position_real="0.048048 0.493852 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator2" position_real="0.048048 0.579918 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator3" position_real="0.048048 0.665984 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator4" position_real="0.048048 0.75 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator5" position_real="0.048048 0.838115 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator6" position_real="0.528529 0.493852 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator7" position_real="0.528529 0.579918 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Separator8" position_real="0.528529 0.665984 0.423423 0.00204918">
+                <Property key="Colour" value="0.315789 0.315789 0.315789" />
+            </Widget>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings />
+</MyGUI>

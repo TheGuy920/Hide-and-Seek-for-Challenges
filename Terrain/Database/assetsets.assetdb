@@ -1,0 +1,72 @@
+{
+	"assetSetList": [
+		{
+			"assetSet": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Database/AssetSets/challengemode.json",
+			"categories": [
+				"Environment/Challengemode/Challengemode"
+			]
+		},
+		{
+			"hidden": true,
+			"assetSet": "$GAME_DATA/Terrain/Database/AssetSets/menu.json",
+			"categories": [
+				"Environment/Special/Menu"
+			]
+		},
+		{
+			"assetSet": "$GAME_DATA/Terrain/Database/AssetSets/manmade.json",
+			"categories": [
+				"Environment/Classic/Manmade"
+			]
+		},
+		{
+			"assetSet": "$GAME_DATA/Terrain/Database/AssetSets/forest.json",
+			"categories": [
+				"Environment/Classic/Forest"
+			]
+		},
+		{
+			"assetSet": "$GAME_DATA/Terrain/Database/AssetSets/foliage.json",
+			"categories": [
+				"Type/Foliage",
+				"Environment/Survival/Meadow",
+				"Environment/Survival/Forest"
+			]
+		},
+		{
+			"assetSet": "$GAME_DATA/Terrain/Database/AssetSets/smallstone.json",
+			"categories": [
+				"NeedsSorting",
+				"Type/Rocks"
+			]
+		},
+		{
+			"assetSet": "$GAME_DATA/Terrain/Database/AssetSets/rocks.json",
+			"categories": [
+				"NeedsSorting",
+				"Type/Rocks"
+			]
+		},
+		{
+			"assetSet": "$SURVIVAL_DATA/Terrain/Database/AssetSets/Nature/Rocks.json",
+			"categories": [
+				"Type/Rocks",
+				"Environment/Survival/Meadow",
+				"Environment/Survival/Forest"
+			]
+		},
+		{
+			"assetSet": "$GAME_DATA/Terrain/Database/AssetSets/racetrack.json",
+			"categories": [
+				"Type/Misc"
+			]
+		},
+		{
+			"hidden": true,
+			"assetSet": "$SURVIVAL_DATA/Terrain/Database/AssetSets/Water.json",
+			"categories": [
+				"Type/Special/Water"
+			]
+		}
+	]
+}
