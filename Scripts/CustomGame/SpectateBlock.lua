@@ -189,6 +189,7 @@ function SpectateBlock.server_unBindAll( self, players )
 end
 
 function SpectateBlock.client_unBindAll( self )
+    self.player:getCharacter():setLockingInteractable(nil)
     self.player = nil
     if self.gui then
         self.gui:destroy()
