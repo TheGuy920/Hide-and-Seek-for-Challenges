@@ -40,7 +40,7 @@ function SpectateBlock.client_bindPlayer( self, player )
         self.original_pos = player:getCharacter():getWorldPosition()
         player.character:setLockingInteractable(self.interactable)
         sm.camera.setCameraState(sm.camera.state.cutsceneTP)
-        self:client_findAvailablePlayer(0)
+        self:client_findAvailablePlayer(1)
         self.gui = sm.gui.createGuiFromLayout('$CONTENT_DATA/Gui/Layouts/spectate.layout', false,
         {
             isHud = true,
@@ -134,7 +134,7 @@ end
 
 function SpectateBlock.client_recieveSpectators( self, players )
     self.spectators = players
-    self:client_findAvailablePlayer(0)
+    self:client_findAvailablePlayer(1)
 end
 
 function SpectateBlock.client_findAvailablePlayer( self, degree )
