@@ -75,7 +75,6 @@ function ChallengePlayer.client_onClientDataUpdate( self, data )
 		if self.cl.stats == nil then self.cl.stats = data.stats end -- First time copy to avoid nil errors
 
 		if _G.g_survivalHud and sm.exists(_G.g_survivalHud) then
-			print(data)
 			_G.g_survivalHud:setVisible( "HealthBar", data.enableHealth )
 			_G.g_survivalHud:setSliderData( "Health", data.stats.maxhp * 10 + 1, data.stats.hp * 10 )
 		
