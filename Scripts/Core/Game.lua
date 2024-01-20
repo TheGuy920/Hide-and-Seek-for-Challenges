@@ -1085,7 +1085,7 @@ function Game.client_onUpdate(self, deltaTime)
         ChallengeGame.client_onUpdate(ChallengeGame, deltaTime)
     end
 
-    if self.MenuInstance.blur.blur_gui:isActive() and sm.exists(self.MenuInstance.blur.gui) and
+    if sm.exists(self.MenuInstance.blur.gui) and self.MenuInstance.blur.blur_gui:isActive() and
             self.MenuInstance.blur.gui:isActive()
      then
         self.MenuInstance.blur.blur_gui:close()
