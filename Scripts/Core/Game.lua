@@ -743,10 +743,7 @@ function Game.server_updateGameState(self, State, caller)
         -- Send to all Clients
         self.network:sendToClients("client_updateGameState", State)
         -- Init items
-        if self.state == 98 then
-            self.state = States.PackMenu
-            self.network:sendToClients("client_initializeApology", true)
-        elseif self.state == States.PackMenu then
+        if self.state == States.PackMenu then
             self.network:sendToClients("client_initializePackMenu", true)
         elseif self.state == States.PlayMenu then
         elseif self.state == States.BuildMenu then

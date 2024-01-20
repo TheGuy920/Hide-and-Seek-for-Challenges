@@ -28,6 +28,7 @@ function ChallengePlayer.server_onCreate( self )
 		self.sv.saved.isNewPlayer = true
 		self.sv.saved.inChemical = false
 		self.sv.saved.inOil = false
+		print(self.lasting_health_rule)
 		self.sv.saved.enableHealth = self.lasting_health_rule == true
 		self.storage:save( self.sv.saved )
 	end
@@ -74,6 +75,7 @@ function ChallengePlayer.client_onClientDataUpdate( self, data )
 		if self.cl.stats == nil then self.cl.stats = data.stats end -- First time copy to avoid nil errors
 
 		if _G.g_survivalHud and sm.exists(_G.g_survivalHud) then
+			print(data)
 			_G.g_survivalHud:setVisible( "HealthBar", data.enableHealth )
 			_G.g_survivalHud:setSliderData( "Health", data.stats.maxhp * 10 + 1, data.stats.hp * 10 )
 		
@@ -119,7 +121,7 @@ end
 function ChallengePlayer.server_setMaxHp( self, maxhp )
 	self.sv.saved.stats.maxhp = maxhp
 	self.sv.saved.stats.hp = maxhp
-	self.sv.saved.enableHealth = true
+	--self.sv.saved.enableHealth = true
 	self.network:setClientData( self.sv.saved )
 end
 

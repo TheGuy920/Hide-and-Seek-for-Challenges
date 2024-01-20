@@ -65,16 +65,6 @@ function SpectateBlock.server_resetPosition( self, dta )
     player:getCharacter():setWorldPosition(pos)
 end
 
-function SpectateBlock.server_recieveSpectators( self, data )
-    self.network:sendToClients("client_recieveSpectators", data.players)
-    sm.event.sendToPlayer(data.player, "server_confirmSpectators")
-end
-
-function SpectateBlock.client_recieveSpectators( self, players )
-    self.spectators = players
-    self:client_findAvailablePlayer(0)
-end
-
 function SpectateBlock.client_isPlayerSpectating( self, player )
     if self.spectators then
         for _,p in pairs(self.spectators) do
@@ -135,6 +125,16 @@ function SpectateBlock.server_requestMovePlayer( self, player )
         true
     )
     player:getCharacter():setWorldPosition( sm.vec3.new(0.125,0.125,9999+1.5)+offset )
+end
+
+function SpectateBlock.server_recieveSpectators( self, data )
+    self.network:sendToClients("client_recieveSpectators", data.players)
+    sm.event.sendToPlayer(data.player, "server_confirmSpectators")
+end
+
+function SpectateBlock.client_recieveSpectators( self, players )
+    self.spectators = players
+    self:client_findAvailablePlayer(0)
 end
 
 function SpectateBlock.client_findAvailablePlayer( self, degree )

@@ -6,6 +6,7 @@ function Player.server_onCreate(self)
 	ChallengePlayer.server_onCreate(self)
 	self.start = sm.game.getCurrentTick()
 	sm.event.sendToGame("server_playerScriptReady", self.player)
+	self.lasting_health_rule = false
 end
 
 function Player.server_updateGameRules(self, rules)
@@ -148,6 +149,11 @@ function Player.server_onFixedUpdate(self, timeStep)
 	if self.state == States.Play or self.state == States.PlayBuild or self.state == States.Build then
 		if self.server_ready == true then
 			ChallengePlayer.server_onFixedUpdate(self, timeStep)
+		end
+		if self.spectators and self.spectate_part and not self.spectate_51sf61 then
+			sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", {player=self.player,players=self.spectators})
+		elseif not self.spectate_part then
+			self.spectate_51sf61 = nil
 		end
 	end
 end
@@ -387,14 +393,6 @@ end
 
 function Player.server_confirmSpectators( self )
 	self.spectate_51sf61 = true
-end
-
-function Player.server_onFixedUpdate( self, dt )
-	if self.spectators and self.spectate_part and not self.spectator_51sf61 then
-		sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", {player=self.player,players=self.spectators})
-	elseif not self.spectate_part then
-		self.spectator_51sf61 = nil
-	end
 end
 
 function Player.client_setSpectate(self, data)

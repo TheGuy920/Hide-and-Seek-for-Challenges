@@ -56,6 +56,7 @@ function ChallengeBaseWorld.client_closeAllMenu( self )
 		_G.g_survivalHud:close()
 		_G.g_survivalHud:destroy()
 	end
+	sm.camera.setCameraState( sm.camera.state.default )
 end
 
 function ChallengeBaseWorld.client_onRefresh( self )
