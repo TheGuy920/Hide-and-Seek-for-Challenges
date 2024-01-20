@@ -380,7 +380,9 @@ function Player.server_setSpectate(self, data)
 end
 
 function Player.client_manualReset(self)
-	self.player:getCharacter():setLockingInteractable(nil)
+	if self.player:getCharacter() then
+		self.player:getCharacter():setLockingInteractable(nil)
+	end
 	sm.camera.setCameraState(sm.camera.state.default)
 end
 
