@@ -14,6 +14,12 @@ function Game.server_onCreate(self)
     self.start_time = sm.game.getCurrentTick()
     self.respawn_all = 0
     
+    self.sv = self.storage:load()
+
+    if self.sv and self.sv.saved and self.sv.saved.world and sm.exists(self.sv.saved.world) then
+        self.sv.saved.world:destroy()
+    end
+
     self.worldDestroyQueue = {}
     self.sv = {
         saved = {
@@ -23,6 +29,8 @@ function Game.server_onCreate(self)
             )
         }
     }
+
+    self.storage:save(self.sv)
 
     local hasDatabase, _ = pcall(sm.json.open, "$CONTENT_e3589ff7-31ca-4f19-b1f0-bef055ba9200/ChallengeList.json")
     if not hasDatabase then
@@ -840,13 +848,9 @@ function Game.sv_createPlayerCharacter(self, world, x, y, player, params)
             vector = sm.vec3.new(0.8375, -112.725, 6)
             yaw = yaw - 0.88
         end
-        local character = nil
-        if not player:getCharacter() then
-            character = sm.character.createCharacter(player, world, vector, yaw, 0)
-            player:setCharacter(character)
-        else
-            character = player:getCharacter()
-        end     
+        character = sm.character.createCharacter(player, world, vector, yaw, 0)
+        player:setCharacter(character)  
+        --print(character, world)
         if player == sm.host then
             sm.event.sendToWorld(world, "server_setMenuLock", character)
         else

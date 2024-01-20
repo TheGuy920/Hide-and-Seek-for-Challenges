@@ -177,7 +177,7 @@ function InitializeChallengeGame()
 		self.activeWorld = nil
 	end
 
-	function ChallengeGame.server_onPlayerJoined(self, player)
+	function ChallengeGame.server_onPlayerJoined(self, player, isNewPlayer)
 		print("Hello " .. player.name)
 
 		--Create character if world is ready

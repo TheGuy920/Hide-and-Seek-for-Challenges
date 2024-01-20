@@ -157,6 +157,10 @@ end
 function World.server_spawnCharacter( self, params )
 	print("World: spawnCharacter")
 	for _, player in pairs( params.players ) do
+		print(player:getCharacter())
+		if player.character then
+			print(player.character:getWorld())
+		end
 		local char = CreateCharacterOnSpawner( self, self.world, player, {}, sm.vec3.new( 0.8375, -112.725, 6 ), false )
 		if player == sm.player.getAllPlayers()[1] then
 			char:setLockingInteractable(self.menu_lock)
