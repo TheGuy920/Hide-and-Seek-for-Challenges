@@ -397,7 +397,7 @@ end
 function Player.client_setSpectate(self, data)
 	self.spectate = data.state
 	if data.part then self.spectate_part = data.part end
-	if self.spectate_part then
+	if self.spectate_part and sm.exists(self.spectate_part) then
 		if self.spectate then
 			sm.event.sendToInteractable(self.spectate_part, "client_bindPlayer", self.player)
 		else
