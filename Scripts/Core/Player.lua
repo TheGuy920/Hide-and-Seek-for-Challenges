@@ -364,7 +364,6 @@ function Player.server_setSpectate(self, data)
 	if self.state == States.Play or self.state == States.PlayBuild or self.state == States.Build then
 		self.spectate = data.state
 		self.spectate_part = data.part
-		print(self.spectate_part, self.spectators)
 		if self.spectate_part and self.spectators then 
 			sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", {player=self.player,players=self.spectators})
 		end
