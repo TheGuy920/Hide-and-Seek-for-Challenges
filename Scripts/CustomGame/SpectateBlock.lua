@@ -19,7 +19,12 @@ local Modes = {
 }
 
 function SpectateBlock.server_onCreate( self )
-
+    local players = sm.player.getAllPlayers()
+    local host = true
+    for _, player in pairs(players) do
+        self.network:sendToClient(player, "client_setIsHost", host)
+        host = false
+    end
 end
 
 function SpectateBlock.client_onCreate( self )
@@ -71,7 +76,6 @@ end
 
 function SpectateBlock.server_requestMovePlayer( self, player )
     local players = sm.player.getAllPlayers()
-    self.network:sendToClient(player, "client_setIsHost", player == players[1])
     local index = 0
     for _,p in pairs(players) do if p == player then break end index = index + 1 end
     -- platform
