@@ -247,7 +247,7 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
         end
         local character = sm.localPlayer.getPlayer():getCharacter()
         local sprint = character:isSprinting()
-        print(sprint)
+
         if not self.camera_pos then self.camera_pos = sm.camera.getPosition() end
         if self.wdown then
             self.camera_pos = self.camera_pos + sm.camera.getDirection() * deltaTime * 5 * (sprint and 2.5 or 1)
