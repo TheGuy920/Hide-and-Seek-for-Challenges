@@ -15,19 +15,19 @@
 		[
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_buildarea.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_buildarea.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
 				"parameters" : [ "minColor", "maxColor" ]
 			},
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_buildarearim.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_buildarearim.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
 				"parameters" : [ "minColor", "maxColor" ]
 			},
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_buildzone.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_buildzone.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
 				"parameters" : [ "minColor2", "maxColor2" ]
 			}
@@ -47,7 +47,7 @@
 		[
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_goal.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_goal.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
 				"parameters" : [ "minColor", "maxColor" ]
 			},
@@ -349,19 +349,19 @@
 		[
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_builderfloor.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_builderfloor.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
 				"parameters" : [ "minColor", "maxColor" ]
 			},
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_builderfloor02.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_builderfloor02.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": -0.6 },
 				"parameters" : [ "minColor2", "maxColor2" ]
 			},
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_builderfloor02.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_builderfloor02.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": -1.5 },
 				"parameters" : [ "minColor3", "maxColor3" ]
 			}
@@ -385,19 +385,19 @@
 		[
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_builderfloor02.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_builderfloor02.rend",
 				"offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
 				"parameters" : [ "minColor", "maxColor" ]
 			},
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_builderfloor02.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_builderfloor02.rend",
 				"offset": { "x": 0.0, "y": -5.0, "z": -5.0 },
 				"parameters" : [ "minColor2", "maxColor2" ]
 			},
 			{
 				"type": "renderable",
-				"name": "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Effects/Renderables/hologram_builderfloor02.rend",
+				"name": "$CHALLENGE_DATA/Effects/Renderables/hologram_builderfloor02.rend",
 				"offset": { "x": 0.0, "y": -10.0, "z": -10.0 },
 				"parameters" : [ "minColor3", "maxColor3" ]
 			}
