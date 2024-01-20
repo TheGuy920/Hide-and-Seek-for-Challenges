@@ -19,12 +19,7 @@ local Modes = {
 }
 
 function SpectateBlock.server_onCreate( self )
-    local players = sm.player.getAllPlayers()
-    local host = true
-    for _, player in pairs(players) do
-        self.network:sendToClient(player, "client_setIsHost", host)
-        host = false
-    end
+
 end
 
 function SpectateBlock.client_onCreate( self )
@@ -70,19 +65,16 @@ function SpectateBlock.server_resetPosition( self, dta )
     player:getCharacter():setWorldPosition(pos)
 end
 
-function SpectateBlock.client_setIsHost( self, isHost )
-    self.isHost = isHost
-end
-
 function SpectateBlock.server_requestMovePlayer( self, player )
     local players = sm.player.getAllPlayers()
     local index = 0
     for _,p in pairs(players) do if p == player then break end index = index + 1 end
+    local offset = sm.vec3.new(index, index, 0)
     -- platform
     sm.shape.createBlock(
         sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
         sm.vec3.new(3,3,1),
-        sm.vec3.new(-0.25,-0.25,9999),
+        sm.vec3.new(-0.25,-0.25,9999)+offset,
         sm.quat.identity(),
         false,
         true
@@ -91,7 +83,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
         sm.vec3.new(1,3,10),
-        sm.vec3.new(-0.5,-0.25,9999),
+        sm.vec3.new(-0.5,-0.25,9999)+offset,
         sm.quat.identity(),
         false,
         true
@@ -100,7 +92,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
         sm.vec3.new(3,1,10),
-        sm.vec3.new(-0.25,-0.5,9999),
+        sm.vec3.new(-0.25,-0.5,9999)+offset,
         sm.quat.identity(),
         false,
         true
@@ -109,7 +101,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
         sm.vec3.new(3,1,10),
-        sm.vec3.new(-0.25,0.5,9999),
+        sm.vec3.new(-0.25,0.5,9999)+offset,
         sm.quat.identity(),
         false,
         true
@@ -118,12 +110,12 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
         sm.vec3.new(1,3,10),
-        sm.vec3.new(0.5,-0.25,9999),
+        sm.vec3.new(0.5,-0.25,9999)+offset,
         sm.quat.identity(),
         false,
         true
     )
-    player:getCharacter():setWorldPosition( sm.vec3.new(0.125,0.125,9999+1.5) )
+    player:getCharacter():setWorldPosition( sm.vec3.new(0.125,0.125,9999+1.5)+offset )
 end
 
 function SpectateBlock.client_findAvailablePlayer( self )
@@ -313,7 +305,7 @@ function SpectateBlock.client_onAction( self, input, active )
         self.zoom = math.min(self.zoom + 0.5, 20)
     end
 
-    if input == 15 and self.isHost and active then
+    if input == 15 and sm.isHost and active then
         self:client_unBindPlayer(self.player)
     end
 
