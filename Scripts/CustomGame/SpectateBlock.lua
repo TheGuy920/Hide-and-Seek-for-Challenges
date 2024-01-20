@@ -247,21 +247,22 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
         end
         local character = sm.localPlayer.getPlayer():getCharacter()
         local sprint = character:isSprinting()
+        print(sprint)
         if not self.camera_pos then self.camera_pos = sm.camera.getPosition() end
         if self.wdown then
-            self.camera_pos = self.camera_pos + sm.camera.getDirection() * deltaTime * 10 * (sprint and 2 or 1)
+            self.camera_pos = self.camera_pos + sm.camera.getDirection() * deltaTime * 5 * (sprint and 2.5 or 1)
         end
         if self.sdown then
-            self.camera_pos = self.camera_pos - sm.camera.getDirection() * deltaTime * 10 * (sprint and 2 or 1)
+            self.camera_pos = self.camera_pos - sm.camera.getDirection() * deltaTime * 5 * (sprint and 2.5 or 1)
         end
         if self.adown then
-            self.camera_pos = self.camera_pos - sm.camera.getRight() * deltaTime * 10 * (sprint and 2 or 1)
+            self.camera_pos = self.camera_pos - sm.camera.getRight() * deltaTime * 5 * (sprint and 2.5 or 1)
         end
         if self.ddown then
-            self.camera_pos = self.camera_pos + sm.camera.getRight() * deltaTime * 10 * (sprint and 2 or 1)
+            self.camera_pos = self.camera_pos + sm.camera.getRight() * deltaTime * 5 * (sprint and 2.5 or 1)
         end
         if self.spacedown then
-            self.camera_pos = self.camera_pos + sm.vec3.new(0,0,1) * deltaTime * 10 * (sprint and 2 or 1)
+            self.camera_pos = self.camera_pos + sm.vec3.new(0,0,1) * deltaTime * 5 * (sprint and 2.5 or 1)
         end
 
         local old = sm.camera.getPosition()
@@ -326,5 +327,5 @@ function SpectateBlock.client_onAction( self, input, active )
         self:client_unBindPlayer(self.player)
     end
 
-    return true
+    return false
 end
