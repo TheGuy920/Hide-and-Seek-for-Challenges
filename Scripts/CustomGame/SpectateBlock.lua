@@ -178,7 +178,7 @@ function SpectateBlock.client_unBindPlayer( self, player )
     end
 end
 
-function SpectateBlock.server_unBindAll( self )
+function SpectateBlock.server_unBindAll( self, cant )
     print("unbind all")
     for _,player in pairs(sm.player.getAllPlayers()) do
         if player and player:getCharacter()
@@ -186,11 +186,13 @@ function SpectateBlock.server_unBindAll( self )
                 player:getCharacter():setLockingInteractable(nil)
         end
     end
-    self.network:sendToClients("client_unBindAll")
+    if not cant then
+        self.network:sendToClients("client_unBindAll")
+    end
 end
 
 function SpectateBlock.server_onDestroy( self )
-    self:server_unBindAll()
+    self:server_unBindAll(true)
 end
 
 function SpectateBlock.client_unBindAll( self )

@@ -372,7 +372,7 @@ function Player.server_setSpectate(self, data)
 
 	if not data.state then
 		if sm.exists(self.spectate_part) then
-			sm.event.sendToInteractable(self.spectate_part, "server_unBindAll")
+			sm.event.sendToInteractable(self.spectate_part, "server_unBindAll", false)
 		else
 			self.network:sendToClient(self.player, "client_manualReset")
 		end
