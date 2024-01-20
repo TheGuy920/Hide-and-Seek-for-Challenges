@@ -849,8 +849,8 @@ function Game.sv_createPlayerCharacter(self, world, x, y, player, params)
             yaw = yaw - 0.88
         end
         character = sm.character.createCharacter(player, world, vector, yaw, 0)
-        player:setCharacter(character)  
-        --print(character, world)
+        player:setCharacter(character)
+
         if player == sm.host then
             sm.event.sendToWorld(world, "server_setMenuLock", character)
         else
