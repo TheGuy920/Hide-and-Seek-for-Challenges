@@ -178,8 +178,9 @@ function SpectateBlock.client_unBindPlayer( self, player )
     end
 end
 
-function SpectateBlock.server_unBindAll( self, players )
-    for _,player in pairs(players) do
+function SpectateBlock.server_unBindAll( self )
+    print("unbind all")
+    for _,player in pairs(sm.player.getAllPlayers()) do
         if player and player:getCharacter()
             and player:getCharacter():getLockingInteractable() then
                 player:getCharacter():setLockingInteractable(nil)
