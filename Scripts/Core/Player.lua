@@ -358,6 +358,10 @@ function Player.server_setSpectate(self, data)
 	if self.state == States.Play or self.state == States.PlayBuild or self.state == States.Build then
 		self.spectate = data.state
 		self.spectate_part = data.part
+		print(self.spectate_part, self.spectators)
+		if self.spectate_part and self.spectators then 
+			sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", self.spectators)
+		end
 		self.network:sendToClient(self.player, "client_setSpectate", data)
 	end
 
@@ -379,8 +383,14 @@ function Player.server_setSpectatorList( self, list )
 		table.insert( self.spectators, spectator )
 		::pass0::
 	end
-	if self.spectate and self.spectate_part then
-		sm.event.sendToInteractable(self.spectate_part, "client_recieveSpectators", self.spectators)
+end
+
+function Player.server_onFixedUpdate( self, dt )
+	if self.spectators and self.spectate_part and not self.spectator_51sf61 then
+		self.spectator_51sf61 = true
+		sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", self.spectators)
+	elseif not self.spectate_part then
+		self.spectator_51sf61 = nil
 	end
 end
 
@@ -393,7 +403,7 @@ function Player.client_setSpectate(self, data)
 		else
 			sm.camera.setCameraState(sm.camera.state.default)
 			sm.event.sendToInteractable(self.spectate_part, "client_unBindPlayer", self.player)
-			self.player:getCharacter():setLockingInteractable(nil)	
+			self.player:getCharacter():setLockingInteractable(nil)
 		end
 	end
 end

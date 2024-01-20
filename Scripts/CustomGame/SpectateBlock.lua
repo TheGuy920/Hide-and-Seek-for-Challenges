@@ -71,6 +71,7 @@ end
 
 function SpectateBlock.client_recieveSpectators( self, players )
     self.spectators = players
+    self:client_findAvailablePlayer(0)
 end
 
 function SpectateBlock.client_isPlayerSpectating( self, player )
@@ -137,14 +138,14 @@ end
 
 function SpectateBlock.client_findAvailablePlayer( self, degree )
     local players = sm.player.getAllPlayers()
-    if #players > 1 then
+    if #players > 1 and not (self.spectators and #self.spectators >= #players) then
         ::SCheck::
         if self.spectateIndex > #players - 1 then
             self.spectateIndex = 0
         end
 
         self.target = players[self.spectateIndex+1]
-        if self.target == sm.localPlayer.getPlayer() or self:client_isPlayerSpectating(self.target) then
+        if self.target == sm.localPlayer.getPlayer() or (self:client_isPlayerSpectating(self.target)) then
             self.spectateIndex = self.spectateIndex + degree
             goto SCheck
         end
@@ -205,8 +206,8 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
 
             -- Adjust theta and phi based on mouse movement
             -- sensitivity factors should be adjusted as needed
-            theta = theta - deltaX * -sm.localPlayer.getAimSensitivity()
-            phi = math.max(0.1, math.min(math.pi - 0.1, phi - deltaY * -sm.localPlayer.getAimSensitivity()))
+            theta = theta - deltaX * -sm.localPlayer.getAimSensitivity() * math.pi * 4/3
+            phi = math.max(0.1, math.min(math.pi - 0.1, phi - deltaY * -sm.localPlayer.getAimSensitivity() * math.pi * 4/3))
 
             -- Convert back to Cartesian coordinates
             dir.x = r * math.sin(phi) * math.cos(theta)

@@ -479,7 +479,7 @@ function ChallengeWorld.server_spawnCharacter( self, params )
 					break
 				end
 			end
-			for _,player in pairs( params.players ) do
+			for _,player in pairs( sm.player.getAllPlayers() ) do
 				sm.event.sendToPlayer(player, "server_setSpectatorList", spectating_players)
 			end
 		end
@@ -682,6 +682,7 @@ function ChallengeWorld.server_startChallenge( self )
 			or self.hideandseekoptions.options.halfhealth and 50
 			or 100
 
+		local spectating_players = {}
 		for _,player in pairs(sm.player.getAllPlayers()) do
 			for _,rplayer in pairs(self.hideandseekoptions.players) do
 				if player:getName() == rplayer.name then
@@ -707,10 +708,15 @@ function ChallengeWorld.server_startChallenge( self )
 								part = self.spectateblock:getInteractable()
 							}
 						)
+						table.insert(spectating_players, player)
 						break
 					end
 				end
 			end
+		end
+		print("world", spectating_players)
+		for _,player in pairs( sm.player.getAllPlayers() ) do
+			sm.event.sendToPlayer(player, "server_setSpectatorList", spectating_players)
 		end
 
 		self.hideandseekoptions.rplayer_list = sm.player.getAllPlayers()
