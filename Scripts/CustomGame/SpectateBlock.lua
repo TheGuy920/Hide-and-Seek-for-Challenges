@@ -196,8 +196,8 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
 
             -- Adjust theta and phi based on mouse movement
             -- sensitivity factors should be adjusted as needed
-            theta = theta - deltaX * -3
-            phi = math.max(0.1, math.min(math.pi - 0.1, phi - deltaY * -3))
+            theta = theta - deltaX * -sm.localPlayer.getAimSensitivity()
+            phi = math.max(0.1, math.min(math.pi - 0.1, phi - deltaY * -sm.localPlayer.getAimSensitivity()))
 
             -- Convert back to Cartesian coordinates
             dir.x = r * math.sin(phi) * math.cos(theta)
