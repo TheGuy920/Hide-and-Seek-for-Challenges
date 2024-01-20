@@ -195,9 +195,15 @@ function SpectateBlock.server_onDestroy( self )
     self:server_unBindAll(true)
 end
 
+function SpectateBlock.client_onDestroy( self )
+    self:client_unBindAll()
+end
+
 function SpectateBlock.client_unBindAll( self )
     print("default: ", self.player:getName())
-    self.player:getCharacter():setLockingInteractable(nil)
+    if self.player:getCharacter() then
+        self.player:getCharacter():setLockingInteractable(nil)
+    end
     sm.camera.setCameraState(sm.camera.state.default)
     self.player = nil
     if self.gui then
