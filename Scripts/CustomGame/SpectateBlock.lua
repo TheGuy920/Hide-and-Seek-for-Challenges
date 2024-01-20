@@ -143,7 +143,10 @@ function SpectateBlock.client_findAvailablePlayer( self, degree )
         ::SCheck::
         if self.spectateIndex > #players - 1 then
             self.spectateIndex = 0
+        elseif self.spectateIndex < 0 then
+            self.spectateIndex = #players - 1
         end
+
 
         self.target = players[self.spectateIndex+1]
         if self.target == sm.localPlayer.getPlayer() or (self:client_isPlayerSpectating(self.target)) then
