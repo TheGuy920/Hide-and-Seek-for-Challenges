@@ -13,27 +13,6 @@ function Game.server_onCreate(self)
     self.special_challenge_has_init = true
     self.start_time = sm.game.getCurrentTick()
     self.respawn_all = 0
-    --[[
-    local old = {challenges = { "" }}
-    local oldpath = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/Json/LocalChallengeList.json"
-    if sm.json.fileExists(oldpath) then
-        local l = sm.json.open(oldpath)
-        if l ~= nil then
-            old = l
-        end
-        sm.json.save(nil, oldpath)
-    end
-    
-    if not sm.json.fileExists("$CHALLENGE_DATA/LocalChallengeList.json") then
-        sm.json.save(old, "$CHALLENGE_DATA/LocalChallengeList.json")
-    end
-    ]]
-
-    -- if self.sv ~= nil and self.sv.saved ~= nil then
-    --     if sm.exists(self.sv.saved.world) then
-    --         self.sv.saved.world:destroy()
-    --     end
-    -- end
     
     self.worldDestroyQueue = {}
     self.sv = {
@@ -55,48 +34,8 @@ function Game.server_onCreate(self)
     self.ChallengeData = LoadChallengeData()
     self:server_updateGameState(States.PackMenu)
     self.ready = true
-    
 
-    -- Check Detector
-    --[[
-    tools = sm.json.open("$CHALLENGE_DATA/Tools/ToolSets/tools.json")
-    local can_continue = false
-    for _, tool in pairs(tools.toolList) do
-        can_continue = tool.uuid == "a83c0677-1dd3-4343-8a3e-2f2c0c3f8f26"
-        if can_continue then
-            break
-        end
-    end
-    if not can_continue then
-        table.insert(
-            tools.toolList,
-            {
-                uuid = "a83c0677-1dd3-4343-8a3e-2f2c0c3f8f26",
-                previewRenderable = "$GAME_DATA/Character/Char_Tools/char_lift_preview.rend",
-                previewRotation = {1, 0, 0, 0, 0, -1, 0, 1, 0},
-                script = {
-                    file = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/Tools/Detector.lua",
-                    class = "Detector"
-                },
-                showInInventory = false
-            }
-        )
-        sm.json.save(tools, "$CHALLENGE_DATA/Tools/ToolSets/tools.json", true)
-    end
-    ]]
 end
---[[
-function Game.client_onCloseApology( self )
-    self.apology = nil
-    self:client_onActionReopen()
-    sm.json.save(true, "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/Json/Apology.json", true)
-end
-
-function Game.client_onButtonApology( self )
-    pcall(self.apology.close, self.apology)
-    pcall(self.apology.destroy, self.apology)
-end
-]]
 
 function Game.client_setDependencyStatus( self, data )
     self.MenuInstance = {
@@ -298,18 +237,18 @@ function Game.server_exitToMenu2(self, data)
         self.ready = true
         self.network:sendToClients("client_closeTmp")
 
-    -- sm.game.setLimitedInventory(true)
-    -- for id,player in pairs(sm.player.getAllPlayers()) do
-    --     local inv = player:getInventory()
-    --     sm.container.beginTransaction()
-    --     for i = 1, inv:getSize() do
-    --         sm.container.setItem(inv, i - 1, sm.uuid.getNil(), 1)
-    --     end
-    --     if id == 1 or true then
-    --         self.network:sendToClient(player, "client_giveHammer")
-    --     end
-    --     sm.container.endTransaction()
-    -- end
+        sm.game.setLimitedInventory(true)
+        for id,player in pairs(sm.player.getAllPlayers()) do
+            local inv = player:getInventory()
+            sm.container.beginTransaction()
+            for i = 1, inv:getSize() do
+                sm.container.setItem(inv, i - 1, sm.uuid.getNil(), 1)
+            end
+            if id == 1 or true then
+                self.network:sendToClient(player, "client_giveHammer")
+            end
+            sm.container.endTransaction()
+        end
     end
 end
 
