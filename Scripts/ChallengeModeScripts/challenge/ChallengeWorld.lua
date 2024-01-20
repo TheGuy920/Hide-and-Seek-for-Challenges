@@ -714,7 +714,6 @@ function ChallengeWorld.server_startChallenge( self )
 				end
 			end
 		end
-		print("world", spectating_players)
 		for _,player in pairs( sm.player.getAllPlayers() ) do
 			sm.event.sendToPlayer(player, "server_setSpectatorList", spectating_players)
 		end
