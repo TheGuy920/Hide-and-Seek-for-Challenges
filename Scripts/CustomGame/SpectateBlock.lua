@@ -189,6 +189,10 @@ function SpectateBlock.server_unBindAll( self )
     self.network:sendToClients("client_unBindAll")
 end
 
+function SpectateBlock.server_onDestroy( self )
+    self:server_unBindAll()
+end
+
 function SpectateBlock.client_unBindAll( self )
     print("default: ", self.player:getName())
     self.player:getCharacter():setLockingInteractable(nil)
