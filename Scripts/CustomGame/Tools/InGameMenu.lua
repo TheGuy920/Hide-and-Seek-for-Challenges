@@ -382,6 +382,7 @@ function InGameMenu.server_bounceBackPlayerList( self, callback )
 end
 
 function InGameMenu.client_updatePlayerStates(self, data)
+	if not sm.isHost then return end
 	local count = 0
 	for _,_ in pairs(data) do count = count + 1 end
 
@@ -410,7 +411,7 @@ function InGameMenu.client_updatePlayerStates(self, data)
 end
 
 function InGameMenu.client_OpenMenu( self )
-
+	if not sm.isHost then return end
 	sm.event.sendToPlayer(self.player, "client_getMode", self.tool)
 
     self.menu = sm.gui.createGuiFromLayout("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/InGameMenu.layout")
@@ -470,6 +471,7 @@ function InGameMenu.server_recieveOptionsFromGame( self, data )
 end
 
 function InGameMenu.client_toggleOptions(self, button)
+	if not sm.isHost then return end
 	local rname = ""
 	local nstate = false
 	if button:sub(-2) == "On" then
@@ -492,6 +494,7 @@ function InGameMenu.client_toggleOptions(self, button)
 end
 
 function InGameMenu.client_setButtonStates( self, data )
+	if not sm.isHost then return end
 	if data then
 		self.options_buttons = data
 	end
@@ -517,6 +520,7 @@ function InGameMenu.server_setButtonStates( self, data )
 end
 
 function InGameMenu.client_togglePlayerState( self, button )
+	if not sm.isHost then return end
 	local index = tonumber(button:sub(5))
 	self.network:sendToServer("server_togglePlayerState", index)
 end
@@ -533,16 +537,19 @@ function InGameMenu.server_togglePlayerState(self, index)
 end
 
 function InGameMenu.client_openHideAndSeekOptions( self, button )
+	if not sm.isHost then return end
 	self.menu:setVisible("ChallengePanel", false)
 	self.menu:setVisible("BackPanel", true)
 end
 
 function InGameMenu.client_exitToMenu( self, button )
+	if not sm.isHost then return end
 	self:client_CloseMenu()
 	sm.event.sendToGame("client_exitToMenu")
 end
 
 function InGameMenu.client_sendEvent( self, button )
+	if not sm.isHost then return end
     self.network:sendToServer("server_sendEvent", button)
 	self:client_CloseMenu()
 end
@@ -559,6 +566,7 @@ function InGameMenu.server_sendEvent( self, button )
 end
 
 function InGameMenu.client_CloseMenu( self )
+	if not sm.isHost then return end
     if sm.exists(self.menu) then
         self.menu:close()
         self.menu:destroy()
@@ -579,6 +587,7 @@ function InGameMenu.client_CloseMenu( self )
 end
 
 function InGameMenu.client_onEquip( self )
+	if not sm.isHost then return end
 	if sm.exists(self.tool) then
 		self.equipped = true
 		for k,v in pairs( renderables ) do renderablesTp[#renderablesTp+1] = v end
@@ -599,6 +608,7 @@ function InGameMenu.client_onEquip( self )
 end
 
 function InGameMenu.client_onUnequip( self )
+	if not sm.isHost then return end
 	if sm.exists(self.tool) then
 		self.SwitchDurration = 0
 		self.equipped = false
