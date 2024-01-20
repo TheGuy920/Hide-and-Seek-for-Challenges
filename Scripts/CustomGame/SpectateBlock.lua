@@ -190,6 +190,7 @@ function SpectateBlock.server_unBindAll( self )
 end
 
 function SpectateBlock.client_unBindAll( self )
+    print("default: ", self.player:getName())
     self.player:getCharacter():setLockingInteractable(nil)
     sm.camera.setCameraState(sm.camera.state.default)
     self.player = nil
