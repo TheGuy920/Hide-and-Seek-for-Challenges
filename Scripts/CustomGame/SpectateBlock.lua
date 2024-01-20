@@ -37,28 +37,113 @@ end
 function SpectateBlock.client_bindPlayer( self, player )
     self.player = player
     if player:getCharacter() then
-        sm.camera.setCameraState(sm.camera.state.cutsceneTP)
+        self.original_pos = player:getCharacter():getWorldPosition()
         player.character:setLockingInteractable(self.interactable)
-        local players = sm.player.getAllPlayers()
-
+        sm.camera.setCameraState(sm.camera.state.cutsceneTP)
         self:client_findAvailablePlayer()
+        self.gui = sm.gui.createGuiFromLayout('$CONTENT_DATA/Gui/Layouts/spectate.layout', false,
+        {
+            isHud = true,
+            isInteractive = false,
+            needsCursor = false,
+            hidesHotbar = true,
+            isOverlapped = true,
+            backgroundAlpha = 0
+        })
+        self.gui:setText("interact", sm.gui.getKeyBinding( "Use", false ))
+        self.gui:setText("cam", self.mode == Modes.Follow and "Player Cam" or "Free Cam")
+        self.gui:open()
+        self.camera_pos = self.original_pos + sm.vec3.new(0,0,1)
+        self.network:sendToServer("server_requestMovePlayer", player)
+        sm.camera.setFov( sm.camera.getDefaultFov() )
     end
+end
+
+function SpectateBlock.server_resetPosition( self, dta )
+    local player = dta.player
+    local pos = dta.pos
+    player:getCharacter():setWorldPosition(pos)
+end
+
+function SpectateBlock.client_setIsHost( self, isHost )
+    self.isHost = isHost
+end
+
+function SpectateBlock.server_requestMovePlayer( self, player )
+    local players = sm.player.getAllPlayers()
+    self.network:sendToClient(player, "client_setIsHost", player == players[1])
+    local index = 0
+    for _,p in pairs(players) do if p == player then break end index = index + 1 end
+    -- platform
+    sm.shape.createBlock(
+        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.vec3.new(3,3,1),
+        sm.vec3.new(-0.25,-0.25,9999),
+        sm.quat.identity(),
+        false,
+        true
+    )
+    -- N wall
+    sm.shape.createBlock(
+        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.vec3.new(1,3,10),
+        sm.vec3.new(-0.5,-0.25,9999),
+        sm.quat.identity(),
+        false,
+        true
+    )
+    -- W wall
+    sm.shape.createBlock(
+        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.vec3.new(3,1,10),
+        sm.vec3.new(-0.25,-0.5,9999),
+        sm.quat.identity(),
+        false,
+        true
+    )
+    -- E wall
+    sm.shape.createBlock(
+        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.vec3.new(3,1,10),
+        sm.vec3.new(-0.25,0.5,9999),
+        sm.quat.identity(),
+        false,
+        true
+    )
+    -- S wall
+    sm.shape.createBlock(
+        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.vec3.new(1,3,10),
+        sm.vec3.new(0.5,-0.25,9999),
+        sm.quat.identity(),
+        false,
+        true
+    )
+    player:getCharacter():setWorldPosition( sm.vec3.new(0.125,0.125,9999+1.5) )
 end
 
 function SpectateBlock.client_findAvailablePlayer( self )
     local players = sm.player.getAllPlayers()
+    if #players > 1 then
+        ::SCheck::
+        if self.spectateIndex > #players - 1 then
+            self.spectateIndex = 0
+        end
 
-    ::SCheck::
-    if self.spectateIndex > #players - 1 then
-        self.spectateIndex = 0
+        self.target = players[self.spectateIndex+1]
+        if self.target == sm.localPlayer.getPlayer() then
+            self.spectateIndex = self.spectateIndex + 1
+            goto SCheck
+        end
+        if self.gui then
+            self.gui:setText("PlayerName", self.target:getName())
+        end
+    else
+        if self.gui then
+            self.gui:setText("cam", "Free Cam")
+        end
+        self.mode = Modes.Free
     end
-
-    self.target = players[self.spectateIndex+1]
-    if self.target == sm.localPlayer.getPlayer() then
-        self.spectateIndex = self.spectateIndex + 1
-        goto SCheck
-    end
-
 end
 
 function SpectateBlock.client_unBindPlayer( self, player )
@@ -66,6 +151,11 @@ function SpectateBlock.client_unBindPlayer( self, player )
     if player:getCharacter() then
         sm.camera.setCameraState(sm.camera.state.default)
         player:getCharacter():setLockingInteractable(nil)
+        self.network:sendToServer("server_resetPosition", {player = player, pos = self.original_pos})
+    end
+    if self.gui then
+        self.gui:destroy()
+        self.gui = nil
     end
 end
 
@@ -75,6 +165,10 @@ function SpectateBlock.client_unbindAll( self, players )
             and player:getCharacter():getLockingInteractable() then
                 player:getCharacter():setLockingInteractable(nil)
         end
+    end
+    if self.gui then
+        self.gui:destroy()
+        self.gui = nil
     end
 end
 
@@ -123,8 +217,11 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
             sm.camera.setDirection(magicPositionInterpolation(oldd, -dir, deltaTime, 1))
         end
     elseif self.mode == Modes.Free and self.player then
-        self.target = nil
-
+        if self.target then
+            self.target = nil
+            self.gui:setText("PlayerName", "")
+        end
+        if not self.camera_pos then self.camera_pos = sm.camera.getPosition() end
         if self.wdown then
             self.camera_pos = self.camera_pos + sm.camera.getDirection() * deltaTime * 10
         end
@@ -162,8 +259,10 @@ function SpectateBlock.client_onAction( self, input, active )
         if input == Controls.One then
             if self.mode == Modes.Follow then
                 self.mode = Modes.Free
+                self.gui:setText("cam", "Free Cam")
             else
                 self.mode = Modes.Follow
+                self.gui:setText("cam", "Player Cam")
                 self:client_findAvailablePlayer()
             end
         end
@@ -210,7 +309,7 @@ function SpectateBlock.client_onAction( self, input, active )
         self.zoom = math.min(self.zoom + 0.5, 20)
     end
 
-    if input == 15 then
+    if input == 15 and self.isHost and active then
         self:client_unBindPlayer(self.player)
     end
 

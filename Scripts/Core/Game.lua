@@ -217,7 +217,7 @@ function Game.client_initializePackMenu(self, force)
         --     }
         -- )
         -- self.MenuInstance.pack.gui:open()
-    else
+    elseif sm.isHost then
         if self.ChallengeData == nil then
             self.ChallengeData = LoadChallengeData()
         end
@@ -928,14 +928,6 @@ end
 
 function Game.client_getSelectedHotBarAndReturn( self, callback )
 	self.network:sendToServer(callback, sm.localPlayer.getSelectedHotbarSlot())
-end
-
-function Game.client_onActionReopen(self)
-    if not self.apology then
-        self:client_initializePackMenu(true)
-        self.inverse_camera_interpolate = nil
-        self.ready = true
-    end
 end
 
 function Game.server_onFixedUpdate(self, timeStep)
