@@ -65,6 +65,23 @@ function SpectateBlock.server_resetPosition( self, dta )
     player:getCharacter():setWorldPosition(pos)
 end
 
+function SpectateBlock.server_recieveSpectators( self, players )
+    self.network:sendToClients("client_recieveSpectators", players)
+end
+
+function SpectateBlock.client_recieveSpectators( self, players )
+    self.spectators = players
+end
+
+function SpectateBlock.client_isPlayerSpectating( self, player )
+    if self.spectators then
+        for _,p in pairs(self.spectators) do
+            if p == player then return true end
+        end
+    end
+    return false
+end
+
 function SpectateBlock.server_requestMovePlayer( self, player )
     local players = sm.player.getAllPlayers()
     local index = 0
@@ -118,7 +135,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     player:getCharacter():setWorldPosition( sm.vec3.new(0.125,0.125,9999+1.5)+offset )
 end
 
-function SpectateBlock.client_findAvailablePlayer( self )
+function SpectateBlock.client_findAvailablePlayer( self, degree )
     local players = sm.player.getAllPlayers()
     if #players > 1 then
         ::SCheck::
@@ -127,8 +144,8 @@ function SpectateBlock.client_findAvailablePlayer( self )
         end
 
         self.target = players[self.spectateIndex+1]
-        if self.target == sm.localPlayer.getPlayer() then
-            self.spectateIndex = self.spectateIndex + 1
+        if self.target == sm.localPlayer.getPlayer() or self:client_isPlayerSpectating(self.target) then
+            self.spectateIndex = self.spectateIndex + degree
             goto SCheck
         end
         if self.gui then
@@ -259,36 +276,23 @@ function SpectateBlock.client_onAction( self, input, active )
             else
                 self.mode = Modes.Follow
                 self.gui:setText("cam", "Player Cam")
-                self:client_findAvailablePlayer()
+                self:client_findAvailablePlayer(1)
             end
         end
 
         if #players > 1 then
             if input == Controls.Mouse1 then
                 self.spectateIndex = self.spectateIndex + 1
-                ::M1Check::
                 if self.spectateIndex > #players - 1 then
                     self.spectateIndex = 0
                 end
-
-                self.target = players[self.spectateIndex+1]
-                if self.target == sm.localPlayer.getPlayer() then
-                    self.spectateIndex = self.spectateIndex + 1
-                    goto M1Check
-                end
+                self:client_findAvailablePlayer(1)
             elseif input == Controls.Mouse2 then
-
                 self.spectateIndex = self.spectateIndex - 1
-                ::M2Check::
                 if self.spectateIndex < 0 then
                     self.spectateIndex = #players - 1
                 end
-
-                self.target = players[self.spectateIndex+1]
-                if self.target == sm.localPlayer.getPlayer() then
-                    self.spectateIndex = self.spectateIndex - 1
-                    goto M2Check
-                end
+                self:client_findAvailablePlayer(-1)
             end
         end
     else

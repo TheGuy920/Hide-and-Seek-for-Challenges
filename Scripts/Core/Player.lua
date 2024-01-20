@@ -366,6 +366,24 @@ function Player.server_setSpectate(self, data)
 	end
 end
 
+function Player.server_setSpectatorList( self, list )
+	if not self.spectators then
+		self.spectators = {}
+	end
+	for _, spectator in pairs( list ) do
+		for _, player in pairs(self.spectators) do
+			if player == spectator then
+				goto pass0
+			end
+		end
+		table.insert( self.spectators, spectator )
+		::pass0::
+	end
+	if self.spectate and self.spectate_part then
+		sm.event.sendToInteractable(self.spectate_part, "client_recieveSpectators", self.spectators)
+	end
+end
+
 function Player.client_setSpectate(self, data)
 	self.spectate = data.state
 	if data.part then self.spectate_part = data.part end

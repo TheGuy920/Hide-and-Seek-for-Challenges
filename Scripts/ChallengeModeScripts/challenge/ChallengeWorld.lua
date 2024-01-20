@@ -448,6 +448,8 @@ local PlayerStates = {
 function ChallengeWorld.server_spawnCharacter( self, params )
 	if self.waitingForDeath == true then return end
 	print("World: spawnCharacter")
+	local spectating_players = {}
+	
 	for _,player in ipairs( params.players ) do
 		if self.challengeStarted then
 			for _,rplayer in pairs(self.hideandseekoptions.players) do
@@ -471,10 +473,14 @@ function ChallengeWorld.server_spawnCharacter( self, params )
 								part = self.spectateblock:getInteractable()
 							}
 						)
+						table.insert(spectating_players, player)
 						sm.event.sendToGame("server_setHideAndSeekOptions", self.hideandseekoptions)
 					end
 					break
 				end
+			end
+			for _,player in pairs( params.players ) do
+				sm.event.sendToPlayer(player, "server_setSpectatorList", spectating_players)
 			end
 		end
 		CreateCharacterOnSpawner( self, self.world, player, self.playerSpawners, sm.vec3.new( 2, 2, 9.7 ), self.enableHealth )

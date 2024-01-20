@@ -224,7 +224,7 @@ function Game.server_exitToMenu2(self, data)
     if sm.exists(data.world) then
         data.world:destroy()
     end
-    
+
     if data.first == true then
         -- reset ChallengeGame
         InitializeChallengeGame()
@@ -871,10 +871,6 @@ function Game.client_getSelectedHotBarAndReturn( self, callback )
 end
 
 function Game.server_onFixedUpdate(self, timeStep)
-    --if not self.player_script_loaded then
-    --    self.player_script_loaded = _G.sm.load_player_script()
-    --    return
-    --end
     if not self.special_challenge_has_init then
         Game.server_onCreate(self)
         self.all_need_respawn = true
