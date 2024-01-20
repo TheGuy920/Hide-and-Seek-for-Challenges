@@ -65,8 +65,9 @@ function SpectateBlock.server_resetPosition( self, dta )
     player:getCharacter():setWorldPosition(pos)
 end
 
-function SpectateBlock.server_recieveSpectators( self, players )
-    self.network:sendToClients("client_recieveSpectators", players)
+function SpectateBlock.server_recieveSpectators( self, data )
+    self.network:sendToClients("client_recieveSpectators", data.players)
+    sm.event.sendToPlayer(data.player, "server_confirmSpectators")
 end
 
 function SpectateBlock.client_recieveSpectators( self, players )

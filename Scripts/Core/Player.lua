@@ -360,7 +360,7 @@ function Player.server_setSpectate(self, data)
 		self.spectate_part = data.part
 		print(self.spectate_part, self.spectators)
 		if self.spectate_part and self.spectators then 
-			sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", self.spectators)
+			sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", {player=self.player,players=self.spectators})
 		end
 		self.network:sendToClient(self.player, "client_setSpectate", data)
 	end
@@ -385,10 +385,13 @@ function Player.server_setSpectatorList( self, list )
 	end
 end
 
+function Player.server_confirmSpectators( self )
+	self.spectate_51sf61 = true
+end
+
 function Player.server_onFixedUpdate( self, dt )
 	if self.spectators and self.spectate_part and not self.spectator_51sf61 then
-		self.spectator_51sf61 = true
-		sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", self.spectators)
+		sm.event.sendToInteractable(self.spectate_part, "server_recieveSpectators", {player=self.player,players=self.spectators})
 	elseif not self.spectate_part then
 		self.spectator_51sf61 = nil
 	end
