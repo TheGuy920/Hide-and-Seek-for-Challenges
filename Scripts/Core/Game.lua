@@ -224,6 +224,7 @@ function Game.server_exitToMenu2(self, data)
     if sm.exists(data.world) then
         data.world:destroy()
     end
+    
     if data.first == true then
         -- reset ChallengeGame
         InitializeChallengeGame()
