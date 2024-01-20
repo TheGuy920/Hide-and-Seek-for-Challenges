@@ -204,7 +204,9 @@ function SpectateBlock.client_unBindAll( self )
     if self.player:getCharacter() then
         self.player:getCharacter():setLockingInteractable(nil)
     end
-    sm.camera.setCameraState(sm.camera.state.default)
+    if not sm.isHost then
+        sm.camera.setCameraState(sm.camera.state.default)
+    end
     self.player = nil
     if self.gui then
         self.gui:destroy()

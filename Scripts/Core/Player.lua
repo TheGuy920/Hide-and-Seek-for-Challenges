@@ -383,7 +383,9 @@ function Player.client_manualReset(self)
 	if self.player:getCharacter() then
 		self.player:getCharacter():setLockingInteractable(nil)
 	end
-	sm.camera.setCameraState(sm.camera.state.default)
+	if not sm.isHost then
+		sm.camera.setCameraState(sm.camera.state.default)
+	end
 end
 
 function Player.server_setSpectatorList( self, list )
