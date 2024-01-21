@@ -40,7 +40,7 @@
 			"scripted" : {
 			   "classname" : "MenuLock",
 			   "data" : {},
-			   "filename" : "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/MenuLock.lua"
+			   "filename" : "$CONTENT_DATA/Scripts/CustomGame/MenuLock.lua"
 			},
 			"restrictions": {
 				"erasable": false
@@ -121,7 +121,7 @@
 			"scripted" : {
 				"classname" : "SpectateBlock",
 				"data" : {},
-				"filename" : "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/SpectateBlock.lua"
+				"filename" : "$CONTENT_DATA/Scripts/CustomGame/SpectateBlock.lua"
 			 },
 			"showInInventory": false,
 			"renderable" : "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_logicgate.rend",

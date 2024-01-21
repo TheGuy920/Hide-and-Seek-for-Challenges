@@ -1,11 +1,11 @@
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/ChallengeBaseWorld.lua")
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/world_util.lua" )
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/game/challenge_shapes.lua" )
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/game/challenge_tools.lua" )
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/ChallengeBaseWorld.lua")
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/world_util.lua" )
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/game/challenge_shapes.lua" )
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/game/challenge_tools.lua" )
 
 BuilderWorld = class( ChallengeBaseWorld )
-BuilderWorld.terrainScript = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/terrain_challengebuilder.lua"
---BuilderWorld.terrainScript = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/terrain.lua"
+BuilderWorld.terrainScript = "$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/terrain_challengebuilder.lua"
+--BuilderWorld.terrainScript = "$CONTENT_DATA/Scripts/Core/terrain.lua"
 BuilderWorld.enableSurface = false
 BuilderWorld.enableAssets = true
 BuilderWorld.enableClutter = true
@@ -226,7 +226,7 @@ function BuilderWorld.server_export( self, data )
 	challengeLevel.data = {}
 	challengeLevel.data.levelCreations = {}
 	challengeLevel.data.startCreations = {}
-	challengeLevel.data.tiles = { "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Tiles/ChallengeBuilderDefault.tile" }
+	challengeLevel.data.tiles = { "$CONTENT_DATA/Terrain/Tiles/ChallengeBuilderDefault.tile" }
 	challengeLevel.data.settings = sm.storage.load( "levelSettings" )
 
 	local header = ""
@@ -235,10 +235,10 @@ function BuilderWorld.server_export( self, data )
 
 	if not data.isLocal then
 		if data.inPack then
-			topHeader = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Overrides/" .. packid .. "."
+			topHeader = "$CONTENT_DATA/Overrides/" .. packid .. "."
 			header = topHeader .. data.uuid .. "."
 		else
-			header = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Overrides/" .. data.uuid .. "."
+			header = "$CONTENT_DATA/Overrides/" .. data.uuid .. "."
 			topHeader = header
 		end
 	else

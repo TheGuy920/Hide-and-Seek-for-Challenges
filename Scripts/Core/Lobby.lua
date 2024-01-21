@@ -1,14 +1,19 @@
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/Util.lua")
+dofile("$CONTENT_DATA/Scripts/Core/Util.lua")
 World = class( nil )
-World.terrainScript = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/terrain.lua"
+World.terrainScript = "$CONTENT_DATA/Scripts/Core/terrain.lua"
 World.cellMinX = -2
 World.cellMaxX = 1
 World.cellMinY = -2
 World.cellMaxY = 1
 World.worldBorder = true
---World.renderMode = "challenge"
-World.isStatic = true
+World.enableSurface = true
+World.enableAssets = true
+World.enableClutter = true
+World.enableNodes = false
 World.enableCreations = false
+World.enableHarvestables = false
+World.enableKinematics = false
+
 local MenuLockUuid = sm.uuid.new("b9e418dd-5875-4ca6-85f1-48154fa81643")
 local OrderList = {
 	sm.uuid.new("d8669091-5ed8-41af-90dd-60e6f5d1f282"),
@@ -56,6 +61,7 @@ function World.server_onCreate( self )
 			if player == host then
 				player.character:setLockingInteractable(self.menu_lock)
 			else
+				print("setLockingInteractable(nil) LOBBY 64")
 				player.character:setLockingInteractable(nil)
 			end
 		end
@@ -68,10 +74,12 @@ function World.client_setLighting( self )
 end
 
 function World.server_setMenuLockNil( self, char )
+	print("setLockingInteractable(nil) LOBBY 76")
 	char:setLockingInteractable(nil)
 end
 
 function World.server_setMenuLock( self, char )
+	print("setLockingInteractable(self.menu_lock) LOBBY 81", char)
 	if sm.exists(char) then
 		char:setLockingInteractable(self.menu_lock)
 	end
@@ -157,14 +165,11 @@ end
 function World.server_spawnCharacter( self, params )
 	print("World: spawnCharacter")
 	for _, player in pairs( params.players ) do
-		print(player:getCharacter())
-		if player.character then
-			print(player.character:getWorld())
-		end
 		local char = CreateCharacterOnSpawner( self, self.world, player, {}, sm.vec3.new( 0.8375, -112.725, 6 ), false )
 		if player == sm.player.getAllPlayers()[1] then
 			char:setLockingInteractable(self.menu_lock)
 		else
+			print("setLockingInteractable(nil) LOBBY 175")
 			char:setLockingInteractable(nil)
 		end
 		sm.event.sendToPlayer( player, "sv_e_onSpawnCharacter")

@@ -1,4 +1,4 @@
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/Util.lua")
+dofile("$CONTENT_DATA/Scripts/Core/Util.lua")
 Game = class(nil)
 
 local correctBasePos = sm.vec3.new(0, -114.5475, 6.1475)
@@ -24,7 +24,7 @@ function Game.server_onCreate(self)
     self.sv = {
         saved = {
             world = sm.world.createWorld(
-                "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/Lobby.lua",
+                "$CONTENT_DATA/Scripts/Core/Lobby.lua",
                 "World"
             )
         }
@@ -49,7 +49,7 @@ function Game.client_setDependencyStatus( self, data )
     self.MenuInstance = {
         blur = {
             blur_gui = sm.gui.createGuiFromLayout(
-                "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/missing.layout",
+                "$CONTENT_DATA/Gui/Layouts/missing.layout",
                 false,
                 {
                     isHud = true,
@@ -127,7 +127,7 @@ function Game.client_initializeBackground(self)
     elseif sm.isHost then
         self.MenuInstance.blur.gui =
             sm.gui.createGuiFromLayout(
-            "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/darken/darken.layout",
+            "$CONTENT_DATA/Gui/Layouts/darken/darken.layout",
             true,
             {
                 isHud = true,
@@ -152,7 +152,7 @@ function Game.client_initializePackMenu(self, force)
     if not sm.isHost then
         -- self.MenuInstance.pack.gui =
         --     sm.gui.createGuiFromLayout(
-        --     "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/ClientLoadingScreen.layout",
+        --     "$CONTENT_DATA/Gui/Layouts/ClientLoadingScreen.layout",
         --     true,
         --     {
         --         isHud = true,
@@ -178,12 +178,12 @@ function Game.client_initializePackMenu(self, force)
             _G["ChallengeModeMenuPack_LoadFunctions"](self.MenuInstance.pack)
             self.MenuInstance.pack.gui =
                 sm.gui.createGuiFromLayout(
-                "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/ChallengeModeMenuPack.layout"
+                "$CONTENT_DATA/Gui/Layouts/ChallengeModeMenuPack.layout"
             )
             self.MenuInstance.pack.gui:setVisible("RecordContainer", false)
             self.MenuInstance.pack.gui_table =
                 sm.json.open(
-                "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/Json/ChallengeModeMenuPack.json"
+                "$CONTENT_DATA/Scripts/CustomGame/Json/ChallengeModeMenuPack.json"
             )
             for _, item in pairs(self.MenuInstance.pack.gui_table.buttons) do
                 self.MenuInstance.pack.gui:setButtonCallback(item.name, item.method)
@@ -239,7 +239,7 @@ function Game.server_exitToMenu2(self, data)
         self.ChallengeData = LoadChallengeData()
         if not sm.exists(self.sv.saved.world) then
             self.sv.saved.world =
-                sm.world.createWorld("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/Lobby.lua", "World")
+                sm.world.createWorld("$CONTENT_DATA/Scripts/Core/Lobby.lua", "World")
         end
         self.respawn_all = 2
         self:server_updateGameState(States.PackMenu)
@@ -283,7 +283,7 @@ end
 
 function Game.client_tmpGui(self, gui)
     self.MenuInstance.waiting.gui =
-        sm.gui.createGuiFromLayout("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/waiting.layout")
+        sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/waiting.layout")
     self.MenuInstance.waiting.gui:open()
 end
 
@@ -301,11 +301,11 @@ function Game.client_initializeBuildMenu(self, force)
         _G["ChallengeBuilder_LoadFunctions"](self.MenuInstance.build)
         self.MenuInstance.build.gui =
             sm.gui.createGuiFromLayout(
-            "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/ChallengeBuilder.layout"
+            "$CONTENT_DATA/Gui/Layouts/ChallengeBuilder.layout"
         )
         self.MenuInstance.build.gui:setVisible("RecordContainer", false)
         self.MenuInstance.build.level_table =
-            sm.json.open("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/Json/ChallengeBuilder.json")
+            sm.json.open("$CONTENT_DATA/Scripts/CustomGame/Json/ChallengeBuilder.json")
         for _, item in pairs(self.MenuInstance.build.level_table.buttons) do
             self.MenuInstance.build.gui:setButtonCallback(item.name, item.method)
         end
@@ -432,12 +432,12 @@ function Game.client_initializePlayMenu(self, uuid, force)
         _G["ChallengeModeMenuPlay_LoadFunctions"](self.MenuInstance.play)
         self.MenuInstance.play.gui =
             sm.gui.createGuiFromLayout(
-            "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/ChallengeModeMenuPlay.layout"
+            "$CONTENT_DATA/Gui/Layouts/ChallengeModeMenuPlay.layout"
         )
         self.MenuInstance.play.gui:setVisible("RecordContainer", false)
         self.MenuInstance.play.play_table =
             sm.json.open(
-            "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/Json/ChallengeModeMenuPlay.json"
+            "$CONTENT_DATA/Scripts/CustomGame/Json/ChallengeModeMenuPlay.json"
         )
         for _, item in pairs(self.MenuInstance.play.play_table.buttons) do
             self.MenuInstance.play.gui:setButtonCallback(item.name, item.method)
@@ -637,7 +637,7 @@ end
 function Game.server_saveAsOverride(self, _table)
     local path = _table.path
     local data = _table.data
-    local header = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Overrides/"
+    local header = "$CONTENT_DATA/Overrides/"
     local stripped = string.gsub(path, EscapePattern("$CONTENT_"), "")
     local level = self.ChallengeData.levels[ChallengeGame.build.level.uuid]
     if #level.packUuid > 10 then
@@ -765,6 +765,12 @@ function Game.loadCraftingRecipes(self)
             craftbot = "$SURVIVAL_DATA/CraftingRecipes/craftbot.json"
         }
     )
+end
+
+function Game.client_onActionReopen(self)
+    self:client_initializePackMenu(true)
+    self.inverse_camera_interpolate = nil
+    self.ready = true
 end
 
 function Game.client_updateGameState(self, State, caller)
@@ -1066,7 +1072,7 @@ function Game.client_onUpdate(self, deltaTime)
     if (self.MenuInstance.blur.blur_gui == nil or not sm.exists(self.MenuInstance.blur.blur_gui)) and sm.isHost then
         self.MenuInstance.blur.blur_gui =
             sm.gui.createGuiFromLayout(
-            "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/darken/darken_new.layout",
+            "$CONTENT_DATA/Gui/Layouts/darken/darken_new.layout",
             false,
             {
                 isHud = true,
@@ -1123,7 +1129,7 @@ function Game.client_onUpdate(self, deltaTime)
                 sm.camera.setDirection(correctBaseDir + ddiff)
                 self.MenuInstance.blur.gui =
                     sm.gui.createGuiFromLayout(
-                    "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/darken/darken.layout",
+                    "$CONTENT_DATA/Gui/Layouts/darken/darken.layout",
                     true,
                     {
                         isHud = true,
@@ -1190,7 +1196,7 @@ function Game.client_onUpdate(self, deltaTime)
             self.inverse_camera_interpolate = false
             self.MenuInstance.blur.gui =
                 sm.gui.createGuiFromLayout(
-                "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/__invis.layout",
+                "$CONTENT_DATA/Gui/Layouts/__invis.layout",
                 false,
                 {
                     isHud = true,

@@ -1,4 +1,4 @@
-local header = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/"
+local header = "$CONTENT_DATA/"
 
 sm.json.checkPath = function( path )
     if not string.find(path, header, 1, true) then

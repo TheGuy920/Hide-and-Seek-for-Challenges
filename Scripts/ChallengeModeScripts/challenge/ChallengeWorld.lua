@@ -1,11 +1,11 @@
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/ChallengeBaseWorld.lua")
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/world_util.lua" )
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/game/challenge_shapes.lua" )
-dofile( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/game/challenge_tools.lua" )
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/ChallengeBaseWorld.lua")
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/world_util.lua" )
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/game/challenge_shapes.lua" )
+dofile( "$CONTENT_DATA/Scripts/ChallengeModeScripts/game/challenge_tools.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/WaterManager.lua" )
 
 ChallengeWorld = class( ChallengeBaseWorld )
-ChallengeWorld.terrainScript = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/terrain_challenge.lua"
+ChallengeWorld.terrainScript = "$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/terrain_challenge.lua"
 ChallengeWorld.enableSurface = false
 ChallengeWorld.enableAssets = true
 ChallengeWorld.enableClutter = true

@@ -1,4 +1,4 @@
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/Util.lua")
+dofile("$CONTENT_DATA/Scripts/Core/Util.lua")
 Player = class(nil)
 
 function Player.server_onCreate(self)
@@ -167,6 +167,7 @@ function Player.sv_e_respawn(self)
 end
 
 function Player.client_onFixedUpdate(self, timeStep)
+	--print(self.player:getCharacter():getLockingInteractable())
 	if self.state == States.Play or self.state == States.PlayBuild or self.state == States.Build then
 	--ChallengePlayer.client_onFixedUpdate( self, timeStep )
 	end
@@ -200,6 +201,7 @@ function Player.client_onUpdate(self, dt)
 	if not sm.isHost and self.state == States.PackMenu or self.state == States.PlayMenu or self.state == States.BuildMenu then
 		if local_player.character ~= nil then
 			if local_player.character:getLockingInteractable() ~= nil then
+				print("setLockingInteractable(nil) PLAYER 203")
 				local_player.character:setLockingInteractable(nil)
 			end
 		end
@@ -381,6 +383,7 @@ end
 
 function Player.client_manualReset(self)
 	if self.player:getCharacter() then
+		print("setLockingInteractable(nil) PLAYER 385")
 		self.player:getCharacter():setLockingInteractable(nil)
 	end
 	if not sm.isHost then
@@ -416,6 +419,7 @@ function Player.client_setSpectate(self, data)
 		else
 			sm.camera.setCameraState(sm.camera.state.default)
 			sm.event.sendToInteractable(self.spectate_part, "client_unBindPlayer", self.player)
+			print("setLockingInteractable(nil) PLAYER 418")
 			self.player:getCharacter():setLockingInteractable(nil)
 		end
 	end

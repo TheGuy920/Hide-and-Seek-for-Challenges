@@ -35,7 +35,7 @@ end
 function PlayerStart.client_onInteract( self, player, state )
 	if state then
 		opened = self
-		self.cl.guiInterface = sm.gui.createGuiFromLayout( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/Interactable_PlayerStart.layout" )
+		self.cl.guiInterface = sm.gui.createGuiFromLayout( "$CONTENT_DATA/Gui/Layouts/Interactable_PlayerStart.layout" )
 		
 		for _, button in ipairs( buttons ) do
 			self.cl.guiInterface:setButtonCallback( button .. "On", "cl_onButtonClick" )

@@ -1,6 +1,6 @@
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/game_util.lua")
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/world_util.lua")
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/game/challenge_shapes.lua")
+dofile("$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/game_util.lua")
+dofile("$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/world_util.lua")
+dofile("$CONTENT_DATA/Scripts/ChallengeModeScripts/game/challenge_shapes.lua")
 dofile("$SURVIVAL_DATA/Scripts/game/survival_projectiles.lua")
 dofile("$SURVIVAL_DATA/Scripts/game/survival_meleeattacks.lua")
 dofile("$SURVIVAL_DATA/Scripts/game/managers/EffectManager.lua")
@@ -35,7 +35,7 @@ function InitializeChallengeGame()
 			for _, level in ipairs(self.play.levelList) do
 				resolveContentPaths(level.data)
 				level.data.tiles[#level.data.tiles + 1] =
-					"$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Tiles/challengemode_env_DT.tile"
+					"$CONTENT_DATA/Terrain/Tiles/challengemode_env_DT.tile"
 			end
 		else
 			-- Build mode
@@ -47,7 +47,7 @@ function InitializeChallengeGame()
 			self.build.level.data.uuid = self.data.uuid
 			resolveContentPaths(self.build.level.data)
 			self.build.level.data.tiles[#self.build.level.data.tiles + 1] =
-				"$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Tiles/challengebuilder_env_DT.tile"
+				"$CONTENT_DATA/Terrain/Tiles/challengebuilder_env_DT.tile"
 
 			sm.game.setLimitedInventory(false)
 			_G.g_inventoriesBuildMode = {}
@@ -125,7 +125,7 @@ function InitializeChallengeGame()
 		self.build.level.data = levelData
 		resolveContentPaths(self.build.level.data)
 		self.build.level.data.tiles[#self.build.level.data.tiles + 1] =
-			"$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Tiles/challengemode_env_DT.tile"
+			"$CONTENT_DATA/Terrain/Tiles/challengemode_env_DT.tile"
 
 		-- Prevent build mode world destroy
 		self.world = nil
@@ -365,10 +365,10 @@ function InitializeChallengeGame()
 		local worldData = {}
 		worldData.tiles = {}
 		worldData.tiles[#worldData.tiles + 1] =
-			"$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Challangemode_victoryscene.tile"
+			"$CONTENT_DATA/Terrain/Challangemode_victoryscene.tile"
 		self.world =
 			sm.world.createWorld(
-			"$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/ChallengeVictoryWorld.lua",
+			"$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/ChallengeVictoryWorld.lua",
 			"ChallengeVictoryWorld",
 			worldData
 		)
@@ -412,11 +412,11 @@ function InitializeChallengeGame()
 
 		if self.build and not self.build.testing then
 			worldScriptFilename =
-				"$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/BuilderWorld.lua"
+				"$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/BuilderWorld.lua"
 			worldScriptClass = "BuilderWorld"
 		else
 			worldScriptFilename =
-				"$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/ChallengeWorld.lua"
+				"$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/ChallengeWorld.lua"
 			worldScriptClass = "ChallengeWorld"
 		end
 

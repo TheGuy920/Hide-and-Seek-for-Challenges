@@ -340,7 +340,7 @@ function split_string (inputstr, sep)
 end
 
 function InGameMenu.client_setMode( self, mode )
-	if not States then dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/Util.lua") end
+	if not States then dofile("$CONTENT_DATA/Scripts/Core/Util.lua") end
 	self.test_running = mode == States.PlayBuild
 	self.play_running = mode == States.Play
 	if sm.exists(self.menu) then
@@ -414,7 +414,7 @@ function InGameMenu.client_OpenMenu( self )
 	if not sm.isHost then return end
 	sm.event.sendToPlayer(self.player, "client_getMode", self.tool)
 
-    self.menu = sm.gui.createGuiFromLayout("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/InGameMenu.layout")
+    self.menu = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/InGameMenu.layout")
     self.menu:setVisible("ChallengeBuilderPanel", true)
     self.menu:setVisible("StopTest_CBP", self.test_running)
 	self.menu:setVisible("Save_CBP", not self.test_running)
@@ -444,7 +444,7 @@ function InGameMenu.client_OpenMenu( self )
     self.menu:setButtonCallback( "Restart_CP", "client_sendEvent" )
 	self.menu:setButtonCallback( "Exit_CP", "client_exitToMenu" )
 	
-    self.blur = sm.gui.createGuiFromLayout("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/Layouts/ingame_darken.layout", true, {
+    self.blur = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/ingame_darken.layout", true, {
         isHud = true,
         isInteractive = false,
         needsCursor = false,
@@ -452,7 +452,7 @@ function InGameMenu.client_OpenMenu( self )
         isOverlapped = true,
         backgroundAlpha = 0.3,
     })
-    self.blur:setImage("BackgroundImage", "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Gui/t_mapinspectorscreen_gradient.png")
+    self.blur:setImage("BackgroundImage", "$CONTENT_DATA/Gui/t_mapinspectorscreen_gradient.png")
     self.menu:open()
 	self.blur:open()
 end

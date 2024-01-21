@@ -1,6 +1,6 @@
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/Util.lua")
+dofile("$CONTENT_DATA/Scripts/Core/Util.lua")
 World = class( nil )
-World.terrainScript = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/Core/terrain.lua"
+World.terrainScript = "$CONTENT_DATA/Scripts/Core/terrain.lua"
 World.cellMinX = -2
 World.cellMaxX = 1
 World.cellMinY = -2
@@ -58,6 +58,7 @@ function World.server_onCreate( self )
 			if player == host then
 				player.character:setLockingInteractable(self.menu_lock)
 			else
+				print("setLockingInteractable(nil) World 61")
 				player.character:setLockingInteractable(nil)
 			end
 		end
@@ -70,6 +71,7 @@ function World.client_setLighting( self )
 end
 
 function World.server_setMenuLockNil( self, char )
+	print("setLockingInteractable(nil) World 73")
 	char:setLockingInteractable(nil)
 end
 
@@ -161,6 +163,7 @@ function World.server_spawnCharacter( self, params )
 		if player == sm.player.getAllPlayers()[1] then
 			char:setLockingInteractable(self.menu_lock)
 		else
+			print("setLockingInteractable(nil) World 166")
 			char:setLockingInteractable(nil)
 		end
 		sm.event.sendToPlayer( player, "sv_e_onSpawnCharacter")

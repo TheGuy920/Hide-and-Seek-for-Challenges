@@ -1,3 +1,11 @@
+CELL_SIZE = 64
+
+DESERT_FADE_RANGE = 128
+DESERT_FADE_START = 512
+DESERT_FADE_END = DESERT_FADE_START + DESERT_FADE_RANGE
+BARRIER_START = 704
+BARRIER_END = 704 + 64
+
 function Init()
 	print( "Init terrain" )
 end
@@ -29,7 +37,7 @@ function Create( xMin, xMax, yMin, yMax, seed, data )
 		end
 	end
 	--print(yMin, yMax, xMin, xMax)
-	local jWorld = sm.json.open( "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Terrain/Worlds/example.world")
+	local jWorld = sm.json.open( "$CONTENT_DATA/Terrain/Worlds/example.world")
 	for _, cell in pairs( jWorld.cellData ) do
 		if cell.path ~= "" then
 			local uid = sm.terrainTile.getTileUuid( cell.path )
@@ -96,16 +104,64 @@ function GetHeightAt( x, y, lod )
 	return sm.terrainTile.getHeightAt( GetTileLoadParamsFromWorldPos( x, y, lod ) )
 end
 
+--[[
 function GetColorAt( x, y, lod )
 	return sm.terrainTile.getColorAt( GetTileLoadParamsFromWorldPos( x, y, lod ) )
 end
+]]
+
+function getCell( x, y )
+	return math.floor( x / CELL_SIZE), math.floor( y / CELL_SIZE )
+end
+
+function GetColorAt( x, y, lod )
+	local cellX, cellY = getCell( x, y )
+	local uid, tileCellOffsetX, tileCellOffsetY = GetCellTileUidAndOffset( cellX, cellY )
+
+	local r, g, b = sm.terrainTile.getColorAt( uid, tileCellOffsetX, tileCellOffsetY, lod, x - cellX * CELL_SIZE, y - cellY * CELL_SIZE )
+
+	local noise = sm.noise.octaveNoise2d( x / 8, y / 8, 5, 45 )
+	local brightness = noise * 0.25 + 0.75
+	local color = { r, g, b }
+	
+	local desertColor = { 255 / 255, 171 / 255, 111 / 255 }
+	
+	local maxDist = math.max( math.abs(x), math.abs(y) )
+	if maxDist >= DESERT_FADE_END then
+		color[1] = desertColor[1]
+		color[2] = desertColor[2]
+		color[3] = desertColor[3]
+	else
+		if maxDist > DESERT_FADE_START then
+			local fade = ( maxDist - DESERT_FADE_START ) / DESERT_FADE_RANGE
+			color[1] = color[1] + ( desertColor[1] - color[1] ) * fade
+			color[2] = color[2] + ( desertColor[2] - color[2] ) * fade
+			color[3] = color[3] + ( desertColor[3] - color[3] ) * fade
+		end
+	end
+
+	return color[1] * brightness, color[2] * brightness, color[3] * brightness
+end
+
 
 function GetMaterialAt( x, y, lod )
 	return sm.terrainTile.getMaterialAt( GetTileLoadParamsFromWorldPos( x, y, lod ) )
 end
-
+--[[
 function GetClutterIdxAt( x, y )
 	return sm.terrainTile.getClutterIdxAt( GetTileLoadParamsFromWorldPos( x, y ) )
+end
+]]
+
+function GetClutterIdxAt( x, y )
+	local cellX = math.floor( x / ( CELL_SIZE * 2 ) )
+	local cellY = math.floor( y / ( CELL_SIZE * 2 ) )
+	local uid, tileCellOffsetX, tileCellOffsetY = GetCellTileUidAndOffset( cellX, cellY )
+
+	local rx, ry = InverseRotateLocal( cellX, cellY, x - cellX * CELL_SIZE * 2, y - cellY * CELL_SIZE * 2, CELL_SIZE * 2 - 1 )
+
+	local clutterIdx = sm.terrainTile.getClutterIdxAt( uid, tileCellOffsetX, tileCellOffsetY, rx, ry )
+	return clutterIdx
 end
 
 function GetAssetsForCell( cellX, cellY, lod )

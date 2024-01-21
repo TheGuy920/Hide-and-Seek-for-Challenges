@@ -1,8 +1,8 @@
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/ChallengeModeMenuPack.lua")
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/ChallengeModeMenuPlay.lua")
-dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/CustomGame/ChallengeBuilder.lua")
+dofile("$CONTENT_DATA/Scripts/CustomGame/ChallengeModeMenuPack.lua")
+dofile("$CONTENT_DATA/Scripts/CustomGame/ChallengeModeMenuPlay.lua")
+dofile("$CONTENT_DATA/Scripts/CustomGame/ChallengeBuilder.lua")
 
-local header = "$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/"
+local header = "$CONTENT_DATA/"
 
 local function EscapePattern(s)
     return s:gsub("([^%w])", "%%%1")
@@ -114,12 +114,12 @@ if not sm.old then
 end
 
 if _G.ChallengeGame == nil then
-    dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/challenge/ChallengeGame.lua")
+    dofile("$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/ChallengeGame.lua")
     InitializeChallengeGame()
 end
 
 if _G.ChallengePlayer == nil then
-    dofile("$CONTENT_a65c170c-ede3-4757-9f1a-586eabf1a2bc/Scripts/ChallengeModeScripts/game/ChallengePlayer.lua")
+    dofile("$CONTENT_DATA/Scripts/ChallengeModeScripts/game/ChallengePlayer.lua")
 end
 
 _G.States = {
