@@ -384,7 +384,7 @@ end
 function Player.client_manualReset(self)
 	if self.player:getCharacter() then
 		print("setLockingInteractable(nil) PLAYER 385")
-		self.player:getCharacter():setLockingInteractable(nil)
+		--self.player:getCharacter():setLockingInteractable(nil)
 	end
 	if not sm.isHost then
 		sm.camera.setCameraState(sm.camera.state.default)
