@@ -27,7 +27,6 @@ local posOffset = {
 
 function World.server_onCreate( self )
     print("World.server_onCreate")
-	sm.event.sendToGame("sve_maybeDestroyWorld", self.world)
     sm.event.sendToGame("server_worldScriptReady")
 	self.menu_lock = nil
 	self.barrier = {}
