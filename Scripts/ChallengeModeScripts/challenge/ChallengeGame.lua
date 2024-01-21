@@ -429,6 +429,7 @@ function InitializeChallengeGame()
 
 		for _, player in pairs(players) do
 			self.world:loadCell(x, y, player)
+			--sm.event.sendToPlayer( player, "server_clearSpectatorList")
 		end
 	end
 

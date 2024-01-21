@@ -62,6 +62,7 @@ function World.server_onCreate( self )
 				player.character:setLockingInteractable(nil)
 			end
 		end
+		--sm.event.sendToPlayer( player, "server_clearSpectatorList")
 	end
 end
 

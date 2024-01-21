@@ -155,7 +155,14 @@ function Player.server_onFixedUpdate(self, timeStep)
 		elseif not self.spectate_part then
 			self.spectate_51sf61 = nil
 		end
+	elseif self.spectators then
+		self.spectators = nil
 	end
+end
+
+function Player.server_clearSpectatorList( self )
+	print("CLEAR SPECTATOR LIST")
+	self.spectators = nil
 end
 
 function Player.sv_e_challengeReset(self)
@@ -167,6 +174,7 @@ function Player.sv_e_respawn(self)
 end
 
 function Player.client_onFixedUpdate(self, timeStep)
+	
 	--print(self.player:getCharacter():getLockingInteractable())
 	if self.state == States.Play or self.state == States.PlayBuild or self.state == States.Build then
 	--ChallengePlayer.client_onFixedUpdate( self, timeStep )

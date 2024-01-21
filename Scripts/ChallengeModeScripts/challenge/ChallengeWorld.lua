@@ -48,6 +48,10 @@ function ChallengeWorld.server_onCreate( self )
 	self.enableHealth = getSettingValue( self.data.settings, "enable_health" )
 
 	sm.event.sendToGame( "server_setHideAndSeekOptions", nil )
+
+	for _,player in pairs(sm.player.getAllPlayers()) do
+		sm.event.sendToPlayer( player, "server_clearSpectatorList")
+	end
 end
 
 function ChallengeWorld.server_onDestroy( self )
