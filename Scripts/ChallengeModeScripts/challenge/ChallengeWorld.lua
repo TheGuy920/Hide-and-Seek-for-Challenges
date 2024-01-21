@@ -674,9 +674,9 @@ function ChallengeWorld.server_startChallenge( self )
 	if self.waitingForDeath == true then return end
 	
 	if self.hideandseekoptions then
-		self.enableHealth = self.hideandseekoptions.options.oneshotOn
-			or self.hideandseekoptions.options.halfhealthOn
-			or self.hideandseekoptions.options.fullhealthOn
+		self.enableHealth = self.hideandseekoptions.options.oneshot
+			or self.hideandseekoptions.options.halfhealth
+			or self.hideandseekoptions.options.fullhealth
 
 		local maxhp = self.hideandseekoptions.options.oneshot and 1
 			or self.hideandseekoptions.options.halfhealth and 50

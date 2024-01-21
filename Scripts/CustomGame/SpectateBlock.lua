@@ -152,6 +152,14 @@ function SpectateBlock.client_findAvailablePlayer( self, degree )
         self.target = players[self.spectateIndex+1]
         if self.target == sm.localPlayer.getPlayer() or (self:client_isPlayerSpectating(self.target)) then
             self.spectateIndex = self.spectateIndex + degree
+            -- sanity check
+            if self.spectators and #self.spectators >= #players then
+                if self.gui then
+                    self.gui:setText("cam", "Free Cam")
+                end
+                self.mode = Modes.Free
+                return
+            end
             goto SCheck
         end
         if self.gui then
@@ -169,7 +177,6 @@ function SpectateBlock.client_unBindPlayer( self, player )
     self.player = nil
     if player:getCharacter() then
         sm.camera.setCameraState(sm.camera.state.default)
-        print("setLockingInteractable(nil) SPECTATE 170")
         player:getCharacter():setLockingInteractable(nil)
         self.network:sendToServer("server_resetPosition", {player = player, pos = self.original_pos})
     end
@@ -180,11 +187,9 @@ function SpectateBlock.client_unBindPlayer( self, player )
 end
 
 function SpectateBlock.server_unBindAll( self, cant )
-    print("unbind all")
     for _,player in pairs(sm.player.getAllPlayers()) do
         if player and player:getCharacter()
             and player:getCharacter():getLockingInteractable() then
-            print("setLockingInteractable(nil) SPECTATE 184")
                 player:getCharacter():setLockingInteractable(nil)
         end
     end
@@ -202,9 +207,7 @@ function SpectateBlock.client_onDestroy( self )
 end
 
 function SpectateBlock.client_unBindAll( self )
-    print("default: ", self.player:getName())
     if self.player:getCharacter() then
-        print("setLockingInteractable(nil) SPECTATE 205")
         self.player:getCharacter():setLockingInteractable(nil)
     end
     --if not sm.isHost then

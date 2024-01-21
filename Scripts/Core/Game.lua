@@ -790,7 +790,7 @@ function Game.client_updateGameState(self, State, caller)
 end
 
 function Game.server_onPlayerJoined(self, player, isNewPlayer)
-    print("Game.server_onPlayerJoined")
+    print("Game.server_onPlayerJoined", player:getName())
     if sm.host == nil then
         sm.host = sm.player.getAllPlayers()[1]
     end
