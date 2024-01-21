@@ -75,7 +75,9 @@ end
 
 function World.server_setMenuLockNil( self, char )
 	print("setLockingInteractable(nil) LOBBY 76")
-	char:setLockingInteractable(nil)
+	if char:getLockingInteractable() then
+		char:setLockingInteractable(nil)
+	end
 end
 
 function World.server_setMenuLock( self, char )
