@@ -148,7 +148,7 @@ function SpectateBlock.client_findAvailablePlayer( self, degree )
         elseif self.spectateIndex < 0 then
             self.spectateIndex = #players - 1
         end
-
+        print(self.spectators, self.spectateIndex)
         self.target = players[self.spectateIndex+1]
         if self.target == sm.localPlayer.getPlayer() or (self:client_isPlayerSpectating(self.target)) then
             self.spectateIndex = self.spectateIndex + degree
