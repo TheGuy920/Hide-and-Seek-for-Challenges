@@ -28,7 +28,6 @@ function ChallengePlayer.server_onCreate( self )
 		self.sv.saved.isNewPlayer = true
 		self.sv.saved.inChemical = false
 		self.sv.saved.inOil = false
-		print(self.lasting_health_rule)
 		self.sv.saved.enableHealth = self.lasting_health_rule == true
 		self.storage:save( self.sv.saved )
 	end

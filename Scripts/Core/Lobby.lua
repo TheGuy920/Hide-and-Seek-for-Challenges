@@ -38,7 +38,7 @@ function World.server_onCreate( self )
 			if shape.uuid == MenuLockUuid then
 				self.menu_lock = shape:getInteractable()
 			end
-			if shape.uuid == BarrierUuid then
+			if shape.uuid == OrderList[1] or shape.uuid == OrderList[3] then
 				table.insert(self.barrier, shape)
 			end
 		end

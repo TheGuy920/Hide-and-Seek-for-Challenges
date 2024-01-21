@@ -711,6 +711,12 @@ function Game.server_worldScriptReady(self, caller)
     end
 end
 
+function Game.sve_maybeDestroyWorld(self, world)
+    if world ~= self.sv.saved.world then
+        self:sve_destroyWorld(world)
+    end
+end
+
 function Game.sve_destroyWorld(self, world)
     if self.worldDestroyQueue == nil then
         self.worldDestroyQueue = {}
@@ -851,8 +857,11 @@ function Game.sv_createPlayerCharacter(self, world, x, y, player, params)
             vector = sm.vec3.new(0.8375, -112.725, 6)
             yaw = yaw - 0.88
         end
-        character = sm.character.createCharacter(player, world, vector, yaw, 0)
-        player:setCharacter(character)
+        print(player:getName(), player:getCharacter())
+        if player == sm.host then
+            character = sm.character.createCharacter(player, world, vector, yaw, 0)
+            player:setCharacter(character)
+        end
 
         if player == sm.host then
             sm.event.sendToWorld(world, "server_setMenuLock", character)
