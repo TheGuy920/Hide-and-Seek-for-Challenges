@@ -128,13 +128,13 @@ function SpectateBlock.server_requestMovePlayer( self, player )
 end
 
 function SpectateBlock.server_recieveSpectators( self, data )
-    print("server_recieveSpectators", data)
+    --print("server_recieveSpectators", data)
     self.network:sendToClients("client_recieveSpectators", data.players)
     sm.event.sendToPlayer(data.player, "server_confirmSpectators")
 end
 
 function SpectateBlock.client_recieveSpectators( self, players )
-    print("client_recieveSpectators", players)
+    --print("client_recieveSpectators", players)
     self.spectators = players
     if self.player then
         self:client_findAvailablePlayer(1)
@@ -143,7 +143,13 @@ end
 
 function SpectateBlock.client_findAvailablePlayer( self, degree )
     local players = sm.player.getAllPlayers()
-    if #players > 1 and not (self.spectators and #self.spectators >= #players) then
+    local slen = 0
+    if self.spectators then
+        slen = #self.spectators
+        for _,p in pairs(self.spectators) do if p == sm.localPlayer.getPlayer() then slen = slen - 1 end end
+        slen = slen + 1
+    end
+    if #players > 1 and not (self.spectators and slen >= #players) then
         ::SCheck::
         if self.spectateIndex > #players - 1 then
             self.spectateIndex = 0
@@ -155,7 +161,7 @@ function SpectateBlock.client_findAvailablePlayer( self, degree )
         if self.target == sm.localPlayer.getPlayer() or (self:client_isPlayerSpectating(self.target)) then
             self.spectateIndex = self.spectateIndex + degree
             -- sanity check
-            if self.spectators and #self.spectators >= #players then
+            if self.spectators and slen >= #players then
                 --print("sane?")
                 if self.gui then
                     self.gui:setText("cam", "Free Cam")
