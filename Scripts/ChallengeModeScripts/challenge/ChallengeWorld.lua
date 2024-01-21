@@ -688,7 +688,9 @@ function ChallengeWorld.server_startChallenge( self )
 				if player:getName() == rplayer.name then
 					if rplayer.state == PlayerStates.Hider  then
 						sm.event.sendToPlayer(player, "sv_e_enableHealth", self.enableHealth )
-						sm.event.sendToPlayer(player, "server_setMaxHp", maxhp )
+						if self.enableHealth then
+							sm.event.sendToPlayer(player, "server_setMaxHp", maxhp )
+						end
 						break
 					elseif rplayer.state == PlayerStates.Spectator then
 						if not self.spectateblock then

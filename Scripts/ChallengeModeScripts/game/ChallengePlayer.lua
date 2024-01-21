@@ -120,7 +120,7 @@ end
 function ChallengePlayer.server_setMaxHp( self, maxhp )
 	self.sv.saved.stats.maxhp = maxhp
 	self.sv.saved.stats.hp = maxhp
-	--self.sv.saved.enableHealth = true
+	self.sv.saved.enableHealth = true
 	self.network:setClientData( self.sv.saved )
 end
 
