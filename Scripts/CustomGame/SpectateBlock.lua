@@ -128,11 +128,13 @@ function SpectateBlock.server_requestMovePlayer( self, player )
 end
 
 function SpectateBlock.server_recieveSpectators( self, data )
+    print("server_recieveSpectators", data)
     self.network:sendToClients("client_recieveSpectators", data.players)
     sm.event.sendToPlayer(data.player, "server_confirmSpectators")
 end
 
 function SpectateBlock.client_recieveSpectators( self, players )
+    print("client_recieveSpectators", players)
     self.spectators = players
     if self.player then
         self:client_findAvailablePlayer(1)
