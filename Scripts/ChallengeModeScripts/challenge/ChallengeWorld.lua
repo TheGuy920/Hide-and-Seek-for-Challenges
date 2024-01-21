@@ -462,7 +462,7 @@ function ChallengeWorld.server_spawnCharacter( self, params )
 						rplayer.state = PlayerStates.Spectator
 						if not self.spectateblock then
 							self.spectateblock = sm.shape.createPart(
-								sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
+								sm.uuid.new("d8669091-5ed8-41af-90dd-60e6f5d1f283"),
 								sm.vec3.new(0,0,0),
 								sm.quat.identity(),
 								false,

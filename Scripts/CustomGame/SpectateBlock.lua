@@ -81,7 +81,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     local offset = sm.vec3.new(index, index, 0)
     -- platform
     sm.shape.createBlock(
-        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(3,3,1),
         sm.vec3.new(-0.25,-0.25,9999)+offset,
         sm.quat.identity(),
@@ -90,7 +90,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     )
     -- N wall
     sm.shape.createBlock(
-        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(1,3,10),
         sm.vec3.new(-0.5,-0.25,9999)+offset,
         sm.quat.identity(),
@@ -99,7 +99,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     )
     -- W wall
     sm.shape.createBlock(
-        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(3,1,10),
         sm.vec3.new(-0.25,-0.5,9999)+offset,
         sm.quat.identity(),
@@ -108,7 +108,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     )
     -- E wall
     sm.shape.createBlock(
-        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(3,1,10),
         sm.vec3.new(-0.25,0.5,9999)+offset,
         sm.quat.identity(),
@@ -117,7 +117,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     )
     -- S wall
     sm.shape.createBlock(
-        sm.uuid.new("5f41af56-df4c-4837-9b3c-10781335757f"),
+        sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(1,3,10),
         sm.vec3.new(0.5,-0.25,9999)+offset,
         sm.quat.identity(),
