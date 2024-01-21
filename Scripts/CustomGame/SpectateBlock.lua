@@ -79,11 +79,13 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     local index = 0
     for _,p in pairs(players) do if p == player then break end index = index + 1 end
     local offset = sm.vec3.new(index, index, 0)
+
+    local zpos = 99999
     -- platform
     sm.shape.createBlock(
         sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(3,3,1),
-        sm.vec3.new(-0.25,-0.25,9999)+offset,
+        sm.vec3.new(-0.25,-0.25,zpos)+offset,
         sm.quat.identity(),
         false,
         true
@@ -92,7 +94,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(1,3,10),
-        sm.vec3.new(-0.5,-0.25,9999)+offset,
+        sm.vec3.new(-0.5,-0.25,zpos)+offset,
         sm.quat.identity(),
         false,
         true
@@ -101,7 +103,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(3,1,10),
-        sm.vec3.new(-0.25,-0.5,9999)+offset,
+        sm.vec3.new(-0.25,-0.5,zpos)+offset,
         sm.quat.identity(),
         false,
         true
@@ -110,7 +112,7 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(3,1,10),
-        sm.vec3.new(-0.25,0.5,9999)+offset,
+        sm.vec3.new(-0.25,0.5,zpos)+offset,
         sm.quat.identity(),
         false,
         true
@@ -119,12 +121,12 @@ function SpectateBlock.server_requestMovePlayer( self, player )
     sm.shape.createBlock(
         sm.uuid.new("f99ebc34-4821-4b39-a625-b839c5802ed5"),
         sm.vec3.new(1,3,10),
-        sm.vec3.new(0.5,-0.25,9999)+offset,
+        sm.vec3.new(0.5,-0.25,zpos)+offset,
         sm.quat.identity(),
         false,
         true
     )
-    player:getCharacter():setWorldPosition( sm.vec3.new(0.125,0.125,9999+1.5)+offset )
+    player:getCharacter():setWorldPosition( sm.vec3.new(0.125,0.125,zpos+1.5)+offset )
 end
 
 function SpectateBlock.server_recieveSpectators( self, data )
