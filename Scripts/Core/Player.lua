@@ -161,7 +161,6 @@ function Player.server_onFixedUpdate(self, timeStep)
 end
 
 function Player.server_clearSpectatorList( self )
-	print("CLEAR SPECTATOR LIST")
 	self.spectators = nil
 end
 
@@ -209,7 +208,6 @@ function Player.client_onUpdate(self, dt)
 	if not sm.isHost and self.state == States.PackMenu or self.state == States.PlayMenu or self.state == States.BuildMenu then
 		if local_player.character ~= nil then
 			if local_player.character:getLockingInteractable() ~= nil then
-				print("setLockingInteractable(nil) PLAYER 203")
 				local_player.character:setLockingInteractable(nil)
 			end
 		end
@@ -345,9 +343,6 @@ function Player.client_onCancel(self)
 end
 
 function Player.client_onReload(self)
-	if self.state == States.Play or self.state == States.PlayBuild or self.state == States.Build then
-		ChallengePlayer.client_onReload(self)
-	end
 end
 
 function Player.cl_n_fillWater(self)
@@ -390,10 +385,6 @@ function Player.server_setSpectate(self, data)
 end
 
 function Player.client_manualReset(self)
-	if self.player:getCharacter() then
-		print("setLockingInteractable(nil) PLAYER 385")
-		--self.player:getCharacter():setLockingInteractable(nil)
-	end
 	if not sm.isHost then
 		sm.camera.setCameraState(sm.camera.state.default)
 	end
@@ -427,7 +418,6 @@ function Player.client_setSpectate(self, data)
 		else
 			sm.camera.setCameraState(sm.camera.state.default)
 			sm.event.sendToInteractable(self.spectate_part, "client_unBindPlayer", self.player)
-			print("setLockingInteractable(nil) PLAYER 418")
 			self.player:getCharacter():setLockingInteractable(nil)
 		end
 	end

@@ -292,32 +292,38 @@
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="Caption" value="Spectate When Dead"/>
             </Widget>
-            <Widget type="Button" skin="PrimaryButton" position_real="0.79559118236472948 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="noitemsOnActive">
+            <Widget type="Button" skin="PrimaryButton" position_real="0.79559118236472948 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="skyboxOnActive">
                 <Property key="Visible" value="false"/>
                 <Property key="Caption" value="#{ON}"/>
                 <Property key="FontName" value="SM_ButtonSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SettingsButton" position_real="0.79559118236472948 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="noitemsOn">
+            <Widget type="Button" skin="SettingsButton" position_real="0.79559118236472948 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="skyboxOn">
                 <Property key="Caption" value="#{ON}"/>
                 <Property key="FontName" value="SM_ButtonSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="PrimaryButton" position_real="0.87975951903807614 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="noitemsOffActive">
+            <Widget type="Button" skin="PrimaryButton" position_real="0.87975951903807614 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="skyboxOffActive">
                 <Property key="Caption" value="#{OFF}"/>
                 <Property key="FontName" value="SM_ButtonSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SettingsButton" position_real="0.87975951903807614 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="noitemsOff">
+            <Widget type="Button" skin="SettingsButton" position_real="0.87975951903807614 0.41803278688524592 0.080160320641282562 0.068306010928961755" name="skyboxOff">
                 <Property key="Visible" value="false"/>
                 <Property key="Caption" value="#{OFF}"/>
                 <Property key="FontName" value="SM_ButtonSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="TextBox" skin="TextBox" position_real="0.52505010020040077 0.40846994535519127 0.26953907815631262 0.08060109289617487" name="noitemsText">
+            <Widget type="TextBox" skin="TextBox" position_real="0.52505010020040077 0.40846994535519127 0.26953907815631262 0.08060109289617487" name="skyboxText">
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
-                <Property key="Caption" value="BLANK"/>
+                <Property key="Caption" value="Skybox [DAY]"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.52505010020040077 0.43715846994535518 0.26953907815631262 0.08060109289617487" name="skyboxText">
+                <Property key="FontName" value="HandbookDescriptionSmall"/>
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="Caption" value="Time Entry feild comming soon"/>
+                <Property key="FontHeight" value="12"/>
             </Widget>
             <Widget type="Button" skin="PrimaryButton" position_real="0.79559118236472948 0.50273224043715847 0.080160320641282562 0.068306010928961755" name="inactivityOnActive">
                 <Property key="Visible" value="false"/>

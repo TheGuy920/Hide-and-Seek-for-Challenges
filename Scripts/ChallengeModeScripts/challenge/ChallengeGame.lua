@@ -409,6 +409,8 @@ function InitializeChallengeGame()
 
 		local worldScriptFilename
 		local worldScriptClass
+		local saved = self:server_getLevelData()
+		local restore = nil
 
 		if self.build and not self.build.testing then
 			worldScriptFilename =
@@ -418,10 +420,21 @@ function InitializeChallengeGame()
 			worldScriptFilename =
 				"$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/ChallengeWorld.lua"
 			worldScriptClass = "ChallengeWorld"
+			if self.hideandseekoptions and self.hideandseekoptions.options
+				and self.hideandseekoptions.options.skybox then
+					worldScriptFilename = "$CONTENT_DATA/Scripts/ChallengeModeScripts/challenge/ChallengeWorldOutdoor.lua"
+					worldScriptClass = "ChallengeWorldOutdoor"
+					restore = saved.tiles[#saved.tiles]
+					saved.tiles[#saved.tiles] = nil
+			end
 		end
 
-		self.world = sm.world.createWorld(worldScriptFilename, worldScriptClass, self:server_getLevelData())
+		self.world = sm.world.createWorld(worldScriptFilename, worldScriptClass, saved)
 		sm.challenge.setChallengeWorld(self.world)
+
+		if restore then
+			saved.tiles[#saved.tiles + 1] = restore
+		end
 
 		local players = sm.player.getAllPlayers()
 		local x = 0

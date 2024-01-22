@@ -30,6 +30,8 @@ function Game.server_onCreate(self)
         }
     }
 
+    sm.json.save(false, "$CONTENT_DATA/Scripts/skybox.json")
+
     self.storage:save(self.sv)
 
     local hasDatabase, _ = pcall(sm.json.open, "$CONTENT_e3589ff7-31ca-4f19-b1f0-bef055ba9200/ChallengeList.json")

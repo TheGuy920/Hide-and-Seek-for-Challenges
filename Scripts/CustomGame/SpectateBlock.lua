@@ -6,6 +6,7 @@ local Controls = {
     A = 1,
     D = 2,
     One = 5,
+    Two = 6,
     Spacebar = 16,
     Mouse1 = 19,
     Mouse2 = 18,
@@ -51,6 +52,7 @@ function SpectateBlock.client_bindPlayer( self, player )
             backgroundAlpha = 0
         })
         self.gui:setText("interact", sm.gui.getKeyBinding( "Use", false ))
+        self.gui:setText("forward", sm.gui.getKeyBinding( "Forward", false ))
         self.gui:setText("cam", self.mode == Modes.Follow and "Player Cam" or "Free Cam")
         self.gui:open()
         self.camera_pos = self.original_pos + sm.vec3.new(0,0,1)
@@ -72,6 +74,18 @@ function SpectateBlock.client_isPlayerSpectating( self, player )
         end
     end
     return false
+end
+
+function SpectateBlock.client_toggleGUI(self)
+    if self.gui_toggle then
+        self.gui:setVisible("gui_body", true)
+        self.gui:setText("gui_text", "GUI is #{ON_CAPS}")
+        self.gui_toggle = false
+    else
+        self.gui:setVisible("gui_body", false)
+        self.gui:setText("gui_text", "GUI is #{OFF_CAPS}")
+        self.gui_toggle = true
+    end
 end
 
 function SpectateBlock.server_requestMovePlayer( self, player )
@@ -281,23 +295,32 @@ function SpectateBlock.client_onUpdate( self, deltaTime )
             self.gui:setText("PlayerName", "")
         end
         local character = sm.localPlayer.getPlayer():getCharacter()
-        local sprint = character:isSprinting()
-
+        local sprint = character:isSprinting() or  self.wfast
         if not self.camera_pos then self.camera_pos = sm.camera.getPosition() end
+        
         if self.wdown then
-            self.camera_pos = self.camera_pos + sm.camera.getDirection() * deltaTime * 5 * (sprint and 3 or 1)
+            if self.wtimer and (sm.game.getCurrentTick() - self.wtimer) <= 3 then
+                self.wtimer = nil
+                self.wfast = true
+            elseif self.wtimer then
+                self.wtimer = nil
+                self.wfast = false
+            end
+            self.camera_pos = self.camera_pos + sm.camera.getDirection() * deltaTime * 5 * (sprint and 4 or 1.5)
+        elseif not self.wtimer then
+            self.wtimer = sm.game.getCurrentTick()
         end
         if self.sdown then
-            self.camera_pos = self.camera_pos - sm.camera.getDirection() * deltaTime * 5 * (sprint and 3 or 1)
+            self.camera_pos = self.camera_pos - sm.camera.getDirection() * deltaTime * 5 * (sprint and 4 or 1.5)
         end
         if self.adown then
-            self.camera_pos = self.camera_pos - sm.camera.getRight() * deltaTime * 5 * (sprint and 3 or 1)
+            self.camera_pos = self.camera_pos - sm.camera.getRight() * deltaTime * 5 * (sprint and 4 or 1.5)
         end
         if self.ddown then
-            self.camera_pos = self.camera_pos + sm.camera.getRight() * deltaTime * 5 * (sprint and 3 or 1)
+            self.camera_pos = self.camera_pos + sm.camera.getRight() * deltaTime * 5 * (sprint and 4 or 1.5)
         end
         if self.spacedown then
-            self.camera_pos = self.camera_pos + sm.vec3.new(0,0,1) * deltaTime * 5 * (sprint and 3 or 1)
+            self.camera_pos = self.camera_pos + sm.vec3.new(0,0,1) * deltaTime * 5 * (sprint and 4 or 1.5)
         end
 
         local old = sm.camera.getPosition()
@@ -312,13 +335,13 @@ function SpectateBlock.client_onAction( self, input, active )
     if active then
         local players = sm.player.getAllPlayers()
 
-        if input == Controls.W then self.wdown = true end 
+        if input == Controls.W then self.wdown = true end
         if input == Controls.S then self.sdown = true end
         if input == Controls.A then self.adown = true end
         if input == Controls.D then self.ddown = true end
         if input == Controls.Spacebar then self.spacedown = true end
 
-        if input == Controls.One then
+        if input == Controls.Two then
             if self.mode == Modes.Follow then
                 self.mode = Modes.Free
                 self.gui:setText("cam", "Free Cam")
@@ -327,6 +350,10 @@ function SpectateBlock.client_onAction( self, input, active )
                 self.gui:setText("cam", "Player Cam")
                 self:client_findAvailablePlayer(1)
             end
+        end
+
+        if input == Controls.One then
+            self:client_toggleGUI()
         end
 
         if #players > 1 then
@@ -362,5 +389,5 @@ function SpectateBlock.client_onAction( self, input, active )
         self:client_unBindPlayer(self.player)
     end
 
-    return false
+    return true
 end

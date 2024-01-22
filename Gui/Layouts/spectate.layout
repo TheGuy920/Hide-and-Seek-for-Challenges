@@ -8,7 +8,7 @@
         <Property key="TextShadow" value="true"/>
         <Property key="TextColour" value="1 1 1"/>
     </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.020833333333333332 0.037037037037037035 0.018229166666666668 0.032407407407407406">
+    <Widget type="TextBox" skin="TextBox" position_real="0.0026041666666666665 0.0046296296296296294 0.018229166666666668 0.032407407407407406">
         <Property key="FontName" value="SM_GameName"/>
         <Property key="TextAlign" value="Center"/>
         <Property key="Caption" value="1"/>
@@ -16,86 +16,152 @@
         <Property key="TextShadow" value="true"/>
         <Property key="TextColour" value="0 0 0"/>
     </Widget>
-    <Widget type="ImageBox" skin="ImageBox" position_real="0.020833333333333332 0.19907407407407407 0.018229166666666668 0.032407407407407406">
+    <Widget type="ImageBox" skin="ImageBox" position_real="0.0026041666666666665 0.0046296296296296294 0.018229166666666668 0.032407407407407406">
         <Property key="ImageTexture" value="gui_keybinds_bg_orange.png"/>
     </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.041666666666666664 0.037037037037037035 0.28645833333333331 0.032407407407407406" name="cam">
+    <Widget type="TextBox" skin="TextBox" position_real="0.0234375 0.0046296296296296294 0.28645833333333331 0.032407407407407406" name="gui_text">
         <Property key="FontName" value="SM_GameName"/>
         <Property key="TextAlign" value="Left VCenter"/>
-        <Property key="Caption" value="Player Cam"/>
+        <Property key="Caption" value="GUI is #{ON_CAPS}"/>
         <Property key="FontHeight" value="18"/>
         <Property key="TextShadow" value="true"/>
         <Property key="TextColour" value="1 1 1"/>
     </Widget>
-    <Widget type="ImageBox" skin="ImageBox" position_real="0.020833333333333332 0.069444444444444448 0.018229166666666668 0.032407407407407406">
-        <Property key="ImageTexture" value="icon_keybinds_scroll_up.png"/>
-    </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.041666666666666664 0.069444444444444448 0.28645833333333331 0.032407407407407406">
-        <Property key="FontName" value="SM_GameName"/>
-        <Property key="TextAlign" value="Left VCenter"/>
-        <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_SCROLL_UP}] : Zoom in for player cam"/>
-        <Property key="FontHeight" value="18"/>
-        <Property key="TextShadow" value="true"/>
-        <Property key="TextColour" value="1 1 1"/>
-    </Widget>
-    <Widget type="ImageBox" skin="ImageBox" position_real="0.020833333333333332 0.10185185185185185 0.018229166666666668 0.032407407407407406">
-        <Property key="ImageTexture" value="icon_keybinds_scroll_down.png"/>
-    </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.041666666666666664 0.10185185185185185 0.28645833333333331 0.032407407407407406">
-        <Property key="FontName" value="SM_GameName"/>
-        <Property key="TextAlign" value="Left VCenter"/>
-        <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_SCROLL_DOWN}] : Zoom out for player cam"/>
-        <Property key="FontHeight" value="18"/>
-        <Property key="TextShadow" value="true"/>
-        <Property key="TextColour" value="1 1 1"/>
-    </Widget>
-    <Widget type="ImageBox" skin="ImageBox" position_real="0.020833333333333332 0.13425925925925927 0.018229166666666668 0.032407407407407406">
-        <Property key="ImageTexture" value="icon_keybinds_leftmouse_button.png"/>
-    </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.041666666666666664 0.13425925925925927 0.29947916666666669 0.032407407407407406" name="mouse1">
-        <Property key="FontName" value="SM_GameName"/>
-        <Property key="TextAlign" value="Left VCenter"/>
-        <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_MOUSE_BUTTON_LEFT}] : Switch to prev player"/>
-        <Property key="FontHeight" value="18"/>
-        <Property key="TextShadow" value="true"/>
-        <Property key="TextColour" value="1 1 1"/>
-    </Widget>
-    <Widget type="ImageBox" skin="ImageBox" position_real="0.020833333333333332 0.16666666666666666 0.018229166666666668 0.032407407407407406">
-        <Property key="ImageTexture" value="icon_keybinds_rightmouse_button.png"/>
-    </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.041666666666666664 0.16666666666666666 0.30208333333333331 0.032407407407407406" name="mouse2">
-        <Property key="FontName" value="SM_GameName"/>
-        <Property key="TextAlign" value="Left VCenter"/>
-        <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_MOUSE_BUTTON_RIGHT}] : Switch to next player"/>
-        <Property key="FontHeight" value="18"/>
-        <Property key="TextShadow" value="true"/>
-        <Property key="TextColour" value="1 1 1"/>
-    </Widget>
-    <Widget type="ImageBox" skin="ImageBox" position_real="0.020833333333333332 0.037037037037037035 0.018229166666666668 0.032407407407407406">
-        <Property key="ImageTexture" value="gui_keybinds_bg_orange.png"/>
-    </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.041666666666666664 0.19907407407407407 0.28645833333333331 0.032407407407407406" name="exit">
-        <Property key="FontName" value="SM_GameName"/>
-        <Property key="TextAlign" value="Left VCenter"/>
-        <Property key="Caption" value="[#{INTERACTION_USE}] : To exit spectating mode (if host)"/>
-        <Property key="FontHeight" value="18"/>
-        <Property key="TextShadow" value="true"/>
-        <Property key="TextColour" value="1 1 1"/>
-    </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0.020833333333333332 0.19907407407407407 0.018229166666666668 0.032407407407407406" name="interact">
-        <Property key="FontName" value="SM_GameName"/>
-        <Property key="TextAlign" value="Center"/>
-        <Property key="Caption" value="F"/>
-        <Property key="FontHeight" value="18"/>
-        <Property key="TextShadow" value="true"/>
-        <Property key="TextColour" value="0 0 0"/>
-    </Widget>
-    <Widget type="TextBox" skin="TextBox" position_real="0 0.83333333333333337 1 0.16666666666666666" name="PlayerName">
-        <Property key="FontName" value="SM_GameName"/>
-        <Property key="TextAlign" value="Center"/>
-        <Property key="FontHeight" value="26"/>
-        <Property key="TextShadow" value="true"/>
-        <Property key="TextColour" value="1 1 1"/>
+    <Widget type="Widget" skin="PanelEmpty" position_real="-0.018229166666666668 0 1.015625 1" name="gui_body">
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.19907407407407407 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg_orange.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.020512820512820513 0.037037037037037035 0.017948717948717947 0.032407407407407406">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Caption" value="2"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="0 0 0"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.037037037037037035 0.28205128205128205 0.032407407407407406" name="cam">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="Player Cam"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.069444444444444448 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg.png"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.069444444444444448 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="icon_keybinds_scroll_up.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.069444444444444448 0.28205128205128205 0.032407407407407406">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_SCROLL_UP}] : Zoom in for player cam"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.10185185185185185 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg.png"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.10185185185185185 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="icon_keybinds_scroll_down.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.10185185185185185 0.28205128205128205 0.032407407407407406">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_SCROLL_DOWN}] : Zoom out for player cam"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.13425925925925927 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg.png"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.13425925925925927 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="icon_keybinds_leftmouse_button.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.13425925925925927 0.29487179487179488 0.032407407407407406" name="mouse1">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_MOUSE_BUTTON_LEFT}] : Switch to prev player"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.16666666666666666 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg.png"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.16666666666666666 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="icon_keybinds_rightmouse_button.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.16666666666666666 0.29743589743589743 0.032407407407407406" name="mouse2">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="[#{MENU_OPTIONS_CONTROLS_BINDING_MOUSE_BUTTON_RIGHT}] : Switch to next player"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.037037037037037035 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg_orange.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.19907407407407407 0.28205128205128205 0.032407407407407406" name="exit">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="[#{INTERACTION_USE}] : To exit spectating mode (if host)"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.020512820512820513 0.19907407407407407 0.017948717948717947 0.032407407407407406" name="interact">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Caption" value="F"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="0 0 0"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.23148148148148148 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg.png"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.23148148148148148 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="icon_keybinds_space.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.23148148148148148 0.28205128205128205 0.032407407407407406" name="exit">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="Fly up in free cam"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position_real="0.020512820512820513 0.2638888888888889 0.017948717948717947 0.032407407407407406">
+            <Property key="ImageTexture" value="gui_keybinds_bg_orange.png"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.041025641025641026 0.2638888888888889 0.28205128205128205 0.032407407407407406" name="exit">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="Double click to sprint in free cam"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0.020512820512820513 0.2638888888888889 0.017948717948717947 0.032407407407407406" name="forward">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="Caption" value="W"/>
+            <Property key="FontHeight" value="18"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="0 0 0"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position_real="0 0.83333333333333337 0.98461538461538467 0.16666666666666666" name="PlayerName">
+            <Property key="FontName" value="SM_GameName"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontHeight" value="26"/>
+            <Property key="TextShadow" value="true"/>
+            <Property key="TextColour" value="1 1 1"/>
+        </Widget>
     </Widget>
     <CodeGeneratorSettings/>
 </MyGUI>

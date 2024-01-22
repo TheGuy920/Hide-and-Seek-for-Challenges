@@ -34,9 +34,9 @@ function ChallengeBaseWorld.server_onFinishedCellLoading( self )
 		end
 	end
 	table.sort(idTable, function(a, b) return a.id < b.id end)
-	for _,box in pairs(idTable) do
-		print(box.id, box.container:getItem( 0 ))
-	end
+	--for _,box in pairs(idTable) do
+	--	print(box.id, box.container:getItem( 0 ))
+	--end
 end
 
 function ChallengeBaseWorld.server_exitToMenu( self, f )

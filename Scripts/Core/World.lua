@@ -164,7 +164,6 @@ function World.server_spawnCharacter( self, params )
 		if player == sm.player.getAllPlayers()[1] then
 			char:setLockingInteractable(self.menu_lock)
 		else
-			print("setLockingInteractable(nil) World 166")
 			char:setLockingInteractable(nil)
 		end
 		sm.event.sendToPlayer( player, "sv_e_onSpawnCharacter")
@@ -181,6 +180,5 @@ function World.server_spawnCharacter( self, params )
 end
 
 function World.client_getSelectedHotBarAndReturn( self, callback )
-	print("sm.localPlayer.getSelectedHotbarSlot()", sm.localPlayer.getSelectedHotbarSlot())
 	self.network:sendToServer(callback, sm.localPlayer.getSelectedHotbarSlot())
 end

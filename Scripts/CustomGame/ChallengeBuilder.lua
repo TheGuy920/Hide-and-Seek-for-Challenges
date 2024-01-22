@@ -271,13 +271,12 @@ _G["ChallengeBuilder_LoadFunctions"] = function(self)
         local index = self.selected_index + 1 + self.offset
         if index >= 0 and index <= #self.number_index then
             local uuid = self.number_index[index].uuid
-            print(uuid)
             sm.event.sendToGame("client_LoadBuild", uuid)
         end
     end
 
     self.client_AddChallenge = function(self, button)
-        print(button)
+        --print(button)
     end
 end
 

@@ -62,7 +62,6 @@ function World.server_onCreate( self )
 			if player == host then
 				player.character:setLockingInteractable(self.menu_lock)
 			else
-				print("setLockingInteractable(nil) LOBBY 64")
 				player.character:setLockingInteractable(nil)
 			end
 		end
@@ -75,14 +74,12 @@ function World.client_setLighting( self )
 end
 
 function World.server_setMenuLockNil( self, char )
-	print("setLockingInteractable(nil) LOBBY 76")
 	if char:getLockingInteractable() then
 		char:setLockingInteractable(nil)
 	end
 end
 
 function World.server_setMenuLock( self, char )
-	print("setLockingInteractable(self.menu_lock) LOBBY 81", char)
 	if sm.exists(char) then
 		char:setLockingInteractable(self.menu_lock)
 	end
@@ -172,7 +169,6 @@ function World.server_spawnCharacter( self, params )
 		if player == sm.player.getAllPlayers()[1] then
 			char:setLockingInteractable(self.menu_lock)
 		else
-			print("setLockingInteractable(nil) LOBBY 175")
 			char:setLockingInteractable(nil)
 		end
 		sm.event.sendToPlayer( player, "sv_e_onSpawnCharacter")
@@ -189,6 +185,5 @@ function World.server_spawnCharacter( self, params )
 end
 
 function World.client_getSelectedHotBarAndReturn( self, callback )
-	print("sm.localPlayer.getSelectedHotbarSlot()", sm.localPlayer.getSelectedHotbarSlot())
 	self.network:sendToServer(callback, sm.localPlayer.getSelectedHotbarSlot())
 end
