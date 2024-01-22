@@ -317,7 +317,7 @@
             <Widget type="TextBox" skin="TextBox" position_real="0.52505010020040077 0.40846994535519127 0.26953907815631262 0.08060109289617487" name="noitemsText">
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
-                <Property key="Caption" value="No Items"/>
+                <Property key="Caption" value="BLANK"/>
             </Widget>
             <Widget type="Button" skin="PrimaryButton" position_real="0.79559118236472948 0.50273224043715847 0.080160320641282562 0.068306010928961755" name="inactivityOnActive">
                 <Property key="Visible" value="false"/>

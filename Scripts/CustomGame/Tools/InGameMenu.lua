@@ -470,11 +470,17 @@ function InGameMenu.server_recieveOptionsFromGame( self, data )
 	end
 end
 
-function InGameMenu.client_toggleOptions(self, button)
+local AllOffButtons = {
+	["halfhealth"] = true,
+	["fullhealth"] = true,
+	["oneshot"] = true
+}
+
+function InGameMenu.client_toggleOptions(self, button, force_type)
 	if not sm.isHost then return end
 	local rname = ""
 	local nstate = false
-	if button:sub(-2) == "On" then
+	if button:sub(-2) == "On" and force_type ~= false then
 		rname = button:sub(1, -3)
 		nstate = true
 		self.menu:setVisible(button, false)
@@ -489,7 +495,13 @@ function InGameMenu.client_toggleOptions(self, button)
 		self.menu:setVisible(button.."Active", true)
 	end
 	self.options_buttons[rname] = nstate
-
+	if force_type == nil and AllOffButtons[rname] then
+		for b,_ in pairs(AllOffButtons) do
+			if b ~= rname then
+				self:client_toggleOptions(b.."Off", false)
+			end
+		end
+	end
 	self.network:sendToServer("server_setButtonStates", self.options_buttons)
 end
 
